@@ -1,0 +1,307 @@
+:root{
+    --border: 1px solid black;
+    --default-purple-color : rgb(79, 70, 229);
+    --radial-background: radial-gradient(circle at top left, #AAB8FC 0%, transparent 30%),
+        radial-gradient( circle at bottom right, #b6c0f0 0%, transparent 15%),
+        #F7F7F7;
+    --h1-font-size: clamp(1rem, calc(1vw + 1.5rem), 3rem); 
+    --p-font-size: clamp(0.8rem, calc(1vw + 0.2rem), 1.7rem);
+    --p-color: rgba(0, 0, 0, 0.7);
+}
+
+ p{
+    font-size: var(--p-font-size);
+    color: var(--p-color);
+}
+
+/* First part of the hero section */
+
+.hero{
+    max-width: 100vw;
+    min-height: 30vh;
+    background: var(--radial-background);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.hero h1{
+    font-size: clamp(1rem, calc(2vw + 1.1rem), 3.5rem);
+    font-weight: 600;
+    width: 100%;
+}
+
+/* Breaks that are in the h1 and p in the hero section */
+
+.and-break, .url-break{
+    display: none;
+}
+
+.hero span{
+    color: var(--default-purple-color);
+}
+
+.grade-break{
+    display: none;
+}
+
+.scams-break{
+    display: none;
+}
+
+/* End of word breaks in the hero section */
+
+.link-input-container{
+    width: 100%;
+}
+
+.link-input-container  input{
+    width: 40%;
+    height: 3rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.link-input-container  button{
+    width: 10%;
+    height: 3rem;
+    color: white;
+    background-color: var(--default-purple-color);
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+}
+
+/* Begining of hero-two */
+.hero-two{
+    display: flex;
+    padding: 1rem;
+    margin-top: 3rem;
+    gap: 3.5rem;
+    min-height: 60vh;
+}
+
+.hero-two div:first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Begining of inline breaks in hero-two */
+.that-break{
+    display: none;
+}
+/* End of the breaks in hero-two */
+
+.hero-two h1{
+   font-size: var(--h1-font-size); 
+}
+
+.hero-two h1, h4{
+    font-weight: 400;
+}
+
+.hero-two h1 > span{
+    color: var(--default-purple-color);
+}
+
+.safelink-reason *{
+    overflow: hidden;
+}
+
+.safelink-reason{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    padding-inline: 1rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+.safelink-reason *{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.safelink-reason-two{
+    grid-row: 1/3;
+    grid-column: 2/3;
+}
+
+.safelink-reason-three{
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+}
+
+.bolt{
+    width: 2rem;
+    padding-block: 0.3rem;
+    border-radius: 4px;
+    background-color: #E0E7FF;
+}
+
+/* End of hero-two section */
+
+/* hero-three begining */
+
+.hero-three{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+    min-height: 50vh;
+    background: var(--radial-background);
+}
+.hero-three h1{
+    font-size: var(--h1-font-size);
+    font-weight: 400;
+}
+
+.hero-three-btn-container{
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero-three-btn-container a{
+    display: inline-block;
+    width: 15%;
+    padding-block: 1rem;
+    text-decoration: none;
+    font-size: var(--p-font-size);
+    background-color: var(--default-purple-color);
+    color: white;
+    border-radius: 0.5rem;
+
+}
+
+.hero-three-btn-container a:active{
+    transform: scale(0.99);
+    transition: all 0.07s linear;
+}
+
+.hero-three-btn-container button{
+    width: 15%;
+    padding-block: 1rem;
+    font-size: var(--p-font-size);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.hero-three-btn-container button:active{
+     transform: scale(0.99);
+    transition: all 0.07s linear;
+}
+
+/* For Mobile */
+
+@media (max-width: 767px){
+    /* word breaks in hero section first part for mobile */
+    .and-break, .url-break{
+        display: block;
+    }
+    .validate-break{
+        display: none;
+    }
+    .grade-break{
+        display: block;
+    }
+    .analyze-break{
+        display: none;
+    }
+    .scams-break{
+        display: block;
+    }
+
+    /* for the input field for mobile for hero first part */
+
+    .link-input-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+     .link-input-container  input{
+            min-width: 100%;
+    }
+
+    .link-input-container  button{
+        min-width: 100%;
+        font-size: 1.3rem;
+    }
+
+     /* Hero-two begining */
+    .hero-two{
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    /* End of hero-two and beginign of hero-three */
+    .hero-three-btn-container{
+        flex-direction: column;
+    }
+
+    .hero-three-btn-container a{
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    .hero-three-btn-container button{
+        width: 80%;
+        font-size: 1rem;
+    }
+}
+
+
+/* For both mobile and tablets */
+
+@media (min-width: 0px) and (max-width: 1023px) {
+
+    /* for input field for tab for the first part of the hero section */
+     .link-input-container  input{
+            width: 50%;
+    }
+
+    .link-input-container  button{
+        width: 10%;
+    }
+
+     /* Hero-two section */
+    .safelink-reason{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+    }
+
+        .safelink-reason-two{
+            grid-row: auto;
+            grid-column: auto;
+    }
+
+    .safelink-reason-three{
+            grid-row: auto;
+    }
+}
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .that-break{
+        display: block;
+    }
+    .for-break{
+        display: none;
+    }
+
+}

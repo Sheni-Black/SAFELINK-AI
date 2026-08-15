@@ -1,0 +1,128 @@
+/* Css variable for default border to help with layouts */
+
+:root{
+    --border: 2px solid black;
+    --default-purple-color : #4F46E5;
+}
+
+.body{
+    background-color: #F7F7F7;
+}
+
+/* General css for every element */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Manrope", sans-serif;
+}
+
+/* Starting here is everything that has to do with the nav/header */
+
+nav{
+    background-color: #F7F7F7;
+    display: flex;
+    padding: 1rem;
+    justify-content: left;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.logo h1{
+    font-weight: 300;
+}
+
+.fa-link{
+    color: var(--default-purple-color);
+    font-size: 1.3rem;
+}
+
+nav a{
+    display: inline-block;
+    text-decoration: none;
+    color: black
+}
+
+nav div:first-child{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.page-links a:hover{
+    color: var(--default-purple-color);
+}
+
+.page-links{
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-create-profile{
+    margin-left: auto;
+    display: flex;
+    gap: 1rem;
+    padding-inline: 1rem;
+}
+
+.nav-create-profile a:first-child{
+    align-self: center;
+}
+
+.nav-create-profile a:last-child{
+    border: var(--border);
+    padding-inline: 1.5rem;
+    padding-block: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--default-purple-color);
+    color : white;
+    border: none;
+}
+
+.nav-create-profile a:last-child:active{
+    transform: scale(0.99);
+    transition: all 0.07s linear;
+}
+
+nav > .fa-bars{
+    display: none;
+}
+
+/* Everything regarding the nav/header ends here */
+
+
+/* This part is for media queries. Wont include for laptops cos its already the default */
+
+/* For mobile */
+
+@media (max-width: 767px){
+
+}
+
+/* For both mobile and tablets */
+
+@media (min-width: 0px) and (max-width: 1023px) {
+
+    nav{
+        justify-content: space-between;
+    }
+    .page-links, .nav-create-profile{
+        display: none;
+    }
+
+    nav > .fa-bars{
+        display: block;
+        font-size: 2rem;
+    }
+}
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
