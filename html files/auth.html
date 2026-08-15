@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safelink Ai Document</title>
+    <link rel="stylesheet" href="../css files/auth.css" />
+    <link rel="stylesheet" href="../css files/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+      integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- This is the sign-up page section -->
+    <div class="signup-container">
+      <h3 class="logo-text">
+        <i
+          class="fa-solid fa-link fa-rotate-270 fa-lg"
+          style="color: rgb(16, 141, 241)"
+        ></i
+        >Safelink AI
+      </h3>
+      <div class="create-container">
+        <h1>Create Your Account</h1>
+        <p>Join safelink and make safer decisions online</p>
+      </div>
+      <div class="google-container">
+        <h4>Continue with Google</h4>
+      </div>
+      <div class="divider">
+        <hr />
+        <p>or continue with</p>
+        <hr />
+      </div>
+      <!-- Attention!!!!!! inspection of Form validation -->
+      <!-- Javascript interactivity for different outline/border color of the input for peculiar circumstances like red outline/border for error etc -->
+      <form action="" method="post">
+        <label for="fname">Full Name*</label><br />
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="Enter your fu-ll name"
+        />
+        <label for="email">Email*</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email address"
+        />
+        <div class="label-content">
+          <label for="password">Password*</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter password"
+        />
+        <div class="label-content">
+          <label for="cpassword" class="cpassword1">Confirm password*</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <input
+          type="password"
+          id="cpassword"
+          name="cpassword"
+          placeholder="Confirm password"
+          class="cpassword1"
+        />
+        <p class="terms">
+          <input type="checkbox" />&nbsp;I agree to the Terms of Service and
+          Privacy Policy
+        </p>
+        <!-- Button interactivity is needed here which would be visible through a color change -->
+        <button type="submit" class="signup-button">Sign up</button>
+      </form>
+      <p class="footer-text">
+        Already have an account? <span class="login-text">Log in</span>
+      </p>
+    </div>
+  </body>
+</html>
