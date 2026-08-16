@@ -242,6 +242,71 @@
     gap: 0.5rem;
 }
 
+/* ending of hero-five and beginging of hero-six */
+
+.hero-six{
+    padding-block: 3rem;
+    padding-inline: 3rem;
+    background-color: #F7F7F7;
+}
+.hero-six-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;  
+}
+
+.hero-six-content h1{
+    font-size: var(--h1-font-size);
+    font-weight: 400;
+}
+
+.hero-six-content p{
+    font-size: var(--p-font-size);
+    color: var(--p-color);
+}
+
+.cyber-resources-container{
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.cyber-resource{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 13rem;
+    background-color: #FFFFFF;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.cyber-resource img{
+    border-radius: 0.5rem;
+}
+
+.cyber-resource p{
+    font-weight: 550;
+    color: rgb(0, 0, 0);
+}
+
+.cyber-resource a{
+    color: rgb(0, 0, 0);
+    font-weight: 550;
+}
+
+/* hero-six end and heo-seven begin */
+.faq-question{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.faq-question span{
+    overflow-y: hidden;
+    font-size: 2rem;
+}
 /* For Mobile */
 
 @media (max-width: 767px){
@@ -342,6 +407,25 @@
         .safe-ideas{
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: repeat(6, 1fr);
+        }
+        /* ending of hero-five and begoing of hero-six */
+
+        .cyber-resources-container{
+            scroll-snap-type: x mandatory;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scrollbar-width: none;
+            gap: 1.5rem;
+        }
+
+        .cyber-resource{
+            flex: 0 0 13rem;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+        }
+
+        .hero-six{
+            padding-inline: 1rem;
         }
 }
 
