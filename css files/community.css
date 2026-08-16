@@ -1,0 +1,131 @@
+:root{
+    --border: 1px solid black;
+    --default-purple-color : rgb(79, 70, 229);
+    --radial-background: radial-gradient(circle at top left, #AAB8FC 0%, transparent 30%),
+        radial-gradient( circle at bottom right, #b6c0f0 0%, transparent 15%),
+        #F7F7F7;
+    --h1-font-size: clamp(1rem, calc(1vw + 1.5rem), 3rem); 
+    --p-font-size: clamp(0.8rem, calc(1vw + 0.2rem), 1.7rem);
+    --p-color: rgba(0, 0, 0, 0.7);
+}
+
+body{
+    background-color: #EBEBEB;
+}
+
+/* This part is for the header */
+header{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-inline: 0.5rem;
+}
+
+.header-content h4{
+    color: var(--default-purple-color);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.header-content h1{
+    font-size: var(--h1-font-size);
+    font-weight: 400;
+}
+
+.header-content p{
+    font-size: var(--p-font-size);
+    color: var(--p-color);
+    line-height: 1.5rem;
+}
+
+.total-reports{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-inline: 1rem;
+}
+
+.total-reports-content{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-block: 1rem;
+    padding-inline: 0.5rem;
+    background-color: white;
+    width:20rem;
+    border-radius: 1rem;
+}
+
+.total-reports-content span{
+    color: var(--default-purple-color);
+    padding: 0.8rem;
+    background-color: #EBEBEB;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+.total-reports-content div{
+    display: flex;
+    flex-direction: column;
+}
+
+.total-reports-content h1{
+    font-size: var(--h1-font-size);
+    font-weight: 400;
+}
+
+.total-reports-content p{
+    font-size:  var(--p-font-size);
+    color: var(--p-color);
+}
+
+
+@media (max-width: 767px){
+    /* for the header  */
+
+    .header-content p{
+        font-size: 0.65rem;
+    }
+    
+    .and-break{
+        display: none;
+    }
+
+    .total-reports-content{
+        gap: 0.5rem;
+    }
+
+    .total-reports-content h1{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .total-reports-content p{
+        font-size:  0.5rem;
+        color: var(--p-color);
+    }
+
+    .total-reports-content span{
+        font-size: 0.8rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+    }
+}
+
+/* For both mobile and tablets */
+
+@media (min-width: 0px) and (max-width: 1023px) {
+
+}
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
