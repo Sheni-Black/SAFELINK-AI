@@ -102,6 +102,62 @@ nav > .fa-bars{
 
 /* Everything regarding the nav/header ends here */
 
+/* for the footer */
+footer{
+    background-color: #111827;
+    padding-inline: 5rem;
+    justify-content: right;
+    display: flex;
+    gap: 2rem;
+    padding-block: 2rem;
+}
+
+footer p{
+    color: #686F7D;
+}
+
+footer h4{
+    color: #FFFFFF;
+
+}
+
+.footer-logo{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.footer-logo-container{
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-container > div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.fa-link{
+    padding-block: 0.5rem;
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
+    padding-right: 1.6rem;
+    color: white;
+    background-color: var(--default-purple-color);
+    font-size: 1rem;
+}
+
+/* Everything for footer ends here */
+
 
 /* This part is for media queries. Wont include for laptops cos its already the default */
 
@@ -125,6 +181,14 @@ nav > .fa-bars{
     nav > .fa-bars{
         display: block;
         font-size: 2rem;
+    }
+
+    /* for footer */
+
+        footer{
+        flex-direction: column;
+        padding-inline: 1rem;
+        
     }
 }
 
