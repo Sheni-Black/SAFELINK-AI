@@ -10,11 +10,15 @@ body {
   font-family: Manrope, sans-serif;
   margin: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #eaeaec;
 }
-.signup-container {
+.signup-container,
+.signin-container,
+.otp-container,
+.otp-successful {
   width: 90%;
   max-width: 550px;
   padding: 20px;
@@ -22,33 +26,41 @@ body {
   margin: 45px 0 10px 0;
   border-radius: 20px;
 }
-.logo-text {
+.logo-text,
+.logo-text1,
+.logo-text2 {
   text-align: var(--logo-text-position);
   padding: var(--logo-text-spacng);
   font-size: var(--logo-text-font);
 }
-.create-container p {
+.create-container p,
+.welcome-container p,
+.verify-container p {
   font-weight: 200;
   font-size: 14px;
 }
-.google-container {
+.google-container,
+.google-container1 {
   background: #f4f4f5;
   padding: 10px;
   margin: 20px 0px;
   text-align: center;
 }
-.divider {
+.divider,
+.divider1 {
   display: flex;
   align-items: center;
   gap: 15px;
   margin: 20px 0px;
 }
-.divider hr {
+.divider hr,
+.divider1 hr {
   flex: 1;
   border: none;
   border-top: 1px solid black;
 }
-.divider p {
+.divider p,
+.divider1 p {
   font-size: 12px;
 }
 form {
@@ -59,17 +71,24 @@ label {
   font-size: 14px;
   padding: 3px 0;
 }
-.label-content {
+.label-content,
+.label-content1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.label-content a {
+.label-content a,
+.label-content1 a {
   font-size: 10px;
   display: inline-block;
   text-decoration: none;
 }
-.signup-button {
+.asterix {
+  color: red;
+}
+.signup-button,
+.signin-button,
+.verify-button {
   padding: 7px;
   width: 100%;
   color: white;
@@ -79,7 +98,9 @@ label {
   border-radius: 4px;
   margin: 10px 0 5px 0;
 }
-.signup-button:hover {
+.signup-button:hover,
+.signin-button:hover,
+.verify-button:hover {
   background: #433aca;
 }
 .cpassword1 {
@@ -101,39 +122,99 @@ input {
   border: none;
   outline: none;
 }
-input:focus-visible {
+input:focus-visible,
+.otp-input:focus-visible {
   outline: 2px solid rgb(105, 105, 250);
 }
 .terms {
   padding: 5px 0;
   font-size: 14px;
 }
-.footer-text {
+.footer-text,
+.footer-text1,
+.footer-text2 {
   text-align: center;
   font-size: 14px;
   font-weight: 500;
 }
-.login-text {
+.login-text,
+.create-text,
+.resend-text {
   color: #6b7dd7;
 }
 
+/* Otp page styling rules */
+.verify-container {
+  text-align: center;
+}
+.box-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0 20px 0;
+}
+.otp-input {
+  width: 40px !important;
+  height: 40px;
+  border: 1px solid rgb(190, 188, 188);
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  text-align: center;
+}
+.footer-text2 {
+  padding: 10px;
+}
+.time {
+  font-size: 15px;
+  font-weight: 600;
+}
+.otp-successful {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.otp-successful-logo {
+  text-align: center;
+  margin: 6rem 0 0 0;
+  font-size: 60px;
+}
+.otp-successful-text {
+  padding: 10px;
+  margin: 0 0 5rem 0;
+  text-align: center;
+}
+.otp-successful-text p {
+  font-size: 12px;
+}
+
 @media (max-width: 769px) {
-  .create-container h1 {
+  .create-container h1,
+  .welcome-container h1,
+  .verify-container h1 {
     font-size: 22px;
   }
-  .create-container p {
+  .create-container p,
+  .welcome-container p,
+  .verify-container p {
     font-size: 12px;
   }
-  .logo-text {
+  .logo-text,
+  .logo-text1,
+  .logo-text2 {
     font-size: 14px;
   }
-  .google-container h4 {
+  .google-container h4,
+  .google-container1 h4 {
     font-size: 12px;
   }
 }
 
 @media (max-width: 450px) {
-  .footer-text {
+  .footer-text,
+  .footer-text1,
+  .footer-text2 {
     font-size: 12px;
   }
   .terms {
@@ -150,33 +231,47 @@ input:focus-visible {
     font-size: 10px;
   }
 
-  .signup-container {
+  .signup-container,
+  .signin-container,
+  .verify-container {
     padding: 10px;
   }
 
-  .create-container h1 {
+  .create-container h1,
+  .welcome-container h1,
+  .verify-container h1 {
     font-size: 17px;
   }
-  .create-container p {
+  .create-container p,
+  .welcome-container p,
+  .verify-container p {
     font-size: 10px;
   }
 
-  .logo-text {
+  .logo-text,
+  .logo-text1,
+  .logo-text2 {
     font-size: 12px;
   }
-  .divider {
+  .divider,
+  .divider1 {
     gap: 10px;
   }
-  .footer-text {
+  .footer-text,
+  .footer-text1,
+  .footer-text2 {
     padding: 0 0 5px 0;
   }
 }
 
 @media (max-width: 320px) {
-  .create-container p {
+  .create-container p,
+  .welcome-container p,
+  .verify-container p {
     font-size: 9px;
   }
-  .label-content a {
+  .label-content a,
+  .label-content1 a {
     font-size: 9px;
   }
   label {
@@ -191,5 +286,10 @@ input:focus-visible {
   input[type="checkbox"] {
     width: 9px;
     height: 9px;
+  }
+  .footer-text1,
+  .footer-text,
+  .footer-text2 {
+    font-size: 10px;
   }
 }
