@@ -94,6 +94,34 @@
                 </div>
             </div>
         </div>
+        <div class="report-website-info-container">
+            <div class="web-url">
+                <label for="url">Website URL</label><span>*</span>
+                <input id="url" type="text" required placeholder="https://suspicious-site.com">
+            </div>
+            <div class="threat-level">
+                <label for="match">Threat Category</label><span>*</span>
+                <select name="" id="match">
+                    <option value="closest-match">Choose the closet match</option>
+                    <option value="dangerous-match">Dangerous</option>
+                    <option value="suspicious-match">Suspicious</option>
+                    <option value="low-match">low</option>
+                </select>
+            </div>
+            <div class="web-description">
+                <label for="description">What happend</label><span>*</span>
+                <textarea name="description" id="description" required placeholder="Describe how you found the site and what it asked you to do."></textarea>
+            </div>
+            <div class="image-drop-container">
+                <p>Screenshot or evidence <span>*</span></p>
+                <div class="image-drop">
+                    <span class="material-symbols-outlined">upload</span>
+                    <label for="image-upload">Drop a screenshot or click to upload<span>*</span></label>
+                    <label for="image-upload">PNG,JPEG,PDF up to 10mb</label>
+                    <input type="file" id="image-upload" accept="image/*">
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>
