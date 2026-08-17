@@ -85,13 +85,164 @@ header{
     font-size:  var(--p-font-size);
     color: var(--p-color);
 }
+ /*  header ends and main starts */
+
+ main{
+    padding-inline: 3rem;
+     margin-top: 2rem;
+ }
+ .main-nav{
+    background-color: #ffffff;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border-radius: 1rem;
+
+ }
+
+ .main-nav button{
+    background-color: transparent;
+    width: 10rem;
+    padding-block: 0.5rem;
+    padding-inline: 0.1rem;
+    font-size: var(--p-font-size);
+    border-radius: 1rem;
+    color: var(--p-color);
+    border: none;
+ }
+
+ .main-nav button:hover{
+    background-color: var(--default-purple-color);
+    color: white;
+ }
+
+ .main-nav button:active{
+    transform: scale(0.98);
+    transition: all 0.05s linear;
+ }
+
+ /* the start of the trending container */
+ .trending-search{
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+ }
+
+ .trending-search *{
+    width: 20rem;
+    height: 2.5rem;
+    font-size: var(--p-font-size);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    padding-inline: 1rem;
+    color: var(--p-color);
+    background-color: transparent;
+ }
+
+ /* for each individual site */
+
+ .trending-content-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #ffffff;
+    padding-inline: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    padding-bottom: 2rem;
+ }
+
+ .trending-content-container > p{
+    margin-left: 3.7rem;
+    font-size: var(--p-font-size);
+    color: var(--p-color);
+    line-height: 1.5rem;
+ }
+
+ .site{
+    display: flex;
+    padding-inline: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+ }
+
+ .site > h2{
+    color: rgba(0, 0, 0, 0.3);
+    font-size: clamp(0.6rem, calc(1vw + 0.8rem), 2.1rem); 
+ }
+
+ .site-name{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+ }
+
+
+ .site-name > h2{
+    font-size: clamp(0.6rem, calc(1vw + 0.8rem), 2.1rem); 
+ }
+
+ .site-name p{
+    font-size: 0.8rem;
+    padding-block: 0.3rem;
+    padding-inline: 0.5rem;
+    border-radius: 5px;
+    color: #DC2626;
+    background-color: #FDEDED;
+    border-color: #DC2626;
+ }
+
+ .view-report{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding-block: 0.5rem;
+    padding-inline: 0.3rem;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    background-color: #EBEBEB;
+ }
+
+ .view-report span{
+    overflow: hidden;
+    font-size: 0.8rem;
+ }
+
+ .site-info{
+    display: flex;
+    gap: 2rem;
+    justify-content: left;
+    margin-left: 3.7rem;
+ }
+
+ .site-info > *{
+    display: flex;
+    font-size: 0.8rem;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--p-color);
+ }
+
+  .site-info > * span{
+    overflow: hidden;
+    font-size: 0.8rem;
+  }
+
+  .site-info div:nth-child(3){
+    color: #FBBF24;
+  }
 
 
 @media (max-width: 767px){
     /* for the header  */
 
     .header-content p{
-        font-size: 0.65rem;
+        font-size: 0.7rem;
     }
     
     .and-break{
@@ -117,15 +268,120 @@ header{
         padding: 0.5rem;
         border-radius: 0.5rem;
     }
+
+    /* for the main section */
+    .main-nav{
+        min-width: 80%;
+        gap: 0.2rem;
+        padding-inline: 0.5rem;
+    }
+
+    .main-nav button{
+        font-size: 0.6rem;
+    }
+
+    /* for the trending container */
+
+    .site{
+        gap: 0.5rem;
+        padding-inline: 0;
+    }
+
+    .site > h2{
+        font-size: 0.8rem;
+    }
+
+    .site-name{
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .site-name > h2{
+        font-size: 0.8rem;
+    }
+
+    .site-name > p{
+        font-size: 0.3rem;
+        padding-block: 0.2rem;
+    }
+
+    .view-report{
+        padding-block: 0.5rem;
+        padding-inline: 0.2rem;
+        font-size: 0.3rem;
+        border-radius: 5px;
+        background-color: #EBEBEB;
+    }
+
+    .view-report{
+        padding-block: 0.2rem;
+    }
+
+    .view-report span{
+        font-size: 0.3rem;
+    }
+
+    .trending-content-container > p{
+        margin-left: 0;
+        font-size: var(--p-font-size);
+        color: var(--p-color);
+        margin-left: 1.3rem;
+    }
+
+    .site-info{
+        gap: 1rem;
+        margin-left: 1.3rem;
+    }
+
+        .site-info > *{
+            display: flex;
+            font-size: 0.5rem;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--p-color);
+    }
+
 }
 
 /* For both mobile and tablets */
 
 @media (min-width: 0px) and (max-width: 1023px) {
+    /* for the main section */
+    main{
+        padding-inline: 1rem;
+    }
+
+     /* trending div */
+
+     .trending-search{
+        justify-content: center;
+     }
+    
+     .trending-search *{
+        min-width: 47%;
+        height: 2rem;
+        font-size: 0.7rem;
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        padding-inline: 0.5rem;
+        color: var(--p-color);
+        background-color: transparent;
+    }
 
 }
 
 /* For tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
+     /* for the main section */
+     .main-nav{
+        min-width: 60%;
+    }
 
+    .trending-content-container > p{
+        margin-left:3.3rem;
+    }
+
+    .site-info{
+        gap: 3rem;
+        margin-left: 3.3rem;
+    }
 }
