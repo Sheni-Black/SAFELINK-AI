@@ -345,6 +345,68 @@ header{
         color: rgba(0, 0, 0, 0.3);
    }
 
+   /* reports content info container ends here and my-reports starts */
+   .my-reports-container{
+        display: flex;
+        padding: 1.5rem;
+        gap: 2rem;
+        border-radius: 1rem;
+        background-color: #ffffff;
+        margin-block: 3rem;
+   }
+
+   .my-reports-content{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 1rem;
+   }
+
+   .my-reports-content  h2:last-child{
+        color: rgba(0, 0, 0, 0.3);
+        font-size: clamp(0.8rem, calc(1vw + 0.5rem), 1.7rem); 
+        font-weight: 400;
+   }
+
+   .my-reports-content h2:first-child{
+      font-size: clamp(0.8rem, calc(1vw + 0.5rem), 1.7rem); 
+   }
+
+   .my-reports-container p{
+        color: var(--p-color);
+        font-size: var(--p-font-size);
+   }
+
+   .my-reports-container > h2{
+        font-size: clamp(0.6rem, calc(1vw + 0.8rem), 2.1rem); 
+        color: rgba(0, 0, 0, 0.3);
+   }
+
+   .my-reports-reason{
+        display: flex;
+        justify-content: space-between;
+   }
+
+   .my-reports-reason p{
+        font-size: var(--p-font-size);
+        color: var(--p-color);
+   }
+
+   .my-reports-reason p:first-child{
+        align-self: center;
+   }
+
+   .my-reports-reason p:last-child{
+        border: var(--border);
+        padding-inline: 1rem;
+        padding-block: 0.3rem;
+        border-radius: 0.5rem;
+        background-color: #EAFCF0;
+        color: #16A34A;
+        font-weight: 600;
+        border-color: #16A34A;
+   }
+
 
 @media (max-width: 767px){
     /* for the header  */
@@ -456,6 +518,38 @@ header{
    .web-description textarea{
         font-size: 0.6rem;
     }
+
+    /* beginning of report reason */
+     .my-reports-container{
+        display: flex;
+        padding-inline: 0.5rem;
+        gap: 1rem;
+   }
+
+   .my-reports-content h2{
+    font-size: 1rem;
+   }
+
+   .my-reports-content{
+        gap: 0.3rem;
+   }
+
+    .my-reports-reason{
+       gap: 1rem;
+       justify-content: center;
+    }
+
+    .my-reports-reason p:first-child{
+        font-size: 0.5rem;
+    }
+
+    .my-reports-reason p:last-child{
+        font-size: 0.5rem;
+        padding-inline: 0.3rem;
+        padding-right: 0.5rem;
+    }
+
+
 
 }
 
