@@ -203,6 +203,35 @@
     transition: all 0.07s linear;
 }
 
+/* end of hero-three and begining of hero-four */
+.hero-four{
+    display: block;
+    min-height: 50vh;
+    border: var(--border);
+    padding-block: 1rem;
+}
+
+.hero-four-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.hero-four-content p:first-child{
+    color: var(--default-purple-color);
+}
+
+.hero-four-content h1{
+    font-size: var(--h1-font-size);
+    font-weight: 400;
+}
+
+.hero-four-content p:last-child{
+    font-size: var(--p-font-size);
+    color: var(--p-color);
+}
+
 /* Beginign of hero-five */
 .hero-five{
     padding-block: 2rem;
