@@ -7,6 +7,9 @@
     --h1-font-size: clamp(1rem, calc(1vw + 1.5rem), 3rem); 
     --p-font-size: clamp(0.8rem, calc(1vw + 0.2rem), 1.7rem);
     --p-color: rgba(0, 0, 0, 0.7);
+    --h4-font-size: 1.2rem;
+    --light-font-weight: 400;
+    --heavy-font-weight: 600;
 }
 
 body{
@@ -83,7 +86,477 @@ header{
     color: var(--p-color);
 }
 
+/* end of the header start of main */
+main{
+    padding-inline: 4.7rem;
+    margin-top: 3rem;
+}
+.view-all-tutorials{
+    display: flex;
+    justify-content: space-between;
+}
+
+.view-all-tutorials h4{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.view-all-tutorials p:last-child{
+    font-size: 0.9rem;
+    color: var(--default-purple-color);
+}
+
+.current-lesson-container{
+    margin-top: 1rem;
+    background-color: #ffffff;
+    padding-block: 2rem 1rem;
+    padding-inline: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.current-lesson-container > p:first-child{
+    font-size: 1rem;
+    color: var(--default-purple-color);
+    font-weight: var(--heavy-font-weight);
+}
+
+.current-lesson-container > p:last-of-type{
+    font-size: 0.9rem;
+    color: var(--p-color);
+}
+
+.current-lesson-container div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-lesson-container div > p{
+    font-size: 1rem;
+    font-weight: var(--heavy-font-weight);
+}
+
+.current-lesson-container div > button{
+    padding-inline: 1rem;
+    padding-block: 0.7rem;
+    background-color: var(--default-purple-color);
+    color: #ffffff;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.other-lessons-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.other-lessons{
+    border-radius: 0.5rem;
+    margin-top: 3rem;
+    background-color: #ffffff;
+    padding-inline: 1rem;
+    padding-block: 2rem;
+    flex: 0 0 40%;
+}
+
+.each-lesson{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.lesson-progress-bar{
+    width: 80%;
+    height: 0.7rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    background-color: #E0E7FF;
+}
+
+.lesson-progress-bar > div{
+    height: 100%;
+    width: 60%;
+    background-color: var(--default-purple-color);
+    border-radius: 1rem;
+}
+
+.lesson-status{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lesson-status span{
+    color: var(--default-purple-color);
+    padding: 0.8rem;
+    background-color: #EBEBEB;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+.lesson-status p{
+    font-size: 0.8rem;
+    color: #16A34A;
+    background-color: #E0E7FF;
+    padding-block: 0.3rem;
+    padding-inline: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.lesson-task{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.lesson-task p{
+    font-size: var(--p-font-size);
+    color: var(--p-color);
+}
+
+.lesson-time{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    padding-bottom: 1rem;
+}
+
+.lesson-time button{
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    border-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.lesson-time > div{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lesson-time > div span{
+    overflow: hidden;
+    font-weight: 200;
+}
+
+.lesson-time > div p{
+    font-size: var(--p-font-size);
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.view-all-articles{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.view-all-articles h4{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.view-all-articles p:last-child{
+    font-size: 0.9rem;
+    color: var(--default-purple-color);
+}
+
+.article-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.each-article{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #ffffff;
+    padding-inline: 1rem;
+    padding-block: 2rem;
+    border-radius: 1rem;
+}
+
+.each-article div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.each-article div p{
+    font-size: 0.9rem;
+    color: var(--p-color);
+}
+
+.each-article div br{
+    display: none;
+}
+
+.each-article div button{
+    padding-inline: 1.5rem;
+    padding-block: 0.5rem;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.each-article > p{
+    font-size: 0.8rem;
+    color: var(--p-color);
+}
+
+.view-all-quiz{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.view-all-quiz h4{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.view-all-quiz p:last-child{
+    font-size: 0.9rem;
+    color: var(--default-purple-color);
+}
+
+.each-quiz{
+    background-color: #ffffff;
+    padding-block: 2rem;
+    padding-inline: 1rem;
+    border-radius: 1rem;
+}
+
+.quiz-container{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.quiz-name{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.quiz-name > p{
+    font-size: 0.8rem;
+    color: #16A34A;
+    background-color: rgba(82, 155, 109, 0.3);
+    padding-inline: 1rem;
+    padding-block: 0.3rem;
+    border-radius: 0.3rem;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.quiz-content-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.quiz-content-container button{
+    padding-inline: 1.5rem;
+    padding-block: 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+}
+
+.quiz-content{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.quiz-content div{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.quiz-content span{
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.quiz-progress-bar{
+    width: 80%;
+    height: 0.7rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    background-color: #E0E7FF;
+}
+
+.quiz-progress-bar > div{
+    height: 100%;
+    width: 60%;
+    background-color: var(--default-purple-color);
+    border-radius: 1rem;
+}
+
+.view-all-certificates{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.view-all-certificates h4{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.view-all-certificates p:last-child{
+    font-size: 0.9rem;
+    color: var(--default-purple-color);
+}
+
+.certificates{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.certificates-container{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    padding-inline: 1rem;
+    padding-block: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+.each-certificate div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.each-certificate div span{
+    color: var(--default-purple-color);
+    padding: 0.8rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    background-color: #AAB8FC;
+}
+
+.each-certificate div p{
+    font-size: 0.8rem;
+    color: #16A34A;
+    background-color: rgba(82, 155, 109, 0.3);
+    padding-inline: 1rem;
+    padding-block: 0.3rem;
+    border-radius: 0.3rem;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.certs-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    padding-bottom: 0.2rem;
+}
+
+.certs-content h4{
+    font-size: var(--h4-font-size);
+}
+
+.certs-content p{
+    font-size: var(--p-font-size);
+    color: var(--p-color);
+}
+
+.get-pdf{
+    display: flex;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.get-pdf div{
+    display: flex;
+    gap: 1rem;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    align-items: center;
+}
+
+.get-pdf div p{
+    font-size: var(--p-font-size);
+    color: var(--p-color);
+}
+
+.get-pdf div span{
+    overflow: hidden;
+    color: var(--p-color);
+}
+
 @media (max-width: 767px){
+    main{
+        padding-inline: 1rem;
+    }
+
+      .current-lesson-container div > p{
+        font-size: 0.8rem;
+      }
+
+    .current-lesson-container div > button{
+        padding-inline: 0.5rem;
+        padding-block: 0.3rem;
+        font-size: 0.5rem;
+    }
+
+    .other-lessons-container{
+        flex-direction: column;
+    }
+
+    .each-article div br{
+        display: block;
+    }
+
+    .each-article div button{
+        padding-inline: 0.5rem;
+        padding-block: 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    .each-article > h4{
+        font-size: 0.9rem;
+    }
+
+    .quiz-content span{
+        font-size: 0.8rem;
+    }
+
+    .quiz-content p{
+        font-size: 0.8rem;
+    }
+
+    .quiz-content-container button{
+        padding-inline: 0.5rem;
+        padding-block: 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    .quiz-name > p{
+        font-size: 0.5rem;
+        padding-inline: 0.5rem;
+        padding-block: 0.3rem;
+        border-radius: 0.3rem;
+    } 
 
 }
 

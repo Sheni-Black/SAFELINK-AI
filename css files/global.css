@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: "Manrope", sans-serif;;
 }
 /* Css variable for default border to help with layouts */
 
