@@ -1,3 +1,5 @@
+/* Important note: Due to the uniformity of the designs, sections were styled together with each section defined by its unique class name for its styling features  */
+
 :root {
   --create-font: 600 24px / 1.5 Manrope, sans-serif;
   --logo-text-font: 17px;
@@ -10,45 +12,65 @@ body {
   font-family: Manrope, sans-serif;
   margin: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #eaeaec;
 }
-.signup-container {
+.signup-container,
+.signin-container,
+.otp-container,
+.otp-successful,
+.fpassword-container,
+.check-email-container,
+.npassword-container {
   width: 90%;
-  max-width: 550px;
-  padding: 20px;
+  max-width: 580px;
+  padding: 25px;
   background: white;
   margin: 45px 0 10px 0;
-  border-radius: 20px;
+  border-radius: 10px;
 }
-.logo-text {
+.logo-text,
+.logo-text1,
+.logo-text2,
+.logo-text3,
+.logo-text4 {
   text-align: var(--logo-text-position);
   padding: var(--logo-text-spacng);
   font-size: var(--logo-text-font);
 }
-.create-container p {
+.create-container p,
+.welcome-container p,
+.verify-container p,
+.fpassword-text p,
+.check-email-text p,
+.npassword-text p {
   font-weight: 200;
   font-size: 14px;
 }
-.google-container {
+.google-container,
+.google-container1 {
   background: #f4f4f5;
   padding: 10px;
   margin: 20px 0px;
   text-align: center;
 }
-.divider {
+.divider,
+.divider1 {
   display: flex;
   align-items: center;
   gap: 15px;
   margin: 20px 0px;
 }
-.divider hr {
+.divider hr,
+.divider1 hr {
   flex: 1;
   border: none;
   border-top: 1px solid black;
 }
-.divider p {
+.divider p,
+.divider1 p {
   font-size: 12px;
 }
 form {
@@ -59,27 +81,42 @@ label {
   font-size: 14px;
   padding: 3px 0;
 }
-.label-content {
+.label-content,
+.label-content1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.label-content a {
+.label-content a,
+.label-content1 a {
   font-size: 10px;
   display: inline-block;
   text-decoration: none;
 }
-.signup-button {
+.asterix {
+  color: red;
+}
+.signup-button,
+.signin-button,
+.verify-button,
+.fpassword-button,
+.check-email-button,
+.npassword-button {
   padding: 7px;
   width: 100%;
   color: white;
   background: #a5b4fc;
   border: none;
   outline: none;
-  border-radius: 4px;
-  margin: 10px 0 5px 0;
+  border-radius: 10px;
+  margin: 20px 0 5px 0;
 }
-.signup-button:hover {
+.signup-button:hover,
+.signin-button:hover,
+.verify-button:hover,
+.fpassword-button:hover,
+.check-email-button:hover,
+.npassword-button:hover {
   background: #433aca;
 }
 .cpassword1 {
@@ -108,32 +145,120 @@ input:focus-visible {
   padding: 5px 0;
   font-size: 14px;
 }
-.footer-text {
+.footer-text,
+.footer-text1,
+.footer-text2,
+.footer-text3 {
   text-align: center;
   font-size: 14px;
   font-weight: 500;
 }
-.login-text {
+.login-text,
+.create-text,
+.resend-text,
+.resend-text1 {
   color: #6b7dd7;
 }
 
+/* Otp page styling rules */
+.verify-container,
+.fpassword-text,
+.check-email-text,
+.npassword-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 10px 0;
+}
+.box-container,
+.box-container1 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 40px 0 20px 0;
+}
+.otp-input,
+.otp-input1 {
+  width: 35px !important;
+  height: 35px;
+  border: 1px solid rgb(190, 188, 188);
+  border-radius: 10px;
+  outline: none;
+  text-align: center;
+  /* padding: 10px; */
+}
+.footer-text2,
+.footer-text3 {
+  padding: 10px;
+}
+.time,
+.time1 {
+  font-size: 15px;
+  font-weight: 600;
+}
+.otp-successful {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.otp-successful-logo {
+  text-align: center;
+  margin: 6rem 0 0 0;
+  font-size: 60px;
+}
+.otp-successful-text {
+  padding: 10px;
+  margin: 0 0 5rem 0;
+  text-align: center;
+}
+.otp-successful-text p {
+  font-size: 12px;
+}
+
+/* forgot password styling rules */
+.fpassword-text p,
+.check-email-text p {
+  text-align: center;
+  padding: 5px 10px;
+}
+
 @media (max-width: 769px) {
-  .create-container h1 {
+  .create-container h1,
+  .welcome-container h1,
+  .verify-container h1,
+  .fpassword-text h1,
+  .check-email-text h1,
+  .npassword-text h1 {
     font-size: 22px;
   }
-  .create-container p {
+  .create-container p,
+  .welcome-container p,
+  .verify-container p,
+  .fpassword-text p,
+  .check-email-text p,
+  .npassword-text p {
     font-size: 12px;
   }
-  .logo-text {
+  .logo-text,
+  .logo-text1,
+  .logo-text2,
+  .logo-text3,
+  .logo-text4 {
     font-size: 14px;
   }
-  .google-container h4 {
+  .google-container h4,
+  .google-container1 h4 {
     font-size: 12px;
   }
 }
 
 @media (max-width: 450px) {
-  .footer-text {
+  .footer-text,
+  .footer-text1,
+  .footer-text2,
+  .footer-text3 {
     font-size: 12px;
   }
   .terms {
@@ -150,33 +275,72 @@ input:focus-visible {
     font-size: 10px;
   }
 
-  .signup-container {
+  .signup-container,
+  .signin-container,
+  .otp-container,
+  .fpassword-container,
+  .check-email-container,
+  .npassword-container {
     padding: 10px;
   }
 
-  .create-container h1 {
+  .create-container h1,
+  .welcome-container h1,
+  .verify-container h1,
+  .fpassword-text h1,
+  .otp-successful-text h2,
+  .check-email-text h1,
+  .npassword-text h1 {
     font-size: 17px;
   }
-  .create-container p {
+  .create-container p,
+  .welcome-container p,
+  .verify-container p,
+  .fpassword-text p,
+  .check-email-text p,
+  .npassword-text p {
     font-size: 10px;
   }
 
-  .logo-text {
+  .logo-text,
+  .logo-text1,
+  .logo-text2,
+  .logo-text3,
+  .logo-text4 {
     font-size: 12px;
   }
-  .divider {
+  .divider,
+  .divider1 {
     gap: 10px;
   }
-  .footer-text {
+  .footer-text,
+  .footer-text1,
+  .footer-text2,
+  .footer-text3 {
     padding: 0 0 5px 0;
+  }
+  .otp-input,
+  .otp-input1 {
+    width: 35px !important;
+    height: 35px;
+  }
+  .footer-text2,
+  .footer-text3 {
+    padding: 5px;
   }
 }
 
 @media (max-width: 320px) {
-  .create-container p {
+  .create-container p,
+  .welcome-container p,
+  .verify-container p,
+  .fpassword-text p,
+  .check-email-text p,
+  .npassword-text p {
     font-size: 9px;
   }
-  .label-content a {
+  .label-content a,
+  .label-content1 a {
     font-size: 9px;
   }
   label {
@@ -191,5 +355,26 @@ input:focus-visible {
   input[type="checkbox"] {
     width: 9px;
     height: 9px;
+  }
+  .footer-text1,
+  .footer-text,
+  .footer-text2,
+  .footer-text3 {
+    font-size: 10px;
+  }
+  .otp-successful-text h2 {
+    font-size: 14px;
+  }
+  .otp-successful-text p {
+    font-size: 10px;
+  }
+  .otp-successful-logo {
+    font-size: 45px;
+  }
+
+  .otp-input,
+  .otp-input1 {
+    width: 25px !important;
+    height: 25px;
   }
 }

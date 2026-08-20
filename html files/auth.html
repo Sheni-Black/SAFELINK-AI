@@ -13,16 +13,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- This is the sign-up page section -->
     <div class="signup-container">
       <h3 class="logo-text">
-        <i
-          class="fa-solid fa-link fa-rotate-270 fa-lg"
-          style="color: rgb(16, 141, 241)"
-        ></i
-        >Safelink AI
+        <i class="fa-solid fa-link fa-rotate-360"></i> Safelink AI
       </h3>
       <div class="create-container">
         <h1>Create Your Account</h1>
@@ -38,15 +40,17 @@
       </div>
       <!-- Attention!!!!!! inspection of Form validation -->
       <!-- Javascript interactivity for different outline/border color of the input for peculiar circumstances like red outline/border for error etc -->
-      <form action="" method="post">
-        <label for="fname">Full Name*</label><br />
+      <form action="" method="post" class="signup-form">
+        <label for="fname">Full Name <span class="asterix">*</span></label
+        ><br />
         <input
           type="text"
           id="fname"
           name="fname"
-          placeholder="Enter your fu-ll name"
+          placeholder="Enter your full name"
         />
-        <label for="email">Email*</label><br />
+        <label for="email">Email <span class="asterix">*</span></label
+        ><br />
         <input
           type="email"
           id="email"
@@ -54,7 +58,7 @@
           placeholder="Enter your email address"
         />
         <div class="label-content">
-          <label for="password">Password*</label>
+          <label for="password">Password <span class="asterix">*</span></label>
           <a href="#">Forgot Password?</a>
         </div>
         <input
@@ -64,7 +68,9 @@
           placeholder="Enter password"
         />
         <div class="label-content">
-          <label for="cpassword" class="cpassword1">Confirm password*</label>
+          <label for="cpassword" class="cpassword1"
+            >Confirm password <span class="asterix">*</span>
+          </label>
           <a href="#">Forgot Password?</a>
         </div>
         <input
@@ -84,6 +90,185 @@
       <p class="footer-text">
         Already have an account? <span class="login-text">Log in</span>
       </p>
+    </div>
+    <!-- This is the sign-in page -->
+    <div class="signin-container">
+      <h3 class="logo-text1">
+        <i class="fa-solid fa-link fa-rotate-360"></i> Safelink AI
+      </h3>
+      <div class="welcome-container">
+        <h1>Welcome Back</h1>
+        <p>
+          Sign in to access your dashboard, scan history and saved security
+          reports
+        </p>
+      </div>
+      <div class="google-container1">
+        <h4>Continue with Google</h4>
+      </div>
+      <div class="divider1">
+        <hr />
+        <p>or continue with</p>
+        <hr />
+      </div>
+      <!-- Attention form validation!!!!!!!! Each page has a unique class name for the form element -->
+      <form action="" method="post" class="signin-form">
+        <label for="email1">Email <span class="asterix">*</span></label
+        ><br />
+        <input
+          type="email"
+          id="email1"
+          name="email1"
+          placeholder="Jondoe@gmail.com"
+        />
+        <div class="label-content1">
+          <label for="password1">Password <span class="asterix">*</span></label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <input
+          type="password"
+          id="password1"
+          name="password1"
+          placeholder="Enter password"
+        />
+        <!-- Button interactivity needed here -->
+        <button type="submit" class="signin-button">Login</button>
+      </form>
+      <p class="footer-text1">
+        Don't have an account? <span class="create-text">Create Account</span>
+      </p>
+    </div>
+    <!-- OTP feature page -->
+    <div class="otp-container">
+      <h3 class="logo-text2">
+        <i class="fa-solid fa-link fa-rotate-360"></i> Safelink AI
+      </h3>
+      <div class="verify-container">
+        <h1>Verify Your Email</h1>
+        <p>We've sent a 6-digit verification code to your email</p>
+        <div class="box-container">
+          <input type="text" maxlength="1" class="otp-input" />
+          <input type="text" maxlength="1" class="otp-input" />
+          <input type="text" maxlength="1" class="otp-input" />
+          <input type="text" maxlength="1" class="otp-input" />
+          <input type="text" maxlength="1" class="otp-input" />
+          <input type="text" maxlength="1" class="otp-input" />
+        </div>
+      </div>
+      <p class="footer-text2">
+        Didn"t receive the code? <span class="resend-text">Resend code</span>
+      </p>
+      <p class="footer-text2">
+        Resend Code in <span class="time"> 00:45 </span>
+      </p>
+      <!-- Button interactivity -->
+      <button type="submit" class="verify-button">Verify</button>
+    </div>
+    <!-- Successful account creation -->
+    <div class="otp-successful">
+      <div class="otp-successful-logo">
+        <i
+          class="fa-regular fa-circle-check"
+          style="color: rgb(31, 164, 125)"
+        ></i>
+      </div>
+      <div class="otp-successful-text">
+        <h2>Account Creation Successful</h2>
+        <p>Redirecting to Homepage</p>
+      </div>
+    </div>
+    <!-- forgot password feature -->
+    <div class="fpassword-container">
+      <h3 class="logo-text3">
+        <i class="fa-solid fa-link fa-rotate-360"></i> Safelink AI
+      </h3>
+      <div class="fpassword-text">
+        <h1>Forgot Password?</h1>
+        <p>
+          No worries. Enter the email address linked to your SafeLink account
+          and we'll send you a verification code
+        </p>
+      </div>
+      <!-- form validation -->
+      <form action="" method="post" class="fpassword-form">
+        <label for="email2">Email <span class="asterix">*</span></label
+        ><br />
+        <input
+          type="email"
+          id="email2"
+          name="email2"
+          placeholder="Jondoe@gmail.com"
+        />
+        <!-- Button interactivity needed here -->
+        <button type="submit" class="fpassword-button">
+          Send Verification Code
+        </button>
+      </form>
+    </div>
+    <!-- Check your email feature -->
+    <div class="check-email-container">
+      <h3 class="logo-text3">
+        <i class="fa-solid fa-link fa-rotate-360"></i> Safelink AI
+      </h3>
+      <div class="check-email-text">
+        <h1>Check Your Email</h1>
+        <p>
+          We've sent a 6-digit verification code to your email. Enter the code
+          below
+        </p>
+        <div class="box-container1">
+          <input type="text" maxlength="1" class="otp-input1" />
+          <input type="text" maxlength="1" class="otp-input1" />
+          <input type="text" maxlength="1" class="otp-input1" />
+          <input type="text" maxlength="1" class="otp-input1" />
+          <input type="text" maxlength="1" class="otp-input1" />
+          <input type="text" maxlength="1" class="otp-input1" />
+        </div>
+      </div>
+      <p class="footer-text3">
+        Didn"t receive the code? <span class="resend-text1">Resend code</span>
+      </p>
+      <p class="footer-text3">
+        Resend Code in <span class="time1"> 00:45 </span>
+      </p>
+      <!-- Button interactivity -->
+      <button type="submit" class="check-email-button">Verify</button>
+    </div>
+    <!-- create new password feature -->
+    <div class="npassword-container">
+      <h3 class="logo-text4">
+        <i class="fa-solid fa-link fa-rotate-360"></i> Safelink AI
+      </h3>
+      <div class="npassword-text">
+        <h1>Create New Password</h1>
+        <p>Choose a strong password you haven't used before</p>
+      </div>
+      <!-- form validation -->
+      <form action="" method="post" class="npassword-form">
+        <div class="label-content">
+          <label for="password2"
+            >New Password <span class="asterix">*</span></label
+          >
+        </div>
+        <input
+          type="password"
+          id="password2"
+          name="password2"
+          placeholder="Enter password"
+        />
+        <div class="label-content">
+          <label for="cpassword2"
+            >Confirm new password <span class="asterix">*</span>
+          </label>
+        </div>
+        <input
+          type="password"
+          id="cpassword2"
+          name="cpassword2"
+          placeholder="urban22@me"
+        />
+        <button type="submit" class="npassword-button">Reset Password</button>
+      </form>
     </div>
   </body>
 </html>
