@@ -177,5 +177,98 @@
         <p>Redirecting to Homepage</p>
       </div>
     </div>
+    <!-- forgot password feature -->
+    <div class="fpassword-container">
+      <h3 class="logo-text3">
+        <i class="fa-solid fa-link fa-rotate-360"></i> Safelink AI
+      </h3>
+      <div class="fpassword-text">
+        <h1>Forgot Password?</h1>
+        <p>
+          No worries. Enter the email address linked to your SafeLink account
+          and we'll send you a verification code
+        </p>
+      </div>
+      <!-- form validation -->
+      <form action="" method="post" class="fpassword-form">
+        <label for="email2">Email <span class="asterix">*</span></label
+        ><br />
+        <input
+          type="email"
+          id="email2"
+          name="email2"
+          placeholder="Jondoe@gmail.com"
+        />
+        <!-- Button interactivity needed here -->
+        <button type="submit" class="fpassword-button">
+          Send Verification Code
+        </button>
+      </form>
+    </div>
+    <!-- Check your email feature -->
+    <div class="check-email-container">
+      <h3 class="logo-text3">
+        <i class="fa-solid fa-link fa-rotate-360"></i> Safelink AI
+      </h3>
+      <div class="check-email-text">
+        <h1>Check Your Email</h1>
+        <p>
+          We've sent a 6-digit verification code to your email. Enter the code
+          below
+        </p>
+        <div class="box-container1">
+          <input type="text" maxlength="1" class="otp-input1" />
+          <input type="text" maxlength="1" class="otp-input1" />
+          <input type="text" maxlength="1" class="otp-input1" />
+          <input type="text" maxlength="1" class="otp-input1" />
+          <input type="text" maxlength="1" class="otp-input1" />
+          <input type="text" maxlength="1" class="otp-input1" />
+        </div>
+      </div>
+      <p class="footer-text3">
+        Didn"t receive the code? <span class="resend-text1">Resend code</span>
+      </p>
+      <p class="footer-text3">
+        Resend Code in <span class="time1"> 00:45 </span>
+      </p>
+      <!-- Button interactivity -->
+      <button type="submit" class="check-email-button">Verify</button>
+    </div>
+    <!-- create new password feature -->
+    <div class="npassword-container">
+      <h3 class="logo-text4">
+        <i class="fa-solid fa-link fa-rotate-360"></i> Safelink AI
+      </h3>
+      <div class="npassword-text">
+        <h1>Create New Password</h1>
+        <p>Choose a strong password you haven't used before</p>
+      </div>
+      <!-- form validation -->
+      <form action="" method="post" class="npassword-form">
+        <div class="label-content">
+          <label for="password2"
+            >New Password <span class="asterix">*</span></label
+          >
+        </div>
+        <input
+          type="password"
+          id="password2"
+          name="password2"
+          placeholder="Enter password"
+        />
+        <div class="label-content">
+          <label for="cpassword2"
+            >Confirm new password <span class="asterix">*</span>
+          </label>
+        </div>
+        <input
+          type="password"
+          id="cpassword2"
+          name="cpassword2"
+          placeholder="urban22@me"
+        />
+        <button type="submit" class="npassword-button">Reset Password</button>
+      </form>
+    </div>
   </body>
 </html>

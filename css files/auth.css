@@ -1,3 +1,5 @@
+/* Important note: Due to the uniformity of the designs, sections were styled together with each section defined by its unique class name for its styling features  */
+
 :root {
   --create-font: 600 24px / 1.5 Manrope, sans-serif;
   --logo-text-font: 17px;
@@ -18,24 +20,32 @@ body {
 .signup-container,
 .signin-container,
 .otp-container,
-.otp-successful {
+.otp-successful,
+.fpassword-container,
+.check-email-container,
+.npassword-container {
   width: 90%;
-  max-width: 550px;
-  padding: 20px;
+  max-width: 580px;
+  padding: 25px;
   background: white;
   margin: 45px 0 10px 0;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .logo-text,
 .logo-text1,
-.logo-text2 {
+.logo-text2,
+.logo-text3,
+.logo-text4 {
   text-align: var(--logo-text-position);
   padding: var(--logo-text-spacng);
   font-size: var(--logo-text-font);
 }
 .create-container p,
 .welcome-container p,
-.verify-container p {
+.verify-container p,
+.fpassword-text p,
+.check-email-text p,
+.npassword-text p {
   font-weight: 200;
   font-size: 14px;
 }
@@ -88,19 +98,25 @@ label {
 }
 .signup-button,
 .signin-button,
-.verify-button {
+.verify-button,
+.fpassword-button,
+.check-email-button,
+.npassword-button {
   padding: 7px;
   width: 100%;
   color: white;
   background: #a5b4fc;
   border: none;
   outline: none;
-  border-radius: 4px;
-  margin: 10px 0 5px 0;
+  border-radius: 10px;
+  margin: 20px 0 5px 0;
 }
 .signup-button:hover,
 .signin-button:hover,
-.verify-button:hover {
+.verify-button:hover,
+.fpassword-button:hover,
+.check-email-button:hover,
+.npassword-button:hover {
   background: #433aca;
 }
 .cpassword1 {
@@ -122,8 +138,7 @@ input {
   border: none;
   outline: none;
 }
-input:focus-visible,
-.otp-input:focus-visible {
+input:focus-visible {
   outline: 2px solid rgb(105, 105, 250);
 }
 .terms {
@@ -132,40 +147,53 @@ input:focus-visible,
 }
 .footer-text,
 .footer-text1,
-.footer-text2 {
+.footer-text2,
+.footer-text3 {
   text-align: center;
   font-size: 14px;
   font-weight: 500;
 }
 .login-text,
 .create-text,
-.resend-text {
+.resend-text,
+.resend-text1 {
   color: #6b7dd7;
 }
 
 /* Otp page styling rules */
-.verify-container {
-  text-align: center;
+.verify-container,
+.fpassword-text,
+.check-email-text,
+.npassword-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 10px 0;
 }
-.box-container {
+.box-container,
+.box-container1 {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
   margin: 40px 0 20px 0;
 }
-.otp-input {
-  width: 40px !important;
-  height: 40px;
+.otp-input,
+.otp-input1 {
+  width: 35px !important;
+  height: 35px;
   border: 1px solid rgb(190, 188, 188);
   border-radius: 10px;
   outline: none;
-  border: none;
   text-align: center;
+  /* padding: 10px; */
 }
-.footer-text2 {
+.footer-text2,
+.footer-text3 {
   padding: 10px;
 }
-.time {
+.time,
+.time1 {
   font-size: 15px;
   font-weight: 600;
 }
@@ -189,20 +217,35 @@ input:focus-visible,
   font-size: 12px;
 }
 
+/* forgot password styling rules */
+.fpassword-text p,
+.check-email-text p {
+  text-align: center;
+  padding: 5px 10px;
+}
+
 @media (max-width: 769px) {
   .create-container h1,
   .welcome-container h1,
-  .verify-container h1 {
+  .verify-container h1,
+  .fpassword-text h1,
+  .check-email-text h1,
+  .npassword-text h1 {
     font-size: 22px;
   }
   .create-container p,
   .welcome-container p,
-  .verify-container p {
+  .verify-container p,
+  .fpassword-text p,
+  .check-email-text p,
+  .npassword-text p {
     font-size: 12px;
   }
   .logo-text,
   .logo-text1,
-  .logo-text2 {
+  .logo-text2,
+  .logo-text3,
+  .logo-text4 {
     font-size: 14px;
   }
   .google-container h4,
@@ -214,7 +257,8 @@ input:focus-visible,
 @media (max-width: 450px) {
   .footer-text,
   .footer-text1,
-  .footer-text2 {
+  .footer-text2,
+  .footer-text3 {
     font-size: 12px;
   }
   .terms {
@@ -233,24 +277,36 @@ input:focus-visible,
 
   .signup-container,
   .signin-container,
-  .verify-container {
+  .otp-container,
+  .fpassword-container,
+  .check-email-container,
+  .npassword-container {
     padding: 10px;
   }
 
   .create-container h1,
   .welcome-container h1,
-  .verify-container h1 {
+  .verify-container h1,
+  .fpassword-text h1,
+  .otp-successful-text h2,
+  .check-email-text h1,
+  .npassword-text h1 {
     font-size: 17px;
   }
   .create-container p,
   .welcome-container p,
-  .verify-container p {
+  .verify-container p,
+  .fpassword-text p,
+  .check-email-text p,
+  .npassword-text p {
     font-size: 10px;
   }
 
   .logo-text,
   .logo-text1,
-  .logo-text2 {
+  .logo-text2,
+  .logo-text3,
+  .logo-text4 {
     font-size: 12px;
   }
   .divider,
@@ -259,15 +315,28 @@ input:focus-visible,
   }
   .footer-text,
   .footer-text1,
-  .footer-text2 {
+  .footer-text2,
+  .footer-text3 {
     padding: 0 0 5px 0;
+  }
+  .otp-input,
+  .otp-input1 {
+    width: 35px !important;
+    height: 35px;
+  }
+  .footer-text2,
+  .footer-text3 {
+    padding: 5px;
   }
 }
 
 @media (max-width: 320px) {
   .create-container p,
   .welcome-container p,
-  .verify-container p {
+  .verify-container p,
+  .fpassword-text p,
+  .check-email-text p,
+  .npassword-text p {
     font-size: 9px;
   }
   .label-content a,
@@ -289,7 +358,23 @@ input:focus-visible,
   }
   .footer-text1,
   .footer-text,
-  .footer-text2 {
+  .footer-text2,
+  .footer-text3 {
     font-size: 10px;
+  }
+  .otp-successful-text h2 {
+    font-size: 14px;
+  }
+  .otp-successful-text p {
+    font-size: 10px;
+  }
+  .otp-successful-logo {
+    font-size: 45px;
+  }
+
+  .otp-input,
+  .otp-input1 {
+    width: 25px !important;
+    height: 25px;
   }
 }
