@@ -9,4 +9,4 @@ hamburgerMenu.addEventListener("click", ()=> {
 closeAside.addEventListener("click", () =>{
     hamburgerMenu.style.display = "block"
     aside.classList.remove("aside-show")
-})
+});
