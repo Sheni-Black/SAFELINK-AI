@@ -260,6 +260,98 @@ nav > span:first-child{
         overflow: hidden;
     }
 
+    /* Styles for the saved websites page */
+
+    .saved-websites-main{
+        margin-top: 3rem;
+        margin-inline: 1rem;
+        margin-bottom: 1rem;
+        padding-block: 1rem;
+        padding-inline: 1rem;
+        border-radius: 1rem;
+        background-color: #fff;
+    }
+
+    .website-type-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .website-type{
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .website-type p{
+        border: 2px solid rgba(0, 0, 0, 0.7);
+        padding: 0.5rem;
+        border-radius: 0.7rem;
+        font-size: var(--p-color);
+    }
+
+    .website-type-container input{
+        width: 20rem;
+        height: 2.5rem;
+        border-radius: 0.5rem;
+        font-size: var(--p-font-size);
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        padding-left: 1rem;
+    }
+    .saved-websites{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 2px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .saved-websites span{
+        overflow: hidden;
+    }
+
+    .visit-saved-website-container > span{
+        color: #6366F1;
+    }
+
+    .saved-websites a{
+        text-decoration: none;
+        color: black;
+        font-size: var(--p-font-size);
+    }
+
+    .saved-websites a:nth-child(2){
+        color: var(--p-color);
+    }
+
+    .each-saved-websites span{
+        background-color: #EEF2FF;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+    }
+
+    .each-saved-websites{
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .visit-saved-website-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-block: 1rem;
+    }
+
+    .visit-saved-website{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+
+
     @media (max-width: 767px){
     /* for the scan website main */
     .filter-search{
@@ -326,6 +418,15 @@ nav > span:first-child{
 
     .close{
         display: block;
+    }
+
+     /* saved websites */
+
+     .website-type-container{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        border: var(--border);
     }
 }
 
