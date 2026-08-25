@@ -1,0 +1,387 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: Manrope, sans-serif;
+  margin: 0;
+  background: #eaeaec;
+}
+.nav-container {
+  margin-bottom: 35px;
+}
+main {
+  background: white;
+  width: 95%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+/* web safety score first section */
+.wsafety-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.wsafety-range-container {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left: 5px;
+}
+.wsafety-range {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.wsafety-range::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 10px solid #059665;
+  /* This removes only a small custom section instead of a full 90-degree border side */
+  mask: conic-gradient(from 0deg, transparent 0deg 36deg, #fff 37deg 360deg);
+  -webkit-mask: conic-gradient(
+    from 320deg,
+    transparent 0deg 36deg,
+    #fff 37deg 360deg
+  );
+}
+.wsafety-range-score {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+strong {
+  font-size: 20px;
+}
+.wsafety-range-score small {
+  font-size: 10px;
+}
+.wsafety-range-container button {
+  padding: 4px 8px 5px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #d1fae5;
+  font-weight: 600;
+  color: rgb(63, 63, 63);
+}
+.wsafety-text {
+  max-width: 1150px;
+}
+.wsafety-text p,
+.wsafety-links {
+  padding: 10px;
+}
+.wsafety-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 500px;
+}
+.wsafety-links button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 25px;
+  gap: 5px;
+  border-radius: 10px;
+  border: none;
+  background: #4f46e5;
+}
+.wsafety-links button a {
+  text-decoration: none;
+  color: rgb(251, 249, 249);
+  font-size: 16px;
+}
+.wsafety-links a {
+  text-decoration: none;
+  color: rgb(13, 13, 13);
+  font-size: 16px;
+  display: inline-block;
+}
+.wsafety-links i {
+  font-size: 20px;
+}
+/* web safety score second section */
+.region-container,
+.wdetails-container {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid rgb(241, 240, 240);
+  border-radius: 10px;
+}
+.region-texts {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  flex: 1;
+}
+.rt-child {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.rt-child p {
+  padding: 10px 0;
+}
+.rurl a,
+.rdomain a,
+.r-ip-address strong {
+  font-size: 17px;
+}
+.rurl a {
+  color: #4f46e5;
+}
+.rdomain a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+.upgrade-container {
+  flex: 3;
+  padding: 10px 20px 0;
+}
+.country-option {
+  background: #f3f4f6;
+  padding: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.country-option p {
+  font-size: 12px;
+}
+.country-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.country-container button {
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: black;
+  color: white;
+  font-size: 12px;
+}
+.country-toggle {
+  width: 250px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.chevron-icon {
+  padding-top: 8px;
+  font-size: 12px;
+}
+.check-icon i {
+  font-size: 14px;
+}
+.country-text {
+  margin-left: 2px;
+  font-size: 15px;
+}
+.continue-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.xmark {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+}
+.upgrade-devices {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px;
+  align-items: center;
+  max-width: 920px;
+  margin-left: 40px;
+}
+.ucontent {
+  font-size: 12px;
+}
+.umessage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f3f4f6;
+  padding: 60px 30px;
+}
+.umessage-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.umessage-container button {
+  padding: 10px;
+  border-radius: 20px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  margin-top: 5px;
+}
+.umessage-text i {
+  font-size: 40px;
+}
+.um1 {
+  padding: 4px;
+}
+.wdetails-text {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.wdetails-text span {
+  font-size: 12px;
+  padding: 3px 0;
+}
+.green {
+  color: #059665;
+}
+.indicator-container {
+  display: grid;
+  grid-column: 1fr 1fr;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+}
+.p-indicator {
+  display: grid;
+  grid-column: 1;
+  padding: 20px;
+}
+.r-indicator {
+  display: grid;
+  grid-column: 2;
+  color: red;
+  justify-self: start;
+  padding: 20px;
+}
+.pindicator-content {
+  border: 2px solid rgb(241, 240, 240);
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 650px;
+}
+.pi-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.pi-text1,
+.ctrust-text {
+  display: flex;
+  gap: 2px;
+}
+.pi-text1 i {
+  font-size: 12px;
+}
+.pi-text2 {
+  display: flex;
+  flex-direction: column;
+}
+.pi-text2 p,
+.rindicator-content p {
+  font-size: 10px;
+}
+.pi-text button {
+  padding: 6px 8px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #d1fae5;
+  font-weight: 600;
+  color: rgb(63, 63, 63);
+  font-size: 8px;
+}
+
+.rindicator-content {
+  border: 2px solid rgb(241, 240, 240);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ctrust-container {
+  border: 2px solid rgb(241, 240, 240);
+  border-radius: 10px;
+}
+.ctrust-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.ctrust-text1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.ctrust-text1 span {
+  font-size: 10px;
+}
+/* footer section uses some of the styles from the global css and also extra styles used in this stylesheet */
+
+footer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px 60px;
+}
+.footer-logo-content {
+  padding: 20px 20px 0;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.product-content,
+.company-content,
+.legal-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.footer-content p {
+  padding: 5px 0;
+  font-size: 15px;
+}
+.footer-content h3 {
+  padding: 0 0 10px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  padding-right: 50px;
+}
+.flc1 {
+  display: flex;
+  gap: 10px;
+}
+.footer-logo-content p {
+  padding: 20px 10px 0;
+  font-size: 15px;
+}
