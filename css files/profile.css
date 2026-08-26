@@ -1,0 +1,186 @@
+/* Profile */
+
+:root{
+    --border: 1px solid black;
+    --default-purple-color : rgb(79, 70, 229);
+    --radial-background: radial-gradient(circle at top left, #AAB8FC 0%, transparent 30%),
+        radial-gradient( circle at bottom right, #b6c0f0 0%, transparent 15%),
+        #F7F7F7;
+    --h1-font-size: clamp(1rem, calc(1vw + 1.5rem), 3rem); 
+    --p-font-size: clamp(0.8rem, calc(1vw + 0.2rem), 1.7rem);
+    --p-color: rgba(0, 0, 0, 0.7);
+    --h4-font-size: 1.2rem;
+    --light-font-weight: 400;
+    --heavy-font-weight: 600;
+}
+
+    .profile-main{
+        margin-inline: 1rem;
+    }
+
+    .profile-main > header{
+        margin-inline: 0.5rem;
+        text-align: left;
+    }
+
+    .profile-main-header h1{
+        font-size: var(--h1-font-size);
+    }
+
+    .profile-main-header > p{
+        font-size: var(--p-font-size);
+        color: var(--p-color);
+    }
+
+    .profile-display{
+        display: flex;
+        margin-inline: 0.5rem;
+        gap: 3rem;
+        align-items: center;
+        margin-top: 2rem;
+        padding: 0.5rem;
+        background-color: #fff;
+        border-radius: 1rem;
+    }
+
+    .profile-display > div:first-child{
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        padding: 2rem;
+        border-radius: 50%;
+    }
+
+    .profile-display div:first-child span{
+        overflow: hidden;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 3rem;
+    }
+
+    .profile-display div:last-child h2{
+        font-size: clamp(1rem, calc(1vw + 1rem), 2rem); ;
+    }
+
+    .profile-display  div:last-child  p:not(.verified-reporter){
+        font-size: var(--p-font-size);
+        color: var(--p-color);
+    }
+
+    .profile-display-content{
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .profile-display-content div{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .verified-reporter{
+        border: var(--border);
+        padding: 0.5rem;
+        color: #16A34A;
+        border-color: #16A34A;
+        background-color: #E9FBF0;
+        border-radius: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .details-container{
+        padding-inline: 0.5rem;
+        padding-block: 1rem;
+        margin-top: 3rem;
+        background-color: #fff;
+        border-radius: 1rem;
+    }
+
+    .details{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .details-container label{
+        display: block;
+        font-size: var(--p-font-size);
+        color: var(--p-color);
+        width: 100%;
+    }
+
+    .details input{
+        height: 2.5rem;
+        font-size: var(--p-font-size);
+        width: 100%;
+        margin-top: 0.5rem;
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        padding-inline: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .details-container label:last-of-type{
+        margin-top: 2rem;
+    }
+
+    .details-container textarea{
+        width: 100%;
+        min-height: 30vh;
+        padding-inline: 0.5rem;
+        font-size: var(--p-font-size);
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        border-radius: 0.5rem;
+    }
+
+    .details-button{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+
+    .details-button button:first-child{
+        background-color: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    .details-button button:nth-child(2){
+        background-color: var(--default-purple-color);
+        padding: 1rem;
+        color: #fff;
+        border: none;
+        border-radius: 0.5rem;
+    }
+
+@media (max-width: 767px){
+    .profile-main{
+        margin-inline: 0.3rem;
+    }
+
+    .profile-display{
+        gap: 1rem;
+    }
+
+    .profile-display-content div{
+        display: flex;
+        align-items: center;
+        gap: 0;
+    }
+
+    .profile-display-content div *{
+        border: var(--border);
+    }
+}
+
+/* For both mobile and tablets */
+
+@media (min-width: 0px) and (max-width: 1023px) {
+
+}
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+

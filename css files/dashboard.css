@@ -1,0 +1,200 @@
+/* nav for the dashboard */
+:root{
+    --border: 1px solid black;
+    --default-purple-color : rgb(79, 70, 229);
+    --radial-background: radial-gradient(circle at top left, #AAB8FC 0%, transparent 30%),
+        radial-gradient( circle at bottom right, #b6c0f0 0%, transparent 15%),
+        #F7F7F7;
+    --h1-font-size: clamp(1rem, calc(1vw + 1.5rem), 3rem); 
+    --p-font-size: clamp(0.8rem, calc(1vw + 0.2rem), 1.7rem);
+    --p-color: rgba(0, 0, 0, 0.7);
+}
+
+body{
+    background-color: #EBEBEB;
+}
+
+/* the nav or aside starts here */
+
+.total-container{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+}
+
+aside{
+    background-color: #111827;
+    color: #fff;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1rem;
+    min-height: 100vh;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+aside > div{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+aside div:not(:first-child){
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: var(--p-font-size);
+}
+
+aside div:not(:first-child):hover{
+    background-color: var(--default-purple-color);
+    cursor: pointer;
+}
+
+ aside div span{
+    overflow: hidden;
+ }
+
+
+.dashboard-logo{
+    gap: 0.5rem;
+    padding-left: 0.5rem;
+    margin-top: 1rem;
+}
+
+.dashboard-logo h4{
+    font-weight: 400;
+}
+
+.dashboard-logo i{
+    font-size: 0.7rem;
+    padding-right: 1rem;
+    padding-left: 0.1rem;
+    border-radius: 0.1rem;
+}
+
+hr{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.dashboard-logo .close{
+    margin-left: auto;
+    display: none;
+}
+
+.close:hover{
+    cursor: pointer;
+}
+
+main{
+    height: 100%;
+    min-width: 80%;
+}
+
+nav{
+    width: 100%;
+    padding-block: 0.5rem;
+    background-color: #fff;
+}
+
+nav span{
+    overflow: hidden;
+}
+
+nav span:hover{
+    cursor: pointer;
+}
+
+nav > span:first-child{
+    display: none;
+}
+
+.profile-picture{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.profile-details-container{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 0.5rem;
+}
+
+.profile-details-container div{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+@media (max-width: 767px){
+
+    
+}
+
+/* For both mobile and tablets */
+
+@media (min-width: 0px) and (max-width: 1023px) {
+    .dashboard-logo .close{
+        display: block;
+    }
+
+    aside{
+        min-width: 45%;
+        position: absolute;
+        transform: translateX(-30rem);
+        overflow: hidden;
+        transition: all 0.5s ease-in;
+    }
+
+    .aside-show{
+        transform: translateX(0);
+        transition: all 0.3s linear;
+    }
+
+    main{
+        height: 100%;
+        min-width: 100%;
+    }
+
+    nav{
+        padding-inline: 0.3rem;
+        gap: 0.5rem;
+    }
+
+    nav h4{
+        font-size: 0.8rem;
+    }
+
+    nav > span:first-child{
+        display: block;
+    }
+
+    .close{
+        display: block;
+    }
+
+     /* saved websites */
+
+     .website-type-container{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        border: var(--border);
+    }
+
+    .details{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    aside{
+        min-width: 30%
+    }
+}

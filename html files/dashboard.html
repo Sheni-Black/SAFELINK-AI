@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css files/global.css">
+    <link rel="stylesheet" href="../css files/dashboard.css">
+    <link rel="stylesheet" href="../css files/community.css">
+    <link rel="stylesheet" href="../css files/scan-history.css">
+    <link rel="stylesheet" href="../css files/saved-websites.css">
+    <link rel="stylesheet" href="../css files/profile.css">
+    <link rel="stylesheet" href="../css files/learning.css">
+    <link rel="stylesheet" href="../css files/community.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+    <div class="total-container">
+        <aside class="dashboard-nav">
+            <div class="dashboard-logo">
+                <i class="fa-solid fa-link fa-rotate-360"></i><h4>SafelinkAI</h4>
+                <span class="material-symbols-outlined close">close_small</span>
+            </div>
+            <div>
+                <span class="material-symbols-outlined">grid_view</span> <p>Dashboard</p>
+            </div>
+            <div>
+                <span class="material-symbols-outlined">search</span>Scan hsitory
+            </div>
+            <div>
+                <span class="material-symbols-outlined">bookmark</span> <p>Saved Websites</p>
+            </div>
+            <div>
+                <span class="material-symbols-outlined">group</span> <p>Community</p>
+            </div>
+            <div>
+                <span class="material-symbols-outlined">mode_comment</span> <p>Ai Assistance</p>
+            </div>
+            <div>
+                <span class="material-symbols-outlined">Book_Ribbon</span> <p>Learning Center</p>
+            </div>
+            <hr>
+            <div>
+                <span class="material-symbols-outlined">account_circle</span> <p>Profile</p>
+            </div>
+            <div>
+                <span class="material-symbols-outlined">settings</span> <p>Settings</p>
+            </div>
+        </aside>
+        <main class="dashboard-main">
+            <nav class="nav">
+                <span class="material-symbols-outlined hamburger-menu">dehaze</span>
+                <h4>Scan Histsory</h4>
+                <div class="profile-details-container">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <div class="profile-details">
+                        <div class="profile-picture"><img src="../Images folder\ChatGPT Image Aug 20, 2026, 04_55_29 PM.png" alt="profile-picture"></div>
+                        <h4>Olatunde Olushola</h4>
+                        <span class="material-symbols-outlined">stat_minus_1</span>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- This is for the scan history -->
+            <div class="scan-history-main">
+                <div class="filter-search">
+                    <div class="filter">
+                        <div>
+                            <span class="material-symbols-outlined">filter_alt</span> 
+                            <select name="filter" id="filter">
+                                <option value="no-filter">Filter</option>
+                                <option value="dangerous">Dangerous</option>
+                                <option value="suspicious">Suspicious</option>
+                                <option value="low">Low</option>
+                            </select>
+                        </div>
+                        <p>No filters applied</p>
+                    </div>
+                    <div class="search"><input type="text" placeholder="Search"></div>
+                </div>
+                <div class="scan-heading">
+                    <p>Website</p>
+                    <p>Date</p>
+                    <p>Risk level</p>
+                    <p>Action</p>
+                </div>
+                <div class="scanned-websites-container">
+                    <div class="scanned-website">
+                        <div>
+                            <i class="fa-solid fa-link fa-rotate-360"></i>
+                            <a href="">www.apple.com</a>
+                        </div>
+                        <div>
+                            <p>Jan 23, 2026</p>
+                            <p>11:10AM</p>
+                        </div>
+                        <p>Safe</p>
+                        <div>
+                            <p>View Report</p>
+                            <span class="material-symbols-outlined">arrow_right_alt</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="scanned-websites-container">
+                    <div class="scanned-website">
+                        <div>
+                            <i class="fa-solid fa-link fa-rotate-360"></i>
+                            <a href="">www.apple.com</a>
+                        </div>
+                        <div>
+                            <p>Jan 23, 2026</p>
+                            <p>11:10AM</p>
+                        </div>
+                        <p>Safe</p>
+                        <div>
+                            <p>View Report</p>
+                            <span class="material-symbols-outlined">arrow_right_alt</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="scanned-websites-container">
+                    <div class="scanned-website">
+                        <div>
+                            <i class="fa-solid fa-link fa-rotate-360"></i>
+                            <a href="">www.apple.com</a>
+                        </div>
+                        <div>
+                            <p>Jan 23, 2026</p>
+                            <p>11:10AM</p>
+                        </div>
+                        <p>Safe</p>
+                        <div>
+                            <p>View Report</p>
+                            <span class="material-symbols-outlined">arrow_right_alt</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="scanned-websites-container">
+                    <div class="scanned-website">
+                        <div>
+                            <i class="fa-solid fa-link fa-rotate-360"></i>
+                            <a href="">www.apple.com</a>
+                        </div>
+                        <div>
+                            <p>Jan 23, 2026</p>
+                            <p>11:10AM</p>
+                        </div>
+                        <p>Safe</p>
+                        <div>
+                            <p>View Report</p>
+                            <span class="material-symbols-outlined">arrow_right_alt</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- This is for saved websites -->
+            <div class="saved-websites-main">
+                <div>
+                    <div class="website-type-container">
+                        <div class="website-type">
+                            <p>All</p>
+                            <p>Banking</p>
+                            <p>Shopping</p>
+                            <p>Healthcare</p>
+                            <p>Education</p>
+                            <p>Technology</p>
+                        </div>
+                        <div class="search-website"><input type="text" placeholder="Search"></div>
+                    </div>
+                    <div class="saved-websites">
+                        <div class="each-saved-websites">
+                            <span class="material-symbols-outlined">captive_portal</span>
+                            <div>
+                                <h4>apple.com</h4>
+                                <a href="">https://www.apple.com</a>
+                            </div>
+                        </div>
+                        <div class="visit-saved-website-container">
+                            <div class="visit-saved-website">
+                                <a href="">Visit Website</a>
+                                <span class="material-symbols-outlined">open_in_new</span>
+                            </div>
+                            <span class="material-symbols-outlined">bookmark</span>
+                        </div>
+                    </div>
+                    <div class="saved-websites">
+                        <div class="each-saved-websites">
+                            <span class="material-symbols-outlined">captive_portal</span>
+                            <div>
+                                <h4>apple.com</h4>
+                                <a href="">https://www.apple.com</a>
+                            </div>
+                        </div>
+                        <div class="visit-saved-website-container">
+                            <div class="visit-saved-website">
+                                <a href="">Visit Website</a>
+                                <span class="material-symbols-outlined">open_in_new</span>
+                            </div>
+                            <span class="material-symbols-outlined">bookmark</span>
+                        </div>
+                    </div>
+                    <div class="saved-websites">
+                        <div class="each-saved-websites">
+                            <span class="material-symbols-outlined">captive_portal</span>
+                            <div>
+                                <h4>apple.com</h4>
+                                <a href="">https://www.apple.com</a>
+                            </div>
+                        </div>
+                        <div class="visit-saved-website-container">
+                            <div class="visit-saved-website">
+                                <a href="">Visit Website</a>
+                                <span class="material-symbols-outlined">open_in_new</span>
+                            </div>
+                            <span class="material-symbols-outlined website-bookmark">bookmark</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- This is for community -->
+            <header>
+                <div class="header-content">
+                    <h4>Community</h4>
+                    <h1>Threats reported by people like you</h1>
+                    <p>Every report strengthens the AI. Browse what's spreading right now, flag a dangerous site and <br class="and-break"> follow what happens to your submissions.</p>
+                </div>
+                <div class="total-reports">
+                    <div  class="total-reports-content">
+                        <span class="material-symbols-outlined">person_alert</span>
+                        <div>
+                            <h1>3,491</h1>
+                            <p>Reports this week</p>
+                        </div>
+                    </div>
+                    <div class="total-reports-content">
+                        <span class="material-symbols-outlined">fire_check</span>
+                        <div>
+                            <h1>812</h1>
+                            <p>Domains blocked</p>
+                        </div>
+                    </div>
+                    <div class="total-reports-content">
+                        <span class="material-symbols-outlined">nest_clock_farsight_analog</span>
+                        <div>
+                            <h1>7h 20m</h1>
+                            <p>Avg. review time</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="main-nav">
+                    <button>Trending threats</button>
+                    <button>Report a Website</button>
+                    <button>My Reports</button>
+                </div>
+                <div class="trending-info-container">
+                    <div class="trending-contianer">
+                        <div class="trending-search">
+                            <input type="text" placeholder=" Search reported domains">
+                            <select name="trend-select" id="trend">
+                                <option value="placeholder">All threat Categotries</option>
+                                <option value="dangerous">Dangerous</option>
+                                <option value="suspicious">Suspicious</option>
+                                <option value="low">Low</option>
+                            </select>
+                        </div>
+                        <div class="trending-content-container">
+                            <div class="site-details-container">
+                                <div class="site">
+                                    <h2>01</h2>
+                                    <div class="site-name">
+                                        <h2>secure-standardband-verify.co</h2> 
+                                        <p>Dangerous</p>
+                                    </div>
+                                    <div class="view-report">
+                                        <p>View report</p>
+                                        <span class="material-symbols-outlined">arrow_outward</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Clone of a bank login page harvesting card pins. Domain registered 6 days ago behind hidden ownership.</p>
+                            <div class="site-info">
+                                <p>Fake banking website</p>
+                                <div><span class="material-symbols-outlined">thumb_up</span><p>1,260 reports</p></div>
+                                <div><span class="material-symbols-outlined">trending_up</span><p>+312% this week</p></div>
+                                <p>2h ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="report-website-info-container">
+                    <div class="web-url">
+                        <label for="url">Website URL</label><span>*</span>
+                        <input id="url" type="text" required placeholder="https://suspicious-site.com">
+                    </div>
+                    <div class="threat-level">
+                        <label for="match">Threat Category</label><span>*</span>
+                        <select name="" id="match">
+                            <option value="closest-match">Choose the closet match</option>
+                            <option value="dangerous-match">Dangerous</option>
+                            <option value="suspicious-match">Suspicious</option>
+                            <option value="low-match">low</option>
+                        </select>
+                    </div>
+                    <div class="web-description">
+                        <label for="description">What happend</label><span>*</span>
+                        <textarea name="description" id="description" required placeholder="Describe how you found the site and what it asked you to do."></textarea>
+                    </div>
+                    <div class="image-drop-container">
+                        <p>Screenshot or evidence <span>*</span></p>
+                        <div class="image-drop">
+                            <span class="material-symbols-outlined">upload</span>
+                            <label for="image-upload">Drop a screenshot or click to upload<span>*</span></label>
+                            <label for="image-upload">PNG,JPEG,PDF up to 10mb</label>
+                            <input type="file" id="image-upload" accept="image/*">
+                        </div>
+                    </div>
+                </div>
+                <div class="my-reports-container">
+                    <h2>01</h2>
+                    <div class="my-reports-content">
+                        <h2>secure-standardband-verify.co</h2>
+                        <div class="my-reports-reason">
+                            <p>Phising Submitted<span>.</span>Submitted 12 jul 2026<span>.</span>48 community confirmation</p>
+                            <p>Verified</p>
+                        </div>
+                        <h2>Added to the global blocklist</h2>
+                    </div>
+                </div>
+            </main>
+
+            <!-- this is for learning -->
+              <header>
+        <div class="header-content">
+            <h4>Learn</h4>
+            <h1>Threats reported by people like you</h1>
+            <p>Short lessons built around the scams people actually hit. Pick a track, test yourself, and earn a certificate.</p>
+        </div>
+        <div class="total-lessons">
+            <div  class="total-lessons-content">
+                <span class="material-symbols-outlined">book_ribbon</span>
+                <div>
+                    <h1>23</h1>
+                    <p>Lessons completed</p>
+                </div>
+            </div>
+             <div class="total-lessons-content">
+                <span class="material-symbols-outlined">assignment</span>
+                <div>
+                    <h1>83%</h1>
+                    <p>Quiz average</p>
+                </div>
+            </div>
+             <div class="total-lessons-content">
+                <span class="material-symbols-outlined">play_circle</span>
+                <div>
+                    <h1>7h 20m</h1>
+                    <p>Watch time</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="view-all-tutorials">
+            <h4>Tutorials</h4>
+            <p>View all</p>
+        </div>
+        <div class="current-lesson-container">
+            <p>Continue</p>
+            <div>
+                <p>Compare a real domain with a lookalike</p>
+                <button>Resume lesson</button>
+            </div>
+            <p>Interactive lesson. Step 4 of 6</p>
+            <div class="lesson-progress-bar">
+                <div></div>
+            </div>
+        </div>
+       <div class="other-lessons-container">
+            <div class="other-lessons">
+                <div class="each-lesson">
+                    <div class="lesson-status">
+                        <span class="material-symbols-outlined">play_circle</span>
+                        <p>Completed</p>
+                    </div>
+                    <div class="lesson-task">
+                        <h4>Scan your first website with safelink</h4>
+                        <p>Safe browsing Video</p>
+                    </div>
+                <div class="lesson-time">
+                    <div>
+                        <span class="material-symbols-outlined">nest_clock_farsight_analog</span>
+                        <p>4 min.5 steps</p>
+                    </div>
+                    <button>Review</button>
+                </div>
+            </div>
+        </div>
+            <div class="other-lessons">
+                <div class="each-lesson">
+                    <div class="lesson-status">
+                        <span class="material-symbols-outlined">play_circle</span>
+                        <p>Completed</p>
+                    </div>
+                    <div class="lesson-task">
+                        <h4>Scan your first website with safelink</h4>
+                        <p>Safe browsing Video</p>
+                    </div>
+                    <div class="lesson-time">
+                        <div>
+                            <span class="material-symbols-outlined">nest_clock_farsight_analog</span>
+                            <p>4 min.5 steps</p>
+                        </div>
+                        <button>Review</button>
+                    </div>
+                </div>
+             </div>
+        </div>
+            <div>
+                <div class="view-all-articles">
+                <h4>Articles</h4>
+                <p>View all</p>
+            </div>
+            <div class="article-container">
+                <div class="each-article">
+                    <h4>How to read a phishing email in 20 seconds</h4>
+                    <div>
+                        <p>Four checks - sender domain, greeting, <br> urgency and link preview - catch most <br> phising attempts before you click.</p>
+                        <button>Read</button>
+                    </div>
+                    <p>Phishing.Beginner.5min read</p>
+                </div>
+                <div class="each-article">
+                    <h4>How to read a phishing email in 20 seconds</h4>
+                    <div>
+                        <p>Four checks - sender domain, greeting, <br> urgency and link preview - catch most <br> phising attempts before you click.</p>
+                        <button>Read</button>
+                    </div>
+                    <p>Phishing.Beginner.5min read</p>
+                </div>
+                <div class="each-article">
+                    <h4>How to read a phishing email in 20 seconds</h4>
+                    <div>
+                        <p>Four checks - sender domain, greeting, <br> urgency and link preview - catch most <br> phising attempts before you click.</p>
+                        <button>Read</button>
+                    </div>
+                    <p>Phishing.Beginner.5min read</p>
+                </div>
+            </div>
+        </div>
+            <div>
+                <div class="view-all-quiz">
+                <h4>Quiz</h4>
+                <p>View all</p>
+            </div>
+            <div class="quiz-container">
+                <div class="each-quiz">
+                    <div class="quiz-name">
+                        <h4>Spot the Phish</h4> 
+                        <p>Best 90%</p>
+                    </div>
+                    <div class="quiz-content-container">
+                        <div class="quiz-content">
+                            <p>Phishing</p>
+                            <div><span class="material-symbols-outlined">mode_comment</span> <p>8 questions</p></div>
+                            <div><span class="material-symbols-outlined">nest_clock_farsight_analog</span> <p>4mins</p></div>
+                        </div>
+                        <button>Retake</button>
+                    </div>
+                    <div class="quiz-progress-bar">
+                        <div></div>
+                    </div>
+                </div>
+                <div class="each-quiz">
+                    <div class="quiz-name">
+                        <h4>Spot the Phish</h4> 
+                        <p>Best 90%</p>
+                    </div>
+                    <div class="quiz-content-container">
+                        <div class="quiz-content">
+                            <p>Phishing</p>
+                            <div><span class="material-symbols-outlined">mode_comment</span> <p>8 questions</p></div>
+                            <div><span class="material-symbols-outlined">nest_clock_farsight_analog</span> <p>4mins</p></div>
+                        </div>
+                        <button>Retake</button>
+                    </div>
+                    <div class="quiz-progress-bar">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="view-all-certificates">
+                <h4>Certificates</h4>
+                <p>View all</p>
+            </div>
+           <div class="certificates">
+                <div class="certificates-container">
+                    <div class="each-certificate">
+                        <div><span class="material-symbols-outlined">editor_choice</span><p>Issued</p></div>
+                    </div>
+                    <div class="certs-content">
+                        <h4>Phishing awareness essentials</h4>
+                        <p>8 lessons + 80% quiz score</p>
+                        <p>SL-PHI-2026-4821.Issued 18 Jun 2026</p>
+                    </div>
+                    <div>
+                        <div class="get-pdf">
+                            <div>
+                                <span class="material-symbols-outlined">download</span>
+                                <p>Download PDF</p>
+                            </div>
+                            <div>
+                                <span class="material-symbols-outlined">share</span>
+                                <p>Share</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="certificates-container">
+                <div class="each-certificate">
+                    <div><span class="material-symbols-outlined">editor_choice</span><p>Issued</p></div>
+                </div>
+                <div class="certs-content">
+                    <h4>Phishing awareness essentials</h4>
+                    <p>8 lessons + 80% quiz score</p>
+                    <p>SL-PHI-2026-4821.Issued 18 Jun 2026</p>
+                </div>
+                <div>
+                    <div class="get-pdf">
+                        <div>
+                            <span class="material-symbols-outlined">download</span>
+                            <p>Download PDF</p>
+                        </div>
+                        <div>
+                            <span class="material-symbols-outlined">share</span>
+                            <p>Share</p>
+                        </div>
+                    </div>
+                </div>
+           </div>
+    </main>
+            
+            <!-- profile starts here -->
+            <div class="profile-main">
+                <header class="profile-main-header">
+                    <h1>Profile</h1>
+                    <p>This is how you appear on community reports and in you security summaries</p>
+                </header>
+                <div class="profile-display">
+                    <div>
+                        <span class="material-symbols-outlined">photo_camera</span>
+                    </div>
+                    <div class="profile-display-content-container">
+                        <div class="profile-display-content">
+                            <div><h2>Olatunde Olushola</h2> <p class="verified-reporter">Verified reporter</p></div>
+                            <p>rotimi.m@example.com . Member since March 2025</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <div class="details">
+                        <div>
+                            <label for="full-name">Full name</label>
+                            <input type="text" id="full-name" placeholder="Olusola Olatunde">
+                        </div>
+                        <div>
+                            <label for="display-name">Display name</label>
+                            <input type="text" id="display-name" placeholder="rotimi">
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="maiami@gmail.com">
+                        </div>
+                        <div>
+                            <label for="country">Country</label>
+                            <input type="text" placeholder="Nigeria" id="country" >
+                        </div>
+                    </div>
+                    <label for="bio">Bio</label>
+                    <textarea name="bio" id="bio"></textarea>
+                    <div class="details-button">
+                        <button>Cancel</button>
+                        <button>Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="../Js files/dashboard.js"></script>
+</body>
+</html>
