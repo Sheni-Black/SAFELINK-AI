@@ -100,6 +100,7 @@ header{
     padding-inline: 1rem;
     padding-block: 0.5rem;
     border-radius: 1rem;
+    margin-bottom: 2rem;
 
  }
 
@@ -125,6 +126,7 @@ header{
  }
 
  /* the start of the trending container */
+ 
  .trending-search{
     margin-top: 2rem;
     display: flex;
@@ -406,6 +408,22 @@ header{
         font-weight: 600;
         border-color: #16A34A;
    }
+
+   /* for javascript */
+   .display-container{
+    display: block;
+   }
+   
+   .trending-info-container, 
+   .report-website-info-container, 
+   .my-reports-container{
+    display: none;
+ }
+
+ .active {
+    background-color: rgb(79, 70, 229);
+    color: white;
+}
 
 
 @media (max-width: 767px){

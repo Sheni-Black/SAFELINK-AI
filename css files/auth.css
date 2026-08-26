@@ -217,12 +217,44 @@ input:focus-visible {
   font-size: 12px;
 }
 
+/* for the error */
+.input-error{
+  color: red;
+}
+
 /* forgot password styling rules */
 .fpassword-text p,
 .check-email-text p {
   text-align: center;
   padding: 5px 10px;
 }
+
+/* for js */
+.signin-container,
+.otp-container,
+.otp-successful,
+.fpassword-container,
+.check-email-container,
+.npassword-container {
+    display: none;
+}
+
+.signup-button:disabled,
+.signin-button:disabled,
+.verify-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.signup-button:disabled:hover,
+.signin-button:disabled:hover,
+.verify-button:disabled:hover {
+    background: #a5b4fc;
+}
+
+/* .signin-container{
+    display: none;
+} */
 
 @media (max-width: 769px) {
   .create-container h1,

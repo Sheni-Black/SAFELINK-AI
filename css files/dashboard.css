@@ -131,6 +131,261 @@ nav > span:first-child{
     gap: 0.2rem;
 }
 
+.community-header{
+    margin-top: 2rem;
+}
+
+.main-nav{
+    margin-top: 2rem;
+}
+
+.no-display{
+    display: none;
+}
+
+/* settings page */
+
+.settings-main{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.settings-main-header h1{
+    font-size: var(--h1-font-size);
+    font-weight: 600;
+}
+
+.settings-main-header p{
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    margin-top: 0.3rem;
+}
+
+/* generic card used for every section */
+
+.settings-card{
+    background-color: #fff;
+    border-radius: 0.75rem;
+    padding: 1.5rem 1.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.settings-card h2{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1.25rem;
+}
+
+.password-card h2{
+    color: var(--default-purple-color);
+}
+
+/* password fields */
+
+.settings-field{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.settings-field label{
+    font-size: 0.9rem;
+    color: #000;
+}
+
+.settings-field input{
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+.settings-field input:focus{
+    border-color: var(--default-purple-color);
+}
+
+.update-password-btn{
+    width: 100%;
+    background-color: var(--default-purple-color);
+    color: #fff;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.25rem;
+}
+
+.update-password-btn:hover{
+    opacity: 0.9;
+}
+
+/* notifications collapsed card */
+
+.notifications-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.notifications-card h2{
+    margin-bottom: 0;
+}
+
+/* toggle rows shared by security + privacy cards */
+
+.settings-toggle-row,
+.settings-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1.1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.settings-toggle-row:last-of-type,
+.settings-row:last-of-type{
+    border-bottom: none;
+    padding-bottom: 0.5rem;
+}
+
+.settings-toggle-row h4,
+.settings-row h4{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.settings-toggle-row p,
+.settings-row p{
+    color: var(--p-color);
+    font-size: 0.85rem;
+}
+
+/* toggle switch */
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    position: absolute;
+    inset: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.slider::before{
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.switch input:checked + .slider{
+    background-color: var(--default-purple-color);
+}
+
+.switch input:checked + .slider::before{
+    transform: translateX(20px);
+}
+
+/* privacy & data specifics */
+
+#scan-history-period{
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    color: var(--p-color);
+    margin-top: -0.5rem;
+}
+
+.request-report-btn{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin-block: 1rem;
+}
+
+.request-report-btn:hover{
+    background-color: #f3f3f3;
+}
+
+/* active sessions */
+
+.session-row{
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding-block: 0.9rem;
+    border-bottom: 1px solid #eee;
+}
+
+.session-row h4{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.session-row p{
+    color: var(--p-color);
+    font-size: 0.85rem;
+}
+
+/* delete account */
+
+.delete-card p{
+    color: var(--p-color);
+    margin-bottom: 1.25rem;
+}
+
+.delete-account-btn{
+    width: 100%;
+    background-color: #dc2626;
+    color: #fff;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.delete-account-btn:hover{
+    background-color: #b91c1c;
+}
+
 @media (max-width: 767px){
 
     
@@ -189,6 +444,19 @@ nav > span:first-child{
 
     .details{
         grid-template-columns: 1fr;
+    }
+
+    .settings-main{
+        padding: 1rem;
+    }
+
+    .settings-card{
+        padding: 1.25rem;
+    }
+
+    .settings-toggle-row,
+    .settings-row{
+        align-items: flex-start;
     }
 }
 
