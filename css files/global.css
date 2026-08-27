@@ -3,197 +3,192 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: "Manrope", sans-serif;;
+  font-family: "Manrope", sans-serif;
 }
 /* Css variable for default border to help with layouts */
 
-:root{
-    --border: 2px solid black;
-    --default-purple-color : #4F46E5;
+:root {
+  --border: 2px solid black;
+  --default-purple-color: #4f46e5;
 }
 
-.body{
-    background-color: #F7F7F7;
+.body {
+  background-color: #f7f7f7;
 }
 
 /* General css for every element */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    font-family: "Manrope", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Manrope", sans-serif;
 }
 
 /* Starting here is everything that has to do with the nav/header */
 
-nav{
-    background-color: #F7F7F7;
-    display: flex;
-    padding: 1rem;
-    justify-content: left;
-    align-items: center;
-    gap: 2rem;
+nav {
+  background-color: #f7f7f7;
+  display: flex;
+  padding: 1rem;
+  justify-content: left;
+  align-items: center;
+  gap: 2rem;
 }
 
-.logo{
-    font-size: 0.8rem;
-    font-weight: 400;
+.logo {
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
-.logo h1{
-    font-weight: 300;
+.logo h1 {
+  font-weight: 300;
 }
 
-.fa-link{
-    color: var(--default-purple-color);
-    font-size: 1.3rem;
+.fa-link {
+  color: var(--default-purple-color);
+  font-size: 1.3rem;
 }
 
-nav a{
-    display: inline-block;
-    text-decoration: none;
-    color: black
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
 }
 
-nav div:first-child{
-    display: flex;
-    gap: 0.5rem;
+nav div:first-child {
+  display: flex;
+  gap: 0.5rem;
 }
 
-.page-links a:hover{
-    color: var(--default-purple-color);
+.page-links a:hover {
+  color: var(--default-purple-color);
 }
 
-.page-links{
-    display: flex;
-    gap: 1rem;
+.page-links {
+  display: flex;
+  gap: 1rem;
 }
 
-.nav-create-profile{
-    margin-left: auto;
-    display: flex;
-    gap: 1rem;
-    padding-inline: 1rem;
+.nav-create-profile {
+  margin-left: auto;
+  display: flex;
+  gap: 1rem;
+  padding-inline: 1rem;
 }
 
-.nav-create-profile a:first-child{
-    align-self: center;
+.nav-create-profile a:first-child {
+  align-self: center;
 }
 
-.nav-create-profile a:last-child{
-    border: var(--border);
-    padding-inline: 1.5rem;
-    padding-block: 1rem;
-    border-radius: 0.5rem;
-    background-color: var(--default-purple-color);
-    color : white;
-    border: none;
+.nav-create-profile a:last-child {
+  border: var(--border);
+  padding-inline: 1.5rem;
+  padding-block: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--default-purple-color);
+  color: white;
+  border: none;
 }
 
-.nav-create-profile a:last-child:active{
-    transform: scale(0.99);
-    transition: all 0.07s linear;
+.nav-create-profile a:last-child:active {
+  transform: scale(0.99);
+  transition: all 0.07s linear;
 }
 
-nav > .fa-bars{
-    display: none;
+nav > .fa-bars {
+  display: none;
 }
 
 /* Everything regarding the nav/header ends here */
 
 /* for the footer */
-footer{
-    background-color: #111827;
-    padding-inline: 5rem;
-    justify-content: right;
-    display: flex;
-    gap: 2rem;
-    padding-block: 2rem;
+footer {
+  background-color: #111827;
+  padding-inline: 5rem;
+  justify-content: right;
+  display: flex;
+  gap: 2rem;
+  padding-block: 2rem;
 }
 
-footer p{
-    color: #686F7D;
+footer p {
+  color: #686f7d;
 }
 
-footer h4{
-    color: #FFFFFF;
-
+footer h4 {
+  color: #ffffff;
 }
 
-.footer-logo{
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
+.footer-logo {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
-.footer-logo-container{
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.footer-logo-container {
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.footer-container{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.footer-container > div{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.footer-container > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.fa-link{
-    padding-block: 0.5rem;
-    padding-left: 0.5rem;
-    border-radius: 0.5rem;
-    padding-right: 1.6rem;
-    color: white;
-    background-color: var(--default-purple-color);
-    font-size: 1rem;
+.fa-link {
+  padding-block: 0.5rem;
+  padding-left: 0.5rem;
+  border-radius: 0.5rem;
+  padding-right: 1.6rem;
+  color: white;
+  background-color: var(--default-purple-color);
+  font-size: 1rem;
 }
 
 /* Everything for footer ends here */
-
 
 /* This part is for media queries. Wont include for laptops cos its already the default */
 
 /* For mobile */
 
-@media (max-width: 767px){
-
+@media (max-width: 767px) {
 }
 
 /* For both mobile and tablets */
 
 @media (min-width: 0px) and (max-width: 1023px) {
+  nav {
+    justify-content: space-between;
+  }
+  .page-links,
+  .nav-create-profile {
+    display: none;
+  }
 
-    nav{
-        justify-content: space-between;
-    }
-    .page-links, .nav-create-profile{
-        display: none;
-    }
+  nav > .fa-bars {
+    display: block;
+    font-size: 2rem;
+  }
 
-    nav > .fa-bars{
-        display: block;
-        font-size: 2rem;
-    }
+  /* for footer */
 
-    /* for footer */
-
-        footer{
-        flex-direction: column;
-        padding-inline: 1rem;
-        
-    }
+  footer {
+    flex-direction: column;
+    padding-inline: 1rem;
+  }
 }
 
 /* For tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
-
 }
