@@ -16,8 +16,9 @@ closeAside.addEventListener("click", () =>{
 
 const navItems = document.querySelectorAll(".dashboard-nav [data-page]");
 const pages = document.querySelectorAll(
-    ".scan-history-main, .saved-websites-main, .community-container, .learning-container, .profile-main, .settings-main"
+    ".scan-history-main, .saved-websites-main, .community-container, .learning-container, .profile-main, .settings-main, .notification-settings-main, .delete-account-main"
 );
+const title = document.querySelector(".title-change")
 
 // Hide all pages initially
 pages.forEach((page) => {
@@ -48,22 +49,27 @@ navItems.forEach((item) => {
 
         if (pageName === "saved-websites") {
             document.querySelector(".saved-websites-main").style.display = "block";
+            title.textContent = "Saved Websites"
         }
 
         if (pageName === "community") {
             document.querySelector(".community-container").style.display = "block";
+            title.textContent = "Community"
         }
 
         if (pageName === "learning") {
             document.querySelector(".learning-container").style.display = "block";
+            title.textContent = "Learning Center"
         }
 
         if (pageName === "profile") {
             document.querySelector(".profile-main").style.display = "block";
+            title.textContent = "Profile"
         }
 
         if (pageName === "settings") {
             document.querySelector(".settings-main").style.display = "block";
+            title.textContent = "Settings"
         }
     });
 });
@@ -109,4 +115,33 @@ pageNav.addEventListener("click", (e) => {
 });
 
 
+// Settings sub-pages: Notifications & Delete Account
+const settingsMain = document.querySelector(".settings-main");
+const notificationSettingsPage = document.querySelector(".notification-settings-main");
+const deleteAccountPage = document.querySelector(".delete-account-main");
 
+// Open Notification Settings when the "Notifications" card (inside Settings) is clicked
+const notificationsCard = settingsMain.querySelector(".notifications-card");
+notificationsCard.addEventListener("click", () => {
+    pages.forEach((page) => (page.style.display = "none"));
+    notificationSettingsPage.style.display = "block";
+});
+
+// Open Delete Account page when "Delete My Account" (inside Settings) is clicked
+// Scoped to .delete-card so it doesn't clash with the confirm button on the delete page itself
+const deleteAccountTrigger = settingsMain.querySelector(".delete-card .delete-account-btn");
+deleteAccountTrigger.addEventListener("click", () => {
+    pages.forEach((page) => (page.style.display = "none"));
+    deleteAccountPage.style.display = "block";
+});
+
+// "Back" links on both sub-pages return to Settings
+document
+    .querySelectorAll(".notification-settings-main .back-link, .delete-account-main .back-link")
+    .forEach((link) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            pages.forEach((page) => (page.style.display = "none"));
+            settingsMain.style.display = "block";
+        });
+    });

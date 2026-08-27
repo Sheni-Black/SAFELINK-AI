@@ -6,12 +6,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css files/global.css">
     <link rel="stylesheet" href="../css files/dashboard.css">
-    <link rel="stylesheet" href="../css files/community.css">
     <link rel="stylesheet" href="../css files/scan-history.css">
     <link rel="stylesheet" href="../css files/saved-websites.css">
     <link rel="stylesheet" href="../css files/profile.css">
     <link rel="stylesheet" href="../css files/learning.css">
     <link rel="stylesheet" href="../css files/community.css">
+    <link rel="stylesheet" href="../css files/settings.css">
+    <link rel="stylesheet" href="../css files/delete.css">
+    <link rel="stylesheet" href="../css files/notification.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <body>
@@ -50,7 +52,7 @@
         <main class="dashboard-main">
             <nav class="nav">
                 <span class="material-symbols-outlined hamburger-menu">dehaze</span>
-                <h4>Scan Histsory</h4>
+                <h4 class="title-change">Scan Histsory</h4>
                 <div class="profile-details-container">
                     <span class="material-symbols-outlined">notifications</span>
                     <div class="profile-details">
@@ -595,6 +597,7 @@
                     </div>
                 </div>
             </div>
+            
             <!-- settings starts here -->
             <div class="settings-main">
                 <header class="settings-main-header">
@@ -711,6 +714,234 @@
                     <h2>Delete Account</h2>
                     <p>Delete your safe link account.</p>
                     <button class="delete-account-btn">Delete My Account</button>
+                </div>
+            </div>
+            <!-- delete account page starts here -->
+            <div class="delete-account-main">
+                <a href="" class="back-link">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    <p>Back</p>
+                </a>
+
+                <header class="delete-account-header">
+                    <h1>Delete Account</h1>
+                    <p>This removes your Safe Link account and personal data. Community reports you filed stay live, but anonymized.</p>
+                </header>
+
+                <!-- Try these first -->
+                <div class="try-these-first-card">
+                    <h2>Try these first</h2>
+
+                    <div class="delete-option-row">
+                        <span class="material-symbols-outlined">download</span>
+                        <div>
+                            <h4>Export your data</h4>
+                            <p>Take your scan history, saved sites and reports with you.</p>
+                        </div>
+                    </div>
+                    <button class="option-btn">Export Data</button>
+
+                    <div class="delete-option-row">
+                        <span class="material-symbols-outlined">notifications_paused</span>
+                        <div>
+                            <h4>Pause notifications instead</h4>
+                            <p>Silence every email and push alert without losing your history.</p>
+                        </div>
+                    </div>
+                    <button class="option-btn">Pause alerts</button>
+                </div>
+
+                <!-- Delete permanently -->
+                <div class="delete-permanently-card">
+                    <div class="delete-permanently-header">
+                        <span class="material-symbols-outlined">error</span>
+                        <div>
+                            <h2>Delete permanently</h2>
+                            <p>Deletion is scheduled for 30 days. Sign in during that window to cancel it. After that, the following is erased for good:</p>
+                        </div>
+                    </div>
+
+                    <ul class="delete-checklist">
+                        <li><span class="material-symbols-outlined">check_circle</span>412 scans and their reports</li>
+                        <li><span class="material-symbols-outlined">check_circle</span>AI assistants and conversations</li>
+                        <li><span class="material-symbols-outlined">check_circle</span>Profile and notifications preferences</li>
+                        <li><span class="material-symbols-outlined">check_circle</span>Saved websites and folders</li>
+                        <li><span class="material-symbols-outlined">check_circle</span>Learning progress and certificates</li>
+                        <li><span class="material-symbols-outlined">check_circle</span>Subscription and billing history</li>
+                    </ul>
+
+                    <div class="confirm-delete">
+                        <label for="confirm-delete-input">Type DELETE to confirm</label>
+                        <input type="text" id="confirm-delete-input" placeholder="DELETE">
+                    </div>
+
+                    <button class="delete-account-btn">Delete my account</button>
+                </div>
+            </div>
+            
+            <!-- notification settings page starts here -->
+            <div class="notification-settings-main">
+                <header class="notification-settings-header">
+                    <a href="" class="back-link">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        <p>Back</p>
+                    </a>
+                    <h1>Notification Settings</h1>
+                    <p>Critical threat alerts are always delivered. Everything else is up to you.</p>
+                </header>
+
+                <!-- Learning & product -->
+                <div class="notification-card">
+                    <div class="notification-card-header">
+                        <h2>Learning & product</h2>
+                        <div class="toggle-labels"><span>Email</span><span>Push</span></div>
+                    </div>
+
+                    <div class="notification-row">
+                        <div>
+                            <h4>Learning reminders</h4>
+                            <p>Nudges to finish a lesson or quiz you started.</p>
+                        </div>
+                        <div class="toggle-pair">
+                            <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                            <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                        </div>
+                    </div>
+
+                    <div class="notification-row">
+                        <div>
+                            <h4>Product updates</h4>
+                            <p>New features like the browser extension</p>
+                        </div>
+                        <div class="toggle-pair">
+                            <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                            <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security -->
+                <div class="notification-card">
+                    <div class="notification-card-header">
+                        <h2>Security</h2>
+                        <div class="toggle-labels"><span>Email</span><span>Push</span></div>
+                    </div>
+
+                    <div class="notification-row">
+                        <div>
+                            <h4>Threat alerts</h4>
+                            <p>Nudges to finish a lesson or quiz you started.</p>
+                        </div>
+                        <div class="toggle-pair">
+                            <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                            <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                        </div>
+                    </div>
+
+                    <div class="notification-row">
+                        <div>
+                            <h4>Product updates</h4>
+                            <p>A saved website starts showing dangerous behaviour.</p>
+                        </div>
+                        <div class="toggle-pair">
+                            <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                            <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                        </div>
+                    </div>
+
+                    <div class="notification-row">
+                        <div>
+                            <h4>Saved website changes</h4>
+                            <p>SSL, ownership or hosting changes on a saved site.</p>
+                        </div>
+                        <div class="toggle-pair">
+                            <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                            <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community -->
+                <div class="notification-card">
+                    <div class="notification-card-header">
+                        <h2>Community</h2>
+                        <div class="toggle-labels"><span>Email</span><span>Push</span></div>
+                    </div>
+
+                    <div class="notification-row">
+                        <div>
+                            <h4>Report decisions</h4>
+                            <p>An analyst verified or rejected a report you filed.</p>
+                        </div>
+                        <div class="toggle-pair">
+                            <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                            <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                        </div>
+                    </div>
+
+                    <div class="notification-row">
+                        <div>
+                            <h4>Trending threats digest</h4>
+                            <p>A weekly roundup of what's spreading near you.</p>
+                        </div>
+                        <div class="toggle-pair">
+                            <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                            <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                        </div>
+                    </div>
+
+                    <div class="notification-row">
+                        <div>
+                            <h4>Replies to my reports</h4>
+                            <p>Someone confirms or disputes your submission.</p>
+                        </div>
+                        <div class="toggle-pair">
+                            <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                            <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active sessions -->
+                <div class="notification-card sessions-card">
+                    <h2>Active sessions</h2>
+                    <div class="session-row">
+                        <span class="material-symbols-outlined">devices</span>
+                        <div>
+                            <h4>MacBook Pro · Chrome</h4>
+                            <p>Lagos, ZA · Active now</p>
+                        </div>
+                    </div>
+                    <button class="request-report-btn">Request report</button>
+                    <div class="session-row">
+                        <span class="material-symbols-outlined">smartphone</span>
+                        <div>
+                            <h4>iPhone 15 · Safari</h4>
+                            <p>Lagos, ZA · 2 days ago</p>
+                        </div>
+                    </div>
+                    <button class="request-report-btn">Request report</button>
+                </div>
+
+                <!-- Quiet hours -->
+                <div class="notification-card quiet-hours-card">
+                    <div>
+                        <h2>Quiet hours</h2>
+                        <p>Hold non-urgent notifications overnight.</p>
+                    </div>
+                    <div class="quiet-hours-range">
+                        <select name="quiet-start" id="quiet-start">
+                            <option value="22:00">22:00</option>
+                            <option value="23:00">23:00</option>
+                            <option value="00:00">00:00</option>
+                        </select>
+                        <p>to</p>
+                        <select name="quiet-end" id="quiet-end">
+                            <option value="22:00">22:00</option>
+                            <option value="06:00">06:00</option>
+                            <option value="07:00">07:00</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </main>
