@@ -1,0 +1,210 @@
+/* delete account page */
+
+span{
+    overflow: hidden;
+}
+
+.delete-account-main{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.back-link{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #000;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.back-link:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.delete-account-header h1{
+    font-size: var(--h1-font-size);
+    font-weight: 600;
+}
+
+.delete-account-header p{
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    margin-top: 0.3rem;
+    max-width: 45rem;
+}
+
+/* try these first card */
+
+.try-these-first-card{
+    background-color: #fff;
+    border-radius: 0.75rem;
+    padding: 1.5rem 1.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.try-these-first-card h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1.25rem;
+}
+
+.delete-option-row{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.delete-option-row span{
+    border: 1px solid #d1d5db;
+    border-radius: 50%;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.delete-option-row h4{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.delete-option-row p{
+    color: var(--p-color);
+    font-size: 0.85rem;
+}
+
+.option-btn{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+.option-btn:hover{
+    background-color: #f3f3f3;
+}
+
+.try-these-first-card .delete-option-row:last-of-type,
+.try-these-first-card .option-btn:last-of-type{
+    margin-bottom: 0;
+}
+
+/* delete permanently card */
+
+.delete-permanently-card{
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 0.75rem;
+    padding: 1.5rem 1.75rem;
+}
+
+.delete-permanently-header{
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.delete-permanently-header span{
+    color: #dc2626;
+    font-size: 1.4rem;
+}
+
+.delete-permanently-header h2{
+    color: #dc2626;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.delete-permanently-header p{
+    color: #7f1d1d;
+    font-size: 0.9rem;
+}
+
+.delete-checklist{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.delete-checklist li{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #7f1d1d;
+    font-size: 0.9rem;
+}
+
+.delete-checklist span{
+    color: #dc2626;
+    font-size: 1.1rem;
+}
+
+.confirm-delete{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+}
+
+.confirm-delete label{
+    font-size: 0.9rem;
+    color: #000;
+}
+
+.confirm-delete input{
+    padding: 0.75rem 1rem;
+    border: 1px solid #fecaca;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    background-color: #fff;
+}
+
+.confirm-delete input:focus{
+    border-color: #dc2626;
+}
+
+.delete-account-btn{
+    width: 100%;
+    background-color: #dc2626;
+    color: #fff;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.delete-account-btn:hover{
+    background-color: #b91c1c;
+}
+
+/* mobile / tablet */
+
+@media (min-width: 0px) and (max-width: 1023px){
+    .delete-account-main{
+        padding: 1rem;
+    }
+
+    .try-these-first-card,
+    .delete-permanently-card{
+        padding: 1.25rem;
+    }
+
+    .delete-option-row{
+        align-items: flex-start;
+    }
+}

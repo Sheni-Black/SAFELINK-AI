@@ -55,6 +55,7 @@
           name="fname"
           placeholder="Enter your full name"
         />
+        <div class="fnameEroor"></div>
         <label for="email">Email <span class="asterix">*</span></label
         ><br />
         <input
@@ -63,6 +64,7 @@
           name="email"
           placeholder="Enter your email address"
         />
+        <div class="emailError"></div>
         <div class="label-content">
           <label for="password">Password <span class="asterix">*</span></label>
           <a href="#">Forgot Password?</a>
@@ -73,6 +75,7 @@
           name="password"
           placeholder="Enter password"
         />
+        <div class="passwordError"></div>
         <div class="label-content">
           <label for="cpassword" class="cpassword1"
             >Confirm password <span class="asterix">*</span>
@@ -91,12 +94,13 @@
           Privacy Policy
         </p>
         <!-- Button interactivity is needed here which would be visible through a color change -->
-        <button type="submit" class="signup-button">Sign up</button>
+        <button class="signup-button">Sign up</button>
       </form>
       <p class="footer-text">
         Already have an account? <span class="login-text">Log in</span>
       </p>
     </div>
+    
     <!-- This is the sign-in page -->
     <div class="signin-container">
       <h3 class="logo-text1">
@@ -295,5 +299,6 @@
         <p>Redirecting to Sign in</p>
       </div>
     </div>
+    <script type="module" src="../Js files/auth.js"></script>
   </body>
 </html>
