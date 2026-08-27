@@ -24,7 +24,7 @@
     <!-- website safety score -->
     <!-- Navigation menu -->
     <nav class="nav-container">
-      <div class="logo">
+      <div class="logo-container">
         <i class="fa-solid fa-link fa-rotate-360"></i>
         <h2>Safelink AI</h2>
       </div>
@@ -116,7 +116,7 @@
                     ></span>
                     <span class="country-text">Nigeria</span>
                   </div>
-                  <!-- This signals a dropdown list for different countries -->
+                  <!-- This signals a dropdown list for different countries so apply javascript to display different countries when the arrow is clicked -->
                   <div class="chevron-icon">
                     <i
                       class="fa-solid fa-angle-down"
@@ -392,7 +392,7 @@
       <div class="ctrust-container">
         <div class="ctrust-content">
           <div class="ctrust-text">
-            <span
+            <span class="ctrust-icon-fa"
               ><i class="fa-solid fa-star" style="color: rgb(238, 160, 97)"></i
             ></span>
             <h5>Community Rating</h5>
@@ -405,6 +405,7 @@
         <div class="ctrust-content">
           <div class="ctrust-text">
             <svg
+              class="ctrust-icon-svg"
               xmlns="http://www.w3.org/2000/svg"
               height="20px"
               viewBox="0 -960 960 960"
@@ -425,6 +426,7 @@
         <div class="ctrust-content">
           <div class="ctrust-text">
             <svg
+              class="ctrust-icon-svg"
               xmlns="http://www.w3.org/2000/svg"
               height="20px"
               viewBox="0 -960 960 960"
@@ -445,37 +447,51 @@
       </div>
     </main>
     <footer>
-      <div class="footer-logo-content">
-        <div class="flc1">
-          <i class="fa-solid fa-link fa-rotate-360"></i>
-          <h2 style="color: white">Safelink AI</h2>
+      <div class="f-container">
+        <div class="footer-logo-content">
+          <div class="flc1">
+            <i class="fa-solid fa-link fa-rotate-360"></i>
+            <h3 style="color: white">Safelink AI</h3>
+          </div>
+          <p>
+            AI powered URL safety scanner protecting millions of users worldwide
+            from phishing, malware and online scams
+          </p>
         </div>
-        <p>
-          AI powered URL safety scanner protecting millions of users worldwide
-          from phishing, malware and online scams
-        </p>
+        <div class="footer-content">
+          <div class="product-content">
+            <h4 style="color: white">Product</h4>
+            <p>URL Scanner</p>
+            <p>Scan Results</p>
+            <p>Risk Assessment</p>
+            <p>Domain Comparison</p>
+            <p>AI Assessment</p>
+            <p>Community Report</p>
+          </div>
+          <div class="company-content">
+            <h4 style="color: white">Company</h4>
+            <p>About Safe Link</p>
+            <p>Contact Us</p>
+            <p>Help Center</p>
+          </div>
+          <div class="legal-content">
+            <h4 style="color: white">Legal</h4>
+            <p>Privacy Policy</p>
+            <p>Terms of services</p>
+            <p>Cookie Policy</p>
+          </div>
+        </div>
       </div>
-      <div class="footer-content">
-        <div class="product-content">
-          <h3 style="color: white">Product</h3>
-          <p>URL Scanner</p>
-          <p>Scan Results</p>
-          <p>Risk Assessment</p>
-          <p>Domain Comparison</p>
-          <p>AI Assessment</p>
-          <p>Community Report</p>
+      <hr />
+      <div class="privacy-info">
+        <div class="copyright">
+          <p>&copy; 2026 Safe Link. All right reserved.</p>
         </div>
-        <div class="company-content">
-          <h3 style="color: white">Company</h3>
-          <p>About Safe Link</p>
-          <p>Contact Us</p>
-          <p>Help Center</p>
-        </div>
-        <div class="legal-content">
-          <h3 style="color: white">Legal</h3>
+        <div class="policies">
           <p>Privacy Policy</p>
-          <p>Terms of services</p>
+          <p>Terms of service</p>
           <p>Cookie Policy</p>
+          <p>Help Center</p>
         </div>
       </div>
     </footer>

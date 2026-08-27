@@ -260,24 +260,27 @@ strong {
 }
 .indicator-container {
   display: grid;
-  grid-column: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
   padding: 10px;
   margin-top: 20px;
+  gap: 0 20px;
 }
 .p-indicator {
-  display: grid;
   grid-column: 1;
+  grid-row: 1;
   padding: 20px;
 }
 .r-indicator {
-  display: grid;
   grid-column: 2;
+  grid-row: 1;
   color: red;
   justify-self: start;
   padding: 20px;
 }
 .pindicator-content {
+  grid-column: 1;
+  grid-row: 2;
   border: 2px solid rgb(241, 240, 240);
   border-radius: 10px;
   padding: 10px;
@@ -315,7 +318,10 @@ strong {
   color: rgb(63, 63, 63);
   font-size: 8px;
 }
-
+.rindicator-container {
+  grid-column: 2;
+  grid-row: 2;
+}
 .rindicator-content {
   border: 2px solid rgb(241, 240, 240);
   padding: 10px;
@@ -345,9 +351,13 @@ strong {
 
 footer {
   margin-top: 30px;
+  padding: 10px 20px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.f-container {
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px 60px;
 }
 .footer-logo-content {
   padding: 20px 20px 0;
@@ -368,14 +378,13 @@ footer {
   padding: 5px 0;
   font-size: 15px;
 }
-.footer-content h3 {
+.footer-content h4 {
   padding: 0 0 10px;
 }
 .footer-content {
   display: flex;
   justify-content: space-around;
   gap: 40px;
-  padding-right: 50px;
 }
 .flc1 {
   display: flex;
@@ -384,4 +393,353 @@ footer {
 .footer-logo-content p {
   padding: 20px 10px 0;
   font-size: 15px;
+}
+hr {
+  border: 1px solid rgb(45, 44, 44);
+}
+.privacy-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.policies {
+  display: flex;
+  gap: 30px;
+}
+
+/* media query for responsiveness */
+@media (max-width: 1370px) {
+  .wsafety-text {
+    max-width: 650px;
+  }
+  .upgrade-container {
+    padding: 10px 0 0;
+  }
+  .country-option {
+    padding: 5px 10px;
+    justify-content: center;
+    gap: 20px;
+  }
+  .country-option p {
+    font-size: 9px;
+  }
+  .upgrade-devices {
+    margin-left: 0;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+  .ucontent {
+    font-size: 9px;
+  }
+  .ucontent i {
+    padding-top: 5px;
+  }
+  .country-toggle {
+    width: 120px;
+    padding: 0px 5px;
+  }
+  .country-text {
+    font-size: 10px;
+  }
+  .chevron-icon,
+  .check-icon i {
+    font-size: 10px;
+  }
+  .country-container button {
+    padding: 2px 5px;
+    font-size: 8px;
+  }
+  .xmark {
+    font-size: 12px;
+  }
+  .pindicator-content {
+    max-width: 450px;
+  }
+  .rurl a,
+  .rdomain a,
+  .r-ip-address strong {
+    font-size: 14px;
+  }
+  .rt-child p {
+    font-size: 14px;
+  }
+  .footer-logo-content p,
+  .footer-content p {
+    font-size: 10px;
+  }
+  .f-container {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .wsafety-text {
+    max-width: 500px;
+  }
+  .wsafety-text p {
+    font-size: 12px;
+  }
+  .wsafety-links button {
+    padding: 8px 15px;
+  }
+  .wsafety-links button a {
+    font-size: 12px;
+  }
+  .wsafety-links i {
+    font-size: 12px;
+  }
+  .wsafety-links a {
+    font-size: 12px;
+  }
+  .wsafety-links {
+    justify-content: space-evenly;
+    max-width: 380px;
+  }
+  .pindicator-content {
+    max-width: 350px;
+  }
+  .footer-logo-content {
+    max-width: 250px;
+    padding: 20px 0 0;
+  }
+  .umessage-text i {
+    font-size: 15px;
+    padding-top: 5px;
+  }
+  .umessage-text h1,
+  h2 {
+    font-size: 15px !important;
+  }
+  .umessage-container button {
+    padding: 6px;
+    font-size: 10px;
+  }
+  .ucontent {
+    font-size: 7px;
+  }
+  .country-option {
+    padding: 5px 10px;
+    gap: 10px;
+  }
+  .country-option p {
+    font-size: 8px;
+  }
+  .apple-logo i {
+    margin-bottom: 3px;
+  }
+  .rurl a,
+  .rdomain a,
+  .r-ip-address strong {
+    font-size: 12px;
+  }
+  .rt-child p {
+    font-size: 12px;
+  }
+  .region-texts {
+    padding: 10px 10px;
+  }
+  .country-toggle {
+    width: 100px;
+    justify-content: flex-start;
+    gap: 35px;
+  }
+  .country-text {
+    font-size: 8px;
+  }
+  .chevron-icon,
+  .check-icon i {
+    font-size: 8px;
+  }
+  .country-container button {
+    padding: 2px 3px;
+    font-size: 7px;
+  }
+  .xmark {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 820px) {
+  .wsafety-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .wsafety-text {
+    padding-top: 25px;
+  }
+  .wsafety-links {
+    gap: 25px;
+    max-width: 400px;
+  }
+  .region-container {
+    flex-direction: column;
+  }
+  .f-container {
+    flex-direction: column;
+  }
+  .footer-logo-content {
+    max-width: 450px;
+    padding-left: 20px;
+  }
+  .footer-content {
+    justify-content: flex-start;
+    gap: 20px;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .privacy-info {
+    font-size: 9px;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .policies {
+    gap: 10px;
+  }
+  .wdetails-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 5px 0;
+  }
+  .indicator-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+  }
+  .p-indicator {
+    padding: 10px;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .r-indicator {
+    padding: 10px;
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .p-indicator-content,
+  .r-indicator-content {
+    width: 100%;
+  }
+  .rindicator-container {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .pindicator-content {
+    max-width: 550px;
+  }
+  .country-toggle {
+    width: 65px;
+    gap: 10px;
+  }
+  .country-option {
+    padding: 5px 5px;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .umessage-container {
+    padding: 20px;
+  }
+  .umessage-text i {
+    font-size: 15px;
+    padding-top: 5px;
+  }
+  .umessage-text h1,
+  h2 {
+    font-size: 12px !important;
+  }
+  .umessage-container button {
+    padding: 4px;
+    font-size: 8px;
+  }
+  .ucontent {
+    font-size: 4px;
+  }
+  .country-text {
+    font-size: 6px;
+  }
+  .chevron-icon,
+  .check-icon i {
+    font-size: 7px;
+  }
+  .country-container button {
+    font-size: 5px;
+  }
+  .country-option p {
+    font-size: 5px;
+  }
+}
+
+@media (max-width: 470px) {
+  .privacy-info {
+    font-size: 8px;
+    gap: 8px;
+  }
+  .policies {
+    gap: 8px;
+  }
+  .footer-logo-content p,
+  .footer-content p {
+    font-size: 8px;
+  }
+  .flc1 h3 {
+    font-size: 15px;
+  }
+  .footer-content h4 {
+    font-size: 12px;
+  }
+  .wsafety-text p {
+    font-size: 10px;
+  }
+  .wsafety-links button {
+    padding: 4px 10px;
+  }
+  .wsafety-links button a {
+    font-size: 10px;
+  }
+  .wsafety-links i {
+    font-size: 12px;
+  }
+  .wsafety-links a {
+    font-size: 10px;
+  }
+  .wsafety-links {
+    justify-content: flex-start;
+    gap: 15px;
+    max-width: 350px;
+  }
+  .ctrust-icon-fa {
+    font-size: 12px;
+  }
+  .ctrust-text1 h4 {
+    font-size: 13px;
+  }
+  .pi-text2 h5,
+  .rindicator-content h5,
+  .ctrust-text h5 {
+    font-size: 10px;
+  }
+  .pi-text2 p,
+  .rindicator-content p,
+  .ctrust-text1 span {
+    font-size: 8px;
+  }
+  .p-indicator h4,
+  .r-indicator h4 {
+    font-size: 12px;
+  }
+  main h5 {
+    font-size: 12px;
+  }
+  .wdetails-text span {
+    font-size: 10px;
+  }
+  .xmark {
+    font-size: 8px;
+  }
 }
