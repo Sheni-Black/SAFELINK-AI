@@ -207,7 +207,7 @@
 .hero-four-container{
     display: block;
     min-height: 50vh;
-    border: var(--border);
+    border: none;
     padding-block: 1rem;
 }
 
