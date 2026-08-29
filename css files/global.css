@@ -31,7 +31,8 @@
 nav {
   background-color: #f7f7f7;
   display: flex;
-  padding: 1rem;
+  padding-inline: 5rem;
+  padding-block: 1rem;
   justify-content: left;
   align-items: center;
   gap: 2rem;
@@ -44,17 +45,20 @@ nav {
 
 .logo h1 {
   font-weight: 300;
+  font-size: 1.3rem;
 }
 
 .fa-link {
   color: var(--default-purple-color);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 nav a {
   display: inline-block;
   text-decoration: none;
   color: black;
+  font-size: 1.01rem;
+  font-weight: 500;
 }
 
 nav div:first-child {
@@ -80,6 +84,7 @@ nav div:first-child {
 
 .nav-create-profile a:first-child {
   align-self: center;
+  font-size: 1rem;
 }
 
 .nav-create-profile a:last-child {
@@ -90,6 +95,7 @@ nav div:first-child {
   background-color: var(--default-purple-color);
   color: white;
   border: none;
+  font-size: 1rem;
 }
 
 .nav-create-profile a:last-child:active {
@@ -163,6 +169,9 @@ footer h4 {
 /* For mobile */
 
 @media (max-width: 767px) {
+  nav{
+    padding-inline: 1rem;
+  }
 }
 
 /* For both mobile and tablets */
@@ -191,4 +200,7 @@ footer h4 {
 
 /* For tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
+  nav {
+    padding-inline: 2rem;
+  }
 }

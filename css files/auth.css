@@ -1,4 +1,3 @@
-/* Important note: Due to the uniformity of the designs, sections were styled together with each section defined by its unique class name for its styling features  */
 
 :root {
   --create-font: 600 24px / 1.5 Manrope, sans-serif;
@@ -166,6 +165,26 @@ input:focus-visible {
 .resend-text,
 .resend-text1 {
   color: #6b7dd7;
+}
+
+/* Icon styling for email / password input fields */
+.input-icon-wrapper {
+  position: relative;
+  width: 100%;
+}
+.input-icon-wrapper i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9a9a9a;
+  font-size: 14px;
+  pointer-events: none;
+}
+.input-icon-wrapper input[type="text"],
+.input-icon-wrapper input[type="email"],
+.input-icon-wrapper input[type="password"] {
+  padding-left: 34px;
 }
 
 /* Otp page styling rules */
