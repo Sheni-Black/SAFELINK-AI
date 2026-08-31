@@ -17,10 +17,10 @@
 
 .settings-main-header{
     background-color: white;
-    /* margin-top: auto; */
+    margin-top: auto;
     margin-bottom: 1rem;
     padding: 1rem;
-    border-radius: 1rem;
+    width: 100%;
 }
 
 .settings-main-header h1{

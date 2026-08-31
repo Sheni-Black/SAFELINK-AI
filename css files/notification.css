@@ -1,12 +1,11 @@
 /* notification settings page */
 
 .notification-settings-main{
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    gap: 1.5rem; */
-    /* padding: 0;
+    gap: 1.5rem; 
+    padding: 0;
     margin: 0;
-    border: 1px solid black; */
 }
 
 .notification-settings-main > *{
@@ -31,8 +30,7 @@
 .notification-settings-header{
     background-color: #fff;
     padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 1rem;
+    margin-top: auto;
 }
 
 .notification-settings-header h1{

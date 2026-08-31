@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../css files/settings.css">
     <link rel="stylesheet" href="../css files/delete.css">
     <link rel="stylesheet" href="../css files/notification.css">
+    <link rel="stylesheet" href="../css files/ai-assistance.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <body>
@@ -332,6 +333,35 @@
                             </div>
                             <h2>Added to the global blocklist</h2>
                         </div>
+                    </div>
+                </div>
+            </div>
+            
+           <!-- this is for ai assistant -->
+            <div class="ai-assistant-main">
+                <div class="chat-msg"></div>
+               <div class="ai-container">
+                    <header class="ai-header">
+                        <h1>How can i help you stay <br> safe online</h1>
+                        <p>Ask SafeLink AI about suspicious websites, security risks, phising, scams and your scan results</p>
+                    </header>
+                    <div class="chat-input-container">
+                        <div class="chat-input">
+                            <button class="attach-btn">
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                            <input type="text" placeholder="Ask a question" class="text-input">
+                            <button class="send-btn">
+                                Send
+                                <span class="material-symbols-outlined">arrow_upward_alt</span>
+                            </button>
+                        </div>
+                        <label for="file-upload" class="chat-label">
+                            <span class="material-symbols-outlined">attach_file</span>
+                            Add file or Photos
+                        </label>
+                        <input type="file" id="file-upload" accept="image/*,.pdf,.doc,.docx,.txt" hidden>
+                        <div></div>
                     </div>
                 </div>
             </div>
@@ -718,12 +748,11 @@
             </div>
             <!-- delete account page starts here -->
             <div class="delete-account-main">
-                <a href="" class="back-link">
-                    <span class="material-symbols-outlined">arrow_back</span>
-                    <p>Back</p>
-                </a>
-
                 <header class="delete-account-header">
+                    <a href="" class="back-link">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        <p>Back</p>
+                    </a>
                     <h1>Delete Account</h1>
                     <p>This removes your Safe Link account and personal data. Community reports you filed stay live, but anonymized.</p>
                 </header>

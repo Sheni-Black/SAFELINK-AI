@@ -16,7 +16,7 @@ closeAside.addEventListener("click", () =>{
 
 const navItems = document.querySelectorAll(".dashboard-nav [data-page]");
 const pages = document.querySelectorAll(
-    ".scan-history-main, .saved-websites-main, .community-container, .learning-container, .profile-main, .settings-main, .notification-settings-main, .delete-account-main"
+    ".scan-history-main, .saved-websites-main, .community-container, .learning-container, .profile-main, .settings-main, .notification-settings-main, .delete-account-main, .ai-assistant-main"
 );
 const title = document.querySelector(".title-change")
 
@@ -55,6 +55,11 @@ navItems.forEach((item) => {
         if (pageName === "community") {
             document.querySelector(".community-container").style.display = "block";
             title.textContent = "Community"
+        }
+
+        if (pageName === "ai-assistant") {
+            document.querySelector(".ai-assistant-main").style.display = "flex";
+            title.textContent = "AI Assistance"
         }
 
         if (pageName === "learning") {
@@ -145,3 +150,89 @@ document
             settingsMain.style.display = "block";
         });
     });
+
+    
+    //For the Ai assistance page
+// This calls YOUR backend (server.js), never the AI API directly.
+// Change this if your backend runs somewhere other than localhost:3001.
+const CHAT_API_URL = 'http://localhost:3001/api/chat';
+
+async function fetchAIResponse(text) {
+  const response = await fetch(CHAT_API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: text }),
+  });
+
+  if (!response.ok) {
+    throw new Error('Request failed');
+  }
+
+  const data = await response.json();
+  return data.reply;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const aiAssistantMain = document.querySelector('.ai-assistant-main');
+  const chatMsg = document.querySelector('.chat-msg');
+  const textInput = document.querySelector('.text-input');
+  const sendBtn = document.querySelector('.send-btn');
+
+  if (!aiAssistantMain || !chatMsg || !textInput || !sendBtn) return;
+
+  function appendMessage(text, sender = 'user') {
+    const bubble = document.createElement('div');
+    bubble.className = `chat-bubble ${sender}`;
+    bubble.textContent = text;
+    chatMsg.appendChild(bubble);
+    chatMsg.scrollTop = chatMsg.scrollHeight;
+    return bubble; // returned so we can update it later (loading -> reply)
+  }
+
+  function setSending(isSending) {
+    sendBtn.disabled = isSending;
+    textInput.disabled = isSending;
+  }
+
+  async function sendMessage() {
+    const text = textInput.value.trim();
+    if (!text) return;
+
+    appendMessage(text, 'user');
+    textInput.value = '';
+    aiAssistantMain.classList.add('has-messages');
+    setSending(true);
+
+    const loadingBubble = appendMessage('Thinking…', 'ai');
+
+    try {
+      const reply = await fetchAIResponse(text);
+      loadingBubble.textContent = reply;
+    } catch (err) {
+      console.error('Chat request failed:', err);
+      loadingBubble.textContent =
+        "Sorry, I couldn't reach the AI just now. Please try again.";
+    } finally {
+      setSending(false);
+      chatMsg.scrollTop = chatMsg.scrollHeight;
+      textInput.focus();
+    }
+  }
+
+  sendBtn.addEventListener('click', sendMessage);
+
+  textInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' && !event.shiftKey) {
+      event.preventDefault();
+      sendMessage();
+    }
+  });
+
+  const attachBtn = document.querySelector('.attach-btn');
+  const chatLabel = document.querySelector('.chat-label');
+  if (attachBtn && chatLabel) {
+    attachBtn.addEventListener('click', () => {
+      chatLabel.classList.toggle('is-open');
+    });
+  }
+});
