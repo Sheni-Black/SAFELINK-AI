@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #eaeaec;
+  background: #ebebeb;
 }
 .signup-container,
 .signin-container,
@@ -249,7 +249,7 @@ input:focus-visible {
 }
 
 /* for the error */
-.input-error{
+.input-error {
   color: red;
 }
 
@@ -267,20 +267,20 @@ input:focus-visible {
 .fpassword-container,
 .check-email-container,
 .npassword-container {
-    display: none;
+  display: none;
 }
 
 .signup-button:disabled,
 .signin-button:disabled,
 .verify-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .signup-button:disabled:hover,
 .signin-button:disabled:hover,
 .verify-button:disabled:hover {
-    background: #a5b4fc;
+  background: #a5b4fc;
 }
 
 /* .signin-container{

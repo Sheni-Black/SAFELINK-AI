@@ -41,7 +41,14 @@
       <i class="fa-solid fa-bars"></i>
     </nav>
     <main>
-      <h3 style="margin: 15px 15px 25px">Website Safety Score</h3>
+      <div class="heading">
+        <h3>Website Safety Score</h3>
+        <div class="xmark-container">
+          <span
+            ><i class="fa-solid fa-xmark" style="color: rgb(29, 26, 26)"></i
+          ></span>
+        </div>
+      </div>
       <div class="wsafety-container">
         <div class="wsafety-range-container">
           <div class="wsafety-range">
@@ -83,135 +90,27 @@
           </div>
         </div>
       </div>
-      <div class="region-container">
-        <div class="region-texts">
-          <div class="rurl rt-child">
+      <div class="website-container">
+        <div class="website-texts">
+          <div class="wurl wt-child">
             <p>Website URL:</p>
             <a href="">https://www.apple.com</a>
           </div>
-          <div class="rdomain rt-child">
+          <div class="wdomain wt-child">
             <p>Domain:</p>
-            <a href="">apple.com</a>
+            <span>apple.com</span>
           </div>
-          <div class="r-ip-address rt-child">
+          <div class="w-ip-address wt-child">
             <p>IP Address:</p>
             <strong>12.234.126.44</strong>
           </div>
         </div>
-        <div class="upgrade-container">
-          <div class="country-option">
-            <p>
-              Choose another country or region to see content specific to your
-              location
-            </p>
-            <div class="country-toggle-container">
-              <div class="country-container">
-                <div class="country-toggle">
-                  <div class="check-icon">
-                    <span
-                      ><i
-                        class="fa-solid fa-check"
-                        style="color: rgb(31, 34, 37)"
-                      ></i
-                    ></span>
-                    <span class="country-text">Nigeria</span>
-                  </div>
-                  <!-- This signals a dropdown list for different countries so apply javascript to display different countries when the arrow is clicked -->
-                  <div class="chevron-icon">
-                    <i
-                      class="fa-solid fa-angle-down"
-                      style="color: rgb(31, 34, 37)"
-                    ></i>
-                  </div>
-                </div>
-                <div class="continue-btn">
-                  <button>Continue</button>
-                  <span class="xmark"
-                    ><i
-                      class="fa-solid fa-xmark"
-                      style="color: rgb(31, 34, 37)"
-                    ></i>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="upgrade-devices">
-            <div class="apple-logo ucontent">
-              <span
-                ><i
-                  class="fa-brands fa-apple"
-                  style="color: rgb(31, 34, 37)"
-                ></i
-              ></span>
-            </div>
-            <div class="ucontent">
-              <span>Store</span>
-            </div>
-            <div class="ucontent">
-              <span>Mac</span>
-            </div>
-            <div class="ucontent">
-              <span>IPad</span>
-            </div>
-            <div class="ucontent">
-              <span>IPhone</span>
-            </div>
-            <div class="ucontent">
-              <span>Watch</span>
-            </div>
-            <div class="ucontent">
-              <span>Vision</span>
-            </div>
-            <div class="ucontent">
-              <span>Airpods</span>
-            </div>
-            <div class="ucontent">
-              <span>TV & Home</span>
-            </div>
-            <div class="ucontent">
-              <span>Entertainment</span>
-            </div>
-            <div class="ucontent">
-              <span>Accessories</span>
-            </div>
-            <div class="ucontent">
-              <span>Support</span>
-            </div>
-            <div class="ucontent">
-              <span
-                ><i
-                  class="fa-solid fa-magnifying-glass"
-                  style="color: rgb(31, 34, 37)"
-                ></i
-              ></span>
-            </div>
-            <div class="ucontent">
-              <span
-                ><i
-                  class="fa-regular fa-clipboard"
-                  style="color: rgb(31, 34, 37)"
-                ></i
-              ></span>
-            </div>
-          </div>
-          <div class="umessage-container">
-            <div class="umessage-text um1">
-              <span
-                ><i
-                  class="fa-brands fa-apple"
-                  style="color: rgb(31, 34, 37)"
-                ></i
-              ></span>
-              <h1 style="font-size: 40px">Upgrade</h1>
-            </div>
-            <div class="um1">
-              <h2>Love it. lease it. Upgrade it</h2>
-            </div>
-            <div class="um1">
-              <button>Learn more</button>
-            </div>
-          </div>
+        <!-- iframe could not work because of the apple website security policy that blocks its access so i tried thum.io which is a website screenshot API service. This is because thum.io can take a URL, render it on its own servers, take a screenshot and return the screenshot to your website within an image but the thum.io couldn't display all the content so i then tried using the chrome dev tools to capture the complete webpage, placed it in a fixed container with overflow-y to allow scrolling through the complete webpage -->
+        <div class="website-preview">
+          <img
+            src="../Images folder/www.apple.com_.png"
+            alt="website preview"
+          />
         </div>
       </div>
       <h5 style="margin: 25px 0px 15px">Website Details</h5>
@@ -221,7 +120,7 @@
           <h5>24 years</h5>
         </div>
         <div class="wdetails-text">
-          <span>SSL Certificate</span>
+          <span>SSL CERTIFICATE</span>
           <h5 class="green">Valid</h5>
         </div>
         <div class="wdetails-text">
