@@ -26,11 +26,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 8px; */
-  /* gap: 8px; */
   border: 1px solid #e5e7eb;
-}
-.xmark-container span {
 }
 /* web safety score first section */
 .wsafety-container {
@@ -351,7 +347,7 @@ footer {
 .legal-content {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 15px;
 }
 .footer-content p {
   padding: 5px 0;
@@ -391,19 +387,6 @@ hr {
   .website-preview {
     width: 650px;
   }
-  /* .wsafety-container {
-    justify-content: flex-start;
-    gap: 180px;
-  } */
-  /* .wsafety-text {
-    width: 543px;
-  }
-  .website-container {
-    gap: 170px;
-  }
-  .website-preview {
-    width: 586px;
-  } */
   .pindicator-content {
     max-width: 450px;
   }
@@ -447,7 +430,7 @@ hr {
     width: 486px;
   }
   .wurl a,
-  .wdomain a,
+  .wdomain span,
   .w-ip-address strong {
     font-size: 12px;
   }
@@ -484,14 +467,9 @@ hr {
   .wsafety-range-container {
     width: 350px;
   }
-  .wdetails-text {
-    padding: 12px;
-  }
-  .wdetails-text h5 {
-    font-size: 10px;
-  }
-  .wdetails-text span {
-    font-size: 8px;
+  .wdetails-container {
+    flex-wrap: wrap;
+    padding: 0 5px 0;
   }
   .footer-logo-content {
     max-width: 160px;
@@ -507,7 +485,7 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: auto;
   }
   .wsafety-text {
     padding-top: 0px;
@@ -518,6 +496,7 @@ hr {
     max-width: 400px;
     flex-wrap: wrap;
     height: auto;
+    padding: 15px;
   }
   .website-container {
     flex-direction: column;
@@ -528,7 +507,6 @@ hr {
     width: 100%;
   }
   .website-texts {
-    /* gap: 20px; */
     height: 270px;
     width: 250px;
   }
@@ -545,11 +523,6 @@ hr {
   }
   .policies {
     gap: 10px;
-  }
-  .wdetails-container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 5px 0;
   }
   .indicator-container {
     grid-template-columns: 1fr;
@@ -591,11 +564,30 @@ hr {
 }
 
 @media (max-width: 470px) {
+  .heading {
+    margin: 10px 0 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading h3 {
+    font-size: 15px;
+  }
+  .xmark-container {
+    display: none;
+  }
+  .xmark-container span {
+    font-size: 12px;
+  }
   .wsafety-range-container {
     height: 250px;
+    gap: 20px;
+  }
+  .wsafety-container {
+    gap: 0;
+    padding-right: 0px;
   }
   .privacy-info {
-    font-size: 8px;
+    font-size: 6px;
     gap: 8px;
   }
   .policies {
@@ -610,6 +602,9 @@ hr {
   }
   .footer-content h4 {
     font-size: 12px;
+  }
+  .wsafety-text {
+    height: auto;
   }
   .wsafety-text p {
     font-size: 10px;
@@ -627,9 +622,7 @@ hr {
     font-size: 10px;
   }
   .wsafety-links {
-    justify-content: flex-start;
     gap: 15px;
-    max-width: 350px;
   }
   .ctrust-icon-fa {
     font-size: 12px;
@@ -656,5 +649,64 @@ hr {
   }
   .wdetails-text span {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 392px) {
+  .wsafety-text p {
+    font-size: 10px;
+  }
+  .wdetails-text span {
+    font-size: 8px;
+  }
+  .pi-text2 h5,
+  .rindicator-content h5,
+  .ctrust-text h5 {
+    font-size: 7px;
+  }
+  .pi-text2 p,
+  .rindicator-content p,
+  .ctrust-text1 span {
+    font-size: 6px;
+  }
+  .ctrust-text1 h4 {
+    font-size: 8px;
+  }
+  .pi-text button {
+    padding: 4px 4px;
+    font-size: 6px;
+  }
+  .pi-text1 i {
+    font-size: 10px;
+  }
+  .pi-text {
+    padding: 5px;
+  }
+  .pindicator-content {
+    padding: 4px 0 4px 4px;
+  }
+  .wurl a,
+  .wdomain span,
+  .w-ip-address strong {
+    font-size: 10px;
+  }
+  .wt-child p {
+    font-size: 10px;
+  }
+  .wdetails-text h5 {
+    font-size: 10px;
+  }
+  strong {
+    font-size: 15px;
+  }
+  .wsafety-range-score small {
+    font-size: 8px;
+  }
+  .wsafety-range-container button {
+    padding: 2px 8px;
+    font-size: 10px;
+  }
+  .privacy-info {
+    font-size: 5px;
   }
 }
