@@ -1,0 +1,261 @@
+/* notification settings page */
+
+.notification-settings-main{
+    /* display: flex;
+    flex-direction: column;
+    gap: 1.5rem; */
+    /* padding: 0;
+    margin: 0;
+    border: 1px solid black; */
+}
+
+.notification-settings-main > *{
+    margin-bottom: 2rem;
+}
+
+.back-link{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #000;
+    text-decoration: none;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+
+.back-link:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.notification-settings-header{
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+.notification-settings-header h1{
+    font-size: var(--h1-font-size);
+    font-weight: 600;
+    text-align: left;
+}
+
+.notification-settings-header p{
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    margin-top: 0.3rem;
+    text-align: left;
+}
+
+/* generic card used for each section */
+
+.notification-card{
+    background-color: #fff;
+    border-radius: 0.75rem;
+    padding: 1.5rem 1.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.notification-card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 0.25rem;
+}
+
+.notification-card-header h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.toggle-labels{
+    display: flex;
+    gap: 2.5rem;
+    color: var(--p-color);
+    font-size: 0.9rem;
+}
+
+.notification-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1.25rem;
+    border-bottom: 1px solid #eee;
+}
+
+.notification-row:last-of-type{
+    border-bottom: none;
+    padding-bottom: 0.5rem;
+}
+
+.notification-row h4{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.notification-row p{
+    color: var(--p-color);
+    font-size: 0.85rem;
+}
+
+.toggle-pair{
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    flex-shrink: 0;
+}
+
+/* toggle switch */
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    position: absolute;
+    inset: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.slider::before{
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.switch input:checked + .slider{
+    background-color: var(--default-purple-color);
+}
+
+.switch input:checked + .slider::before{
+    transform: translateX(20px);
+}
+
+/* active sessions (reused pattern) */
+
+.sessions-card h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+.session-row{
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding-block: 0.9rem;
+    border-bottom: 1px solid #eee;
+}
+
+.session-row h4{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.session-row p{
+    color: var(--p-color);
+    font-size: 0.85rem;
+}
+
+.request-report-btn{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin-block: 1rem;
+}
+
+.request-report-btn:hover{
+    background-color: #f3f3f3;
+}
+
+/* quiet hours */
+
+.quiet-hours-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.quiet-hours-card h2{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.quiet-hours-card p{
+    color: var(--p-color);
+    font-size: 0.85rem;
+}
+
+.quiet-hours-range{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.quiet-hours-range select{
+    padding: 0.6rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    color: #000;
+}
+
+.quiet-hours-range p{
+    color: var(--p-color);
+}
+
+/* mobile / tablet */
+
+@media (min-width: 0px) and (max-width: 1023px){
+    .notification-settings-main{
+        padding: 1rem;
+    }
+
+    .notification-card{
+        padding: 1.25rem;
+    }
+
+    .notification-row{
+        align-items: flex-start;
+    }
+
+    .toggle-pair{
+        gap: 1.5rem;
+    }
+
+    .quiet-hours-card{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
