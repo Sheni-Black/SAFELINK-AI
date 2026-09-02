@@ -1,0 +1,349 @@
+ :root{
+    --border: 1px solid black;
+    --default-purple-color : rgb(79, 70, 229);
+    --radial-background: radial-gradient(circle at top left, #AAB8FC 0%, transparent 30%),
+        radial-gradient( circle at bottom right, #b6c0f0 0%, transparent 15%),
+        #F7F7F7;
+    --h1-font-size: clamp(1rem, calc(1vw + 1.5rem), 3rem); 
+    --p-font-size: clamp(0.8rem, calc(1vw + 0.2rem), 1.7rem);
+    --p-color: rgba(0, 0, 0, 0.7);
+    --h4-font-size: 1.2rem;
+    --light-font-weight: 400;
+    --heavy-font-weight: 600;
+}
+ 
+ * { 
+    box-sizing: border-box; 
+}
+
+.my-dashbaord-main-first-content{
+    display: flex;
+    padding: 16px;
+    gap: 32px;
+}
+
+.my-dashboard-cards-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-width: 426px;
+    min-height: 398px;
+    row-gap: 32px;
+    column-gap: 16px;
+}
+
+.my-dashboard-each-card {
+    width: 205px;
+    min-height: 182px;
+    padding: 16px;
+    border-radius: 16px;
+    background: #4F46E5;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.my-dashboard-each-card > p:first-of-type{
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.my-dashboard-each-card > p:last-of-type{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+.my-dashboard-each-card:nth-child(2){
+    background-color: #D97706;
+}
+
+.my-dashboard-each-card:nth-child(3){
+    background-color: #0369A1;
+}
+
+.my-dashboard-each-card:nth-child(4){
+    background-color: #15803D;
+}
+
+.my-dashboard-each-card:nth-child(3) > update{
+    color: #59AB77;
+}
+
+.box-icon{
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-icon span{
+    color: black;
+}
+
+.update{
+    min-width: 173px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.update p{
+    font-size: 10px;
+}
+
+.update-content{
+    display: flex;
+    background-color: #fff;
+    color: black;
+    min-width: 54px;
+    min-height: 22px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    padding-block: 4px;
+    padding-inline: 8px;
+    border-radius: 16px;
+}
+
+.update-content span{
+    font-size: 10px;
+}
+
+.update-br{
+  display: none;
+}
+
+  
+/* This is the block meant to sit inside .my-dashbaord-main-first-content*/
+  .risk-chart-card {
+    min-width: 450px;
+    min-height: 398px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .risk-chart-header {
+    width: 654px;
+    height: 48px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+
+  .risk-chart-title-group h2 {
+    margin: 0 0 4px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .risk-chart-title-group p {
+    margin: 0;
+    font-size: 14px;
+    color: #8a8f98;
+  }
+
+  .risk-chart-legend {
+    display: flex;
+    gap: 20px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #3a3a3a;
+    font-weight: 500;
+  }
+
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .legend-dot.safe { background: #1e9e5a; }
+  .legend-dot.suspicious { background: #b5651d; }
+  .legend-dot.dangerous { background: #d33b3b; }
+
+  .risk-chart-svg-wrap {
+    margin-top: 12px;
+    width: 100%;
+  }
+
+  .risk-chart-svg-wrap svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
+  }
+
+  .grid-line {
+    stroke: #e3e5ea;
+    stroke-width: 1;
+    stroke-dasharray: 4 4;
+  }
+
+  .axis-label {
+    font-size: 13px;
+    fill: #8a8f98;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+
+  .area-safe {
+    fill: rgba(30, 158, 90, 0.08);
+  }
+
+  .line-safe {
+    fill: none;
+    stroke: #1e9e5a;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .line-suspicious {
+    fill: none;
+    stroke: #b5651d;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .line-dangerous {
+    fill: none;
+    stroke: #d33b3b;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .my-dashboard-main-second-content{
+    padding: 16px;
+  }
+
+  .my-dashboard-main-second-content .scanned-websites-container{
+     background-color: #fff;
+  }
+
+  .recent-scan-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+   .recent-scan-content p{
+      font-size: 18px;
+      font-weight: 600;
+   }
+
+  .recent-scan-content a{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin-block: 1rem;
+    font-size: 16px;
+    color: #4338CA;
+  }
+
+  /* For mobile */
+
+@media (max-width: 767px) {
+    .my-dashboard-each-card {
+    width: 163.5px;
+  }
+
+  .my-dashboard-cards-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 16px;
+    column-gap: 0;
+    min-width: 343px;
+    justify-items: center;
+  }
+
+  .my-dashboard-each-card{
+    min-width: 163px;
+  }
+
+  .my-dashbaord-main-first-content{
+    padding-inline: 8px;
+    margin-top: 32px;
+  }
+
+  .update-br{
+    display: block;
+  }
+
+   .risk-chart-card {
+    min-width: 343px;
+    min-height: 398px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .risk-chart-header{
+    overflow: hidden;
+    height: 60px;
+  }
+
+  .risk-chart-legend {
+    flex-direction: column;
+    height: 58px;
+    gap: 8px;
+  }
+
+  .risk-chart-title-group {
+    width: 214px;
+    height: 58px;
+  }
+
+  .risk-chart-title-group h2{
+    font-size: 14px;
+  }
+
+  .risk-chart-title-group p{
+    font-size: 12px;
+  }
+
+  .risk-chart-svg-wrap {
+    min-height: 276px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1023px) {
+  .my-dashbaord-main-first-content{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .my-dashboard-cards-container{
+    display: flex;
+    gap: 32px;
+    min-height: 176px;
+    justify-content: center;
+  }
+}
+
+
+  
+    

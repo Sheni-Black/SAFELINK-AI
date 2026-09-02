@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../css files/delete.css">
     <link rel="stylesheet" href="../css files/notification.css">
     <link rel="stylesheet" href="../css files/ai-assistance.css">
+    <link rel="stylesheet" href="../css files/My-dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <body>
@@ -63,6 +64,160 @@
                     </div>
                 </div>
             </nav>
+
+            <!-- This is for the dashboard page -->
+            <div class="my-dashboard-main">
+                <div class="my-dashbaord-main-first-content">
+                    <div class="my-dashboard-cards-container">
+                        <div class="my-dashboard-each-card">
+                            <div class="box-icon">
+                                <span class="material-symbols-outlined">deployed_code</span>
+                            </div>
+                            <p>Total Scans</p>
+                            <p>2134</p>
+                            <div class="update">
+                                <div class="update-content">
+                                    <span class="material-symbols-outlined">keyboard_arrow_up</span>
+                                    <p>2.8%</p>
+                                </div>
+                                <p>Updated <br class="update-br"> March 23, 2026</p>
+                            </div>
+                        </div>
+                         <div class="my-dashboard-each-card">
+                            <div class="box-icon">
+                                <span class="material-symbols-outlined">deployed_code</span>
+                            </div>
+                            <p>Total Reports</p>
+                            <p>2134</p>
+                            <div class="update">
+                                <div class="update-content">
+                                    <span class="material-symbols-outlined">keyboard_arrow_up</span>
+                                    <p>2.8%</p>
+                                </div>
+                                <p>Updated <br class="update-br"> March 23, 2026</p>
+                            </div>
+                        </div>
+                         <div class="my-dashboard-each-card">
+                            <div class="box-icon">
+                                <span class="material-symbols-outlined">deployed_code</span>
+                            </div>
+                            <p>Trust Score</p>
+                            <p>95%</p>
+                            <div class="update">
+                                <div class="update-content">
+                                    <p>Excellent</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="my-dashboard-each-card">
+                            <div class="box-icon">
+                                <span class="material-symbols-outlined">deployed_code</span>
+                            </div>
+                            <p>Security Level</p>
+                            <p>High</p>
+                            <div class="update">
+                                <div class="update-content">
+                                    <p>Protected</p>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+
+                    <!-- for the graph -->
+                    <div class="risk-chart-card">
+                        <div class="risk-chart-header">
+                            <div class="risk-chart-title-group">
+                                <h2>Risk Distribution Chart</h2>
+                                <p>Detected threats vs safe scans: last 30 days</p>
+                            </div>
+                            <div class="risk-chart-legend">
+                                <div class="legend-item"><span class="legend-dot safe"></span>Safe</div>
+                                <div class="legend-item"><span class="legend-dot suspicious"></span>Suspicious</div>
+                                <div class="legend-item"><span class="legend-dot dangerous"></span>Dangerous</div>
+                            </div>
+                        </div>
+
+                        <div class="risk-chart-svg-wrap" id="riskChartWrap"></div>
+                    </div>
+                </div>
+
+                <div class="my-dashboard-main-second-content">
+                   <div class="recent-scan">
+                        <div class="recent-scan-content">
+                            <p>Recent Scan History</p>
+                            <a href="">View Report <span class="material-symbols-outlined">arrow_forward</span></a>
+                        </div>
+                        <div class="scan-heading">
+                            <p>Website</p>
+                            <p>Date</p>
+                            <p>Risk level</p>
+                            <p>Action</p>
+                        </div>
+                        <div class="scanned-websites-container">
+                            <div class="scanned-website">
+                                <div>
+                                    <i class="fa-solid fa-link fa-rotate-360"></i>
+                                    <a href="">www.apple.com</a>
+                                </div>
+                                <div>
+                                    <p>Jan 23, 2026</p>
+                                    <p>11:10AM</p>
+                                </div>
+                                <p>Safe</p>
+                                <div>
+                                    <p>View Report</p>
+                                    <span class="material-symbols-outlined">arrow_right_alt</span>
+                                </div>
+                            </div>
+                            <div class="scanned-website">
+                                <div>
+                                    <i class="fa-solid fa-link fa-rotate-360"></i>
+                                    <a href="">www.apple.com</a>
+                                </div>
+                                <div>
+                                    <p>Jan 23, 2026</p>
+                                    <p>11:10AM</p>
+                                </div>
+                                <p>Safe</p>
+                                <div>
+                                    <p>View Report</p>
+                                    <span class="material-symbols-outlined">arrow_right_alt</span>
+                                </div>
+                            </div>
+                            <div class="scanned-website">
+                                <div>
+                                    <i class="fa-solid fa-link fa-rotate-360"></i>
+                                    <a href="">www.apple.com</a>
+                                </div>
+                                <div>
+                                    <p>Jan 23, 2026</p>
+                                    <p>11:10AM</p>
+                                </div>
+                                <p>Safe</p>
+                                <div>
+                                    <p>View Report</p>
+                                    <span class="material-symbols-outlined">arrow_right_alt</span>
+                                </div>
+                            </div>
+                            <div class="scanned-website">
+                                <div>
+                                    <i class="fa-solid fa-link fa-rotate-360"></i>
+                                    <a href="">www.apple.com</a>
+                                </div>
+                                <div>
+                                    <p>Jan 23, 2026</p>
+                                    <p>11:10AM</p>
+                                </div>
+                                <p>Safe</p>
+                                <div>
+                                    <p>View Report</p>
+                                    <span class="material-symbols-outlined">arrow_right_alt</span>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
             
             <!-- This is for the scan history -->
             <div class="scan-history-main">

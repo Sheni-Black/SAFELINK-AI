@@ -16,7 +16,7 @@ closeAside.addEventListener("click", () =>{
 
 const navItems = document.querySelectorAll(".dashboard-nav [data-page]");
 const pages = document.querySelectorAll(
-    ".scan-history-main, .saved-websites-main, .community-container, .learning-container, .profile-main, .settings-main, .notification-settings-main, .delete-account-main, .ai-assistant-main"
+    ".scan-history-main, .saved-websites-main, .community-container, .learning-container, .profile-main, .settings-main, .notification-settings-main, .delete-account-main, .ai-assistant-main, .my-dashboard-main"
 );
 const title = document.querySelector(".title-change")
 
@@ -75,6 +75,10 @@ navItems.forEach((item) => {
         if (pageName === "settings") {
             document.querySelector(".settings-main").style.display = "block";
             title.textContent = "Settings"
+        }
+        if (pageName === "dashboard") {
+            document.querySelector(".my-dashboard-main").style.display = "block";
+            title.textContent = "Overview"
         }
     });
 });
@@ -236,3 +240,78 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
+// For the graph
+// ---- Data: last 30 days, one point every ~2 days ----
+    const labels = ["Jun 1", "Jun 7", "Jun 14", "Jun 21", "Jun 28", "Jun 30"];
+
+    const safeData       = [38, 37, 35, 39, 41, 40, 39];
+    const suspiciousData = [11, 10, 8, 12, 11, 10, 11];
+    const dangerousData  = [6, 5, 4, 7, 6, 5, 6];
+
+    // ---- Chart geometry ----
+    const width = 720;
+    const height = 340;
+    const padding = { top: 10, right: 10, bottom: 34, left: 40 };
+
+    const chartWidth = width - padding.left - padding.right;
+    const chartHeight = height - padding.top - padding.bottom;
+
+    const maxY = 50;
+    const yTicks = [0, 10, 20, 30, 40, 50];
+
+    function xPos(i, len) {
+      return padding.left + (i / (len - 1)) * chartWidth;
+    }
+
+    function yPos(value) {
+      return padding.top + chartHeight - (value / maxY) * chartHeight;
+    }
+
+    function buildLinePath(data) {
+      return data
+        .map((v, i) => `${i === 0 ? "M" : "L"} ${xPos(i, data.length).toFixed(2)} ${yPos(v).toFixed(2)}`)
+        .join(" ");
+    }
+
+    function buildAreaPath(data) {
+      const line = buildLinePath(data);
+      const lastX = xPos(data.length - 1, data.length).toFixed(2);
+      const firstX = xPos(0, data.length).toFixed(2);
+      const baseY = yPos(0).toFixed(2);
+      return `${line} L ${lastX} ${baseY} L ${firstX} ${baseY} Z`;
+    }
+
+    function buildSVG() {
+      let gridLines = "";
+      let yLabels = "";
+
+      yTicks.forEach((tick) => {
+        const y = yPos(tick);
+        gridLines += `<line class="grid-line" x1="${padding.left}" y1="${y}" x2="${width - padding.right}" y2="${y}"></line>`;
+        yLabels += `<text class="axis-label" x="${padding.left - 12}" y="${y + 4}" text-anchor="end">${tick}</text>`;
+      });
+
+      let xLabels = "";
+      labels.forEach((label, i) => {
+        const x = xPos(i, labels.length);
+        xLabels += `<text class="axis-label" x="${x}" y="${height - 6}" text-anchor="middle">${label}</text>`;
+      });
+
+      const svg = `
+        <svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet">
+          ${gridLines}
+          <path class="area-safe" d="${buildAreaPath(safeData)}"></path>
+          <path class="line-safe" d="${buildLinePath(safeData)}"></path>
+          <path class="line-suspicious" d="${buildLinePath(suspiciousData)}"></path>
+          <path class="line-dangerous" d="${buildLinePath(dangerousData)}"></path>
+          ${yLabels}
+          ${xLabels}
+        </svg>
+      `;
+
+      document.getElementById("riskChartWrap").innerHTML = svg;
+    }
+
+    buildSVG();
