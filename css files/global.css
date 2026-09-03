@@ -107,6 +107,42 @@ nav > .fa-bars {
   display: none;
 }
 
+nav > .fa-bars:hover{
+  cursor: pointer;
+}
+
+.hamburger-nav{
+  position: absolute;
+  left: 0;
+  top: 13%;
+  /* display: flex;
+  flex-direction: column; */
+  background-color: #fff;
+  min-width: 100vw;
+  z-index: 100;
+  /* overflow: visible; */
+  display: none;
+}
+
+.hamburger-nav  a{
+  padding: 1rem;
+  display: block;
+}
+
+.hamburger-nav > a:hover{
+  background-color: #EBECEF;
+}
+
+nav > .nav-close{
+  display: none;
+  overflow: hidden;
+  font-weight: 400;
+}
+
+nav > .nav-close:hover{
+  cursor: pointer;
+}
+
 /* Everything regarding the nav/header ends here */
 
 /* for the footer */
@@ -180,6 +216,7 @@ footer h4 {
   nav {
     justify-content: space-between;
   }
+
   .page-links,
   .nav-create-profile {
     display: none;
@@ -195,6 +232,10 @@ footer h4 {
   footer {
     flex-direction: column;
     padding-inline: 1rem;
+  }
+
+  .hamburger-nav{
+    top: 9.5%;
   }
 }
 

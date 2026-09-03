@@ -181,6 +181,11 @@ input:focus-visible {
   font-size: 14px;
   pointer-events: none;
 }
+
+.input-icon-wrapper input{
+  outline: none;
+}
+
 .input-icon-wrapper input[type="text"],
 .input-icon-wrapper input[type="email"],
 .input-icon-wrapper input[type="password"] {
@@ -281,6 +286,32 @@ input:focus-visible {
 .signin-button:disabled:hover,
 .verify-button:disabled:hover {
     background: #a5b4fc;
+}
+
+.visibility-position{
+  position: relative;
+}
+
+.visibility{
+  position: absolute;
+  right: 1rem;
+  top: 25%;
+}
+
+.visibility:hover{
+  cursor: pointer;
+}
+
+.visibility span{
+  overflow: hidden;
+}
+
+.visibility .visible{
+  display: none;
+}
+
+.visibility .close-visible{
+  display: none;
 }
 
 /* .signin-container{

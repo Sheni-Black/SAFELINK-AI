@@ -1,7 +1,4 @@
-// ==========================================================
-// SAFELINK AI - AUTHENTICATION JAVASCRIPT
-// ==========================================================
-//
+
 // This file handles:
 //
 // 1. Sign up
@@ -22,12 +19,9 @@
 //            required fields only appear on submit)
 //
 // Buttons are disabled until the required information is valid.
-// ==========================================================
 
 
-// ==========================================================
 // AUTHENTICATION CONTAINERS
-// ==========================================================
 
 const signupContainer = document.querySelector(".signup-container");
 const signinContainer = document.querySelector(".signin-container");
@@ -36,6 +30,7 @@ const otpSuccessful = document.querySelector(".otp-successful");
 const forgotPasswordContainer = document.querySelector(".fpassword-container");
 const checkEmailContainer = document.querySelector(".check-email-container");
 const newPasswordContainer = document.querySelector(".npassword-container");
+const newPasswordSet = document.querySelector(".rpassword-container");
 
 
 // Put all containers into one array.
@@ -47,16 +42,15 @@ const containers = [
     otpSuccessful,
     forgotPasswordContainer,
     checkEmailContainer,
-    newPasswordContainer
+    newPasswordContainer,
+    newPasswordSet
 ];
 
-
-// ==========================================================
 // SHOW / HIDE AUTHENTICATION CONTAINERS
-// ==========================================================
 
 function hideAllContainers() {
-
+    // loop through every element of the containers array and give it a display of none
+    
     containers.forEach((container) => {
 
         if (container) {
@@ -76,17 +70,12 @@ function showContainer(container) {
     }
 }
 
-
-// ==========================================================
 // INITIAL PAGE
-// ==========================================================
 
 showContainer(signupContainer);
 
 
-// ==========================================================
 // NAVIGATION BETWEEN SIGN UP AND SIGN IN
-// ==========================================================
 
 const createText = document.querySelector(".create-text");
 const loginText = document.querySelector(".login-text");
@@ -114,13 +103,11 @@ if (loginText) {
 }
 
 
-// ==========================================================
 // FORM ELEMENTS
-// ==========================================================
 
-// -------------------------
-// SIGN UP
-// -------------------------
+
+// SIGN UP FORM VARIABLES
+
 
 const signupForm = document.querySelector(".signup-form");
 
@@ -133,13 +120,16 @@ const fnameError = document.querySelector(".fnameEroor");
 const emailError = document.querySelector(".emailError");
 const passwordError = document.querySelector(".passwordError");
 
+[fnameError, emailError, passwordError].forEach((el) => {
+    if (el) el.classList.add("js-error");
+});
+
 const terms = document.querySelector(".terms input");
 const signupButton = document.querySelector(".signup-button");
 
 
-// -------------------------
-// SIGN IN
-// -------------------------
+// SIGN IN VARIABLES
+
 
 const signinForm = document.querySelector(".signin-form");
 
@@ -149,9 +139,7 @@ const signinPassword = document.querySelector("#password1");
 const signinButton = document.querySelector(".signin-button");
 
 
-// -------------------------
-// FORGOT PASSWORD
-// -------------------------
+// FORGOT PASSWORD VARIABLES
 
 const forgotPasswordForm = document.querySelector(".fpassword-form");
 
@@ -160,9 +148,7 @@ const forgotEmail = document.querySelector("#email2");
 const forgotPasswordButton = document.querySelector(".fpassword-button");
 
 
-// -------------------------
-// CREATE NEW PASSWORD
-// -------------------------
+// CREATE NEW PASSWORD VARIABLES
 
 const newPasswordForm = document.querySelector(".npassword-form");
 
@@ -172,42 +158,22 @@ const newConfirmPassword = document.querySelector("#cpassword2");
 const newPasswordButton = document.querySelector(".npassword-button");
 
 
-// ==========================================================
-// ERROR MESSAGE HELPERS
-// ==========================================================
-//
-// Your HTML already contains error elements for:
-//
-// fname
-// email
-// password
-//
-// For fields without an error element, we create one
-// dynamically.
-
-
 function createErrorElement(input) {
 
     let errorElement = input.nextElementSibling;
 
     // If an error element already exists, use it.
-    if (
-        errorElement &&
-        errorElement.classList.contains("js-error")
-    ) {
+    
+    if (errorElement && errorElement.classList.contains("js-error")) {
         return errorElement;
     }
-
 
     // Otherwise create one.
     errorElement = document.createElement("div");
 
     errorElement.classList.add("js-error");
 
-    input.insertAdjacentElement(
-        "afterend",
-        errorElement
-    );
+    input.insertAdjacentElement("afterend", errorElement);
 
     return errorElement;
 }
@@ -1259,3 +1225,68 @@ if (resendText1) {
     });
 
 }
+
+// ==========================================================
+// PASSWORD FIELD VISIBILITY
+// ==========================================================
+
+const visibilityContainers = document.querySelectorAll(".visibility");
+
+visibilityContainers.forEach((visibilityContainer) => {
+
+    const closeVisible =
+        visibilityContainer.querySelector(".close-visible");
+
+    const nonVisible =
+        visibilityContainer.querySelector(".non-visible");
+
+    const visible =
+        visibilityContainer.querySelector(".visible");
+
+    // Find the input that belongs to this visibility container
+    const passwordInput =
+        visibilityContainer
+            .closest(".input-icon-wrapper")
+            .querySelector("input");
+
+
+    // ======================================================
+    // SHOW PASSWORD
+    // ======================================================
+
+    nonVisible.addEventListener("click", () => {
+
+        // Change password from hidden to visible
+        passwordInput.type = "text";
+
+        // Hide the eye-off icon
+        nonVisible.style.display = "none";
+
+        // Show the eye icon
+        visible.style.display = "inline-block";
+
+        // Show the close icon
+        closeVisible.style.display = "inline-block";
+    });
+
+
+    // ======================================================
+    // HIDE PASSWORD
+    // ======================================================
+
+    closeVisible.addEventListener("click", () => {
+
+        // Change password back to hidden
+        passwordInput.type = "password";
+
+        // Show the eye-off icon
+        nonVisible.style.display = "inline-block";
+
+        // Hide the eye icon
+        visible.style.display = "none";
+
+        // Hide the close icon
+        closeVisible.style.display = "none";
+    });
+
+});
