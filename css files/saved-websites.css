@@ -29,6 +29,12 @@
         font-size: var(--p-color);
     }
 
+    .website-type p:hover{
+        background-color: #6366F1;
+        color: #fff;
+        border: none;
+    }
+
     .website-type-container input{
         width: 20rem;
         height: 2.5rem;

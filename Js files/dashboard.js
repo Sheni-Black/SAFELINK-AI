@@ -26,7 +26,7 @@ pages.forEach((page) => {
 });
 
 // Show scan history by default
-document.querySelector(".scan-history-main").style.display = "block";
+document.querySelector(".my-dashboard-main").style.display = "block";
 
 // Listen for clicks
 navItems.forEach((item) => {

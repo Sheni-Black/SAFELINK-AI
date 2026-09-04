@@ -103,6 +103,7 @@ nav{
     width: 100%;
     padding-block: 0.5rem;
     background-color: #fff;
+    padding-inline: 1rem;
 }
 
 nav span{
@@ -146,6 +147,37 @@ nav > span:first-child{
 
 .no-display{
     display: none;
+}
+
+/* for community */
+.dashboard-community-header{
+    margin-top: 0;
+}
+
+.dashboard-total-reports{
+    margin-top: 2rem;
+    border: var(--border);
+}
+
+.community-header > .header-content{
+    background-color: #fff;
+    padding-inline: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.dashboard-community-main{
+    padding-inline: 2rem;
+}
+
+.dashboard-learning-header-content{
+    background-color: #fff;
+    padding-block: 1rem;
+}
+
+.dashboard-learning-main{
+    padding-inline: 1rem;
+    margin-top: 3rem;
 }
 
 
