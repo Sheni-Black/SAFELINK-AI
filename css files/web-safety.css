@@ -5,9 +5,9 @@ body {
   margin: 0;
   background: #eaeaec;
 }
+/* specified width: 1280px; */
 main {
   background: white;
-  /* width: 1280px; */
   min-height: 100vh;
   margin: 60px;
   padding: 16px;
@@ -113,14 +113,13 @@ strong {
   font-weight: 400;
 }
 
+/* Specified width: 943px; */
 .wsafety-links {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* width: 943px; */
   height: 50px;
   gap: 24px;
-  /* max-width: 500px; */
 }
 .wsafety-links button {
   display: flex;
@@ -143,8 +142,7 @@ strong {
   font-size: 14px;
   display: inline-block;
 }
-/* .wsafety-links i {
-} */
+
 /* web safety score second section */
 .wdetails-container {
   display: flex;
@@ -157,7 +155,6 @@ strong {
   justify-content: space-between;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
-  /* width: 1248px; */
   height: 334px;
   padding: 16px 16px 0;
 }
@@ -190,7 +187,6 @@ strong {
   gap: 8px;
 }
 .wt-child p {
-  /* padding: 10px 0; */
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
