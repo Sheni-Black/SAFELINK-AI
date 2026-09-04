@@ -542,11 +542,11 @@
     margin-bottom: 1rem;
 }
 
-.hamburger-dashboard:hover{
+.hamburger-nav> .hamburger-dashboard:hover{
     background-color: #4F46E5;
 }
 
-.hamburger-dashboard-signin{
+.hamburger-nav > .hamburger-dashboard-signin{
     text-align: center;
     background-color: #fff;
     color: #000;
