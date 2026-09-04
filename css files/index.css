@@ -648,6 +648,19 @@
     .all-break{
         display: none;
     }
+
+    .hero-four-container{
+        padding-bottom: 0;
+    }
+
+    .hero-five{
+        padding-block: 3rem;
+        padding-inline: 1rem;
+    }
+
+    .hero-five-content{
+        margin-bottom: 2rem;
+    }
 }
 
 
