@@ -464,10 +464,18 @@
     color: #030712;
 }
 
+.cyber-resource p:hover{
+    color: var(--default-purple-color);
+}
+
 .cyber-resource a{
     color: #030712;
     font-weight: 600;
     font-size: 1rem;
+}
+
+.cyber-resource a:hover{
+    color: var(--default-purple-color);
 }
 
 /* hero-six end and heo-seven begin */
@@ -734,6 +742,10 @@
         font-weight: 600;
     }
 
+    .hero-seven{
+        padding-inline: 0.5rem;
+    }
+
     .faq-content h1{
         font-size: 24px;
         font-weight: 600;
@@ -745,6 +757,16 @@
 
     .faq p{
         line-height: 20px;
+    }
+
+    .faq-question {
+        padding-inline: 0;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .faq-question > p{
+        margin-right: auto;
     }
 }
 
