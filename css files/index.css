@@ -282,7 +282,7 @@
 
 .hero-four-content-container {
     display: flex;
-    gap: 24px;
+    gap: 5rem;
     padding-block: 40px;
     padding-inline: 60px;
     justify-content: center;
@@ -377,14 +377,17 @@
 
 .hero-five-content p:first-child{
     color: var(--default-purple-color);
+    font-size: var(--p-font-size);
 }
 
 .hero-five-content h1{
     font-size: var(--h1-font-size);
-    font-weight: 400;
+    font-weight: 600;
+    font-size: 40px;
 }
 
 .safe-ideas{
+    margin-top: 24px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -396,6 +399,17 @@
     flex-direction: column;
     gap: 0.5rem;
 }
+
+.safe-ideas > div h4{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.safe-ideas > div p{
+    font-size: var(--p-font-size);
+    color: var(--p-color);
+}
+
 
 /* ending of hero-five and beginging of hero-six */
 
@@ -411,8 +425,8 @@
 }
 
 .hero-six-content h1{
-    font-size: var(--h1-font-size);
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: 600;
 }
 
 .hero-six-content p{
@@ -434,7 +448,8 @@
     min-width: 236px;
     min-height: 280px;
     background-color: #FFFFFF;
-    padding-block: 0.5rem;
+    padding-block: 1rem 0.5rem;
+    padding-inline: 0.5rem;
     border-radius: 1rem;
 }
 
@@ -445,13 +460,14 @@
 }
 
 .cyber-resource p{
-    font-weight: 550;
-    color: rgb(0, 0, 0);
+    font-weight: 600;
+    color: #030712;
 }
 
 .cyber-resource a{
-    color: rgb(0, 0, 0);
-    font-weight: 550;
+    color: #030712;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 /* hero-six end and heo-seven begin */
@@ -476,9 +492,19 @@
     color: var(--default-purple-color);
 }
 
+.faq-content p{
+    font-size: var(--p-font-size);
+    color: var(--p-color);
+}
+
+.faq p{
+    font-size: var(--p-font-size);
+    color: var(--p-color);
+}
+
 .faq-content h1{
-    font-size: var(--h1-font-size);
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: 600;
 }
 
 .faq{
@@ -499,12 +525,29 @@
     border-width: 0.15rem;
     padding-block: 0.5rem;
 }
+
+.faq-question-container p{
+    margin-top: 1rem;
+    line-height: 24px;
+}
+
 .faq-question{
     display: flex;
     align-items: center;
     gap: 3rem;
     display: flex;
     justify-content: space-between;
+}
+
+.faq-question p{
+    font-weight: 500;
+    font-size: 18px;
+    color: #030712;
+}
+
+.faq-question p:hover{
+    color: var(--default-purple-color);
+    cursor: pointer;
 }
 
 .faq-question button{
@@ -673,6 +716,10 @@
         padding-bottom: 0;
     }
 
+    .hero-four-content {
+        scroll-snap-align: center;
+    }
+
     .hero-five{
         padding-block: 3rem;
         padding-inline: 1rem;
@@ -680,6 +727,24 @@
 
     .hero-five-content{
         margin-bottom: 2rem;
+    }
+
+    .hero-six-content h1{
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .faq-content h1{
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+     .faq-content p{
+        line-height: 20px;
+    }
+
+    .faq p{
+        line-height: 20px;
     }
 }
 
@@ -716,6 +781,12 @@
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: repeat(6, 1fr);
         }
+
+        .safe-ideas > div{
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+        }
         /* ending of hero-five and begoing of hero-six */
 
         .cyber-resources-container{
@@ -744,6 +815,14 @@
 
         .hero-four-content-container {
         justify-content: flex-start;
+    }
+
+    .hero-five-content h1{
+        font-size: 24px;
+    }
+
+    .faq{
+        width: 100%;
     }
 }
 
