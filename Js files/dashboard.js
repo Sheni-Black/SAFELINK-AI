@@ -44,7 +44,7 @@ navItems.forEach((item) => {
 
         // Show the correct page
         if (pageName === "scan-history") {
-            document.querySelector(".scan-history-main").style.display = "block";
+            document.querySelector(".my-dashboard-main").style.display = "block";
         }
 
         if (pageName === "saved-websites") {

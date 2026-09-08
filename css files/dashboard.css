@@ -41,7 +41,7 @@ aside > div{
 }
 
 aside div:not(:first-child){
-    padding-inline: 1rem;
+    padding-inline: 0.5rem;
     padding-block: 0.5rem;
     border-radius: 0.5rem;
     font-size: var(--p-font-size);
@@ -65,10 +65,11 @@ aside div:not(:first-child):hover{
 
 .dashboard-logo h4{
     font-weight: 400;
+    font-size: 0.5rem;
 }
 
 .dashboard-logo i{
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     padding-right: 1rem;
     padding-left: 0.1rem;
     border-radius: 0.1rem;

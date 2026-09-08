@@ -6,7 +6,7 @@
         #F7F7F7;
     --h1-font-size: clamp(1rem, calc(1vw + 1.5rem), 3rem); 
     --p-font-size: clamp(0.8rem, calc(1vw + 0.2rem), 1.7rem);
-    --p-color: rgba(0, 0, 0, 0.7);
+    --p-color: #4B5563;
     --h4-font-size: 1.2rem;
     --light-font-weight: 400;
     --heavy-font-weight: 600;
@@ -24,23 +24,25 @@ header{
 .header-content{
     gap: 0.5rem;
     padding-inline: 0.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .header-content h4{
     color: var(--default-purple-color);
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 16px;
 }
 
 .header-content h1{
-    font-size: var(--h1-font-size);
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: 700;
 }
 
 .header-content p{
-    font-size: var(--p-font-size);
+    font-size: 18px;
     color: var(--p-color);
-    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .total-lessons{
@@ -60,6 +62,7 @@ header{
     background-color: white;
     width:20rem;
     border-radius: 1rem;
+    flex: 0 0 30%;
 }
 
 .total-lessons-content span{
@@ -69,6 +72,7 @@ header{
     border-radius: 1rem;
     font-size: 1.5rem;
     overflow: hidden;
+    font-size: 70px;
 }
 
 .total-lessons-content div{
@@ -77,20 +81,21 @@ header{
 }
 
 .total-lessons-content h1{
-    font-size: var(--h1-font-size);
-    font-weight: 400;
+    font-size: 48px;
+    font-weight: 700;
 }
 
 .total-lessons-content p{
-    font-size:  var(--p-font-size);
+    font-size:  24px;
     color: var(--p-color);
 }
 
 /* end of the header start of main */
 main{
-    padding-inline: 4.7rem;
+    padding-inline: 1.5rem;
     margin-top: 3rem;
 }
+
 .view-all-tutorials{
     display: flex;
     justify-content: space-between;
@@ -98,11 +103,11 @@ main{
 
 .view-all-tutorials h4{
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .view-all-tutorials p:last-child{
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--default-purple-color);
 }
 
@@ -562,6 +567,37 @@ main{
         flex-direction: column;
     }
 
+    .header-content h4{
+        font-size: 14px;
+    }
+
+    .header-content h1{
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .header-content p{
+        font-size: 14px;
+    }
+
+    .total-lessons-content span{
+        font-size: 40px;
+    }
+
+    .total-lessons-content h1{
+        font-size: 24px;
+    }
+
+    .total-lessons-content p{
+        font-size:  14px;
+    }
+
+    .view-all-tutorials h4{
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+
 }
 
 /* For both mobile and tablets */
@@ -588,5 +624,14 @@ main{
 
 /* For tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
+
+    .header-content h1{
+        font-size: 32px;
+    }
+
+    .total-lessons-content h1{
+        font-size: 32px;
+    }
+
 
 }
