@@ -30,6 +30,7 @@
     .profile-main-header > p{
         font-size: var(--p-font-size);
         color: var(--p-color);
+        margin-top: 0.5rem;
     }
 
     .profile-display{

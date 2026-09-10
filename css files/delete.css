@@ -14,6 +14,10 @@ span{
     margin-bottom: 2rem;
 }
 
+.delete-account-main > *:not(.delete-account-header){
+    margin-inline: 1rem;
+}
+
 .back-link{
     display: flex;
     align-items: center;

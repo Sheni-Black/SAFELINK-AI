@@ -12,6 +12,11 @@
     margin-bottom: 2rem;
 }
 
+.notification-settings-main > *:not(.notification-settings-header){
+    margin-inline: 1rem;
+}
+
+
 .back-link{
     display: flex;
     align-items: center;
