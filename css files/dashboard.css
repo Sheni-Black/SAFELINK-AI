@@ -32,6 +32,7 @@ aside{
     min-height: 100vh;
     gap: 1rem;
     overflow: hidden;
+    z-index: 1000;
 }
 
 aside > div{
@@ -240,6 +241,7 @@ nav > span:first-child{
 
 .total-lessons-header-content > .complete{
     font-size: 21px;
+    color: #4B5563;
 }
 
 

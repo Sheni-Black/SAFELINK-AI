@@ -8,7 +8,7 @@
         #F7F7F7;
     --h1-font-size: clamp(1rem, calc(1vw + 1.5rem), 3rem); 
     --p-font-size: clamp(0.8rem, calc(1vw + 0.2rem), 1.7rem);
-    --p-color: rgba(0, 0, 0, 0.7);
+    --p-color: #A8B2BF;
     --h4-font-size: 1.2rem;
     --light-font-weight: 400;
     --heavy-font-weight: 600;
@@ -44,7 +44,7 @@
     }
 
     .profile-display > div:first-child{
-        border: 2px solid rgba(0, 0, 0, 0.5);
+        border: 1px solid #A8B2BF;
         padding: 2rem;
         border-radius: 50%;
     }
@@ -77,7 +77,6 @@
     }
 
     .verified-reporter{
-        border: var(--border);
         padding: 0.5rem;
         color: #16A34A;
         border-color: #16A34A;
@@ -92,12 +91,12 @@
         margin-top: 3rem;
         background-color: #fff;
         border-radius: 1rem;
+        margin-inline: 0.5rem;
     }
 
     .details{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
     }
 
     .details-container label{
@@ -107,12 +106,16 @@
         width: 100%;
     }
 
+    .details-container > label:last-of-type{
+        margin-bottom: 0.5rem;
+    }
+
     .details input{
         height: 2.5rem;
         font-size: var(--p-font-size);
-        width: 100%;
+        min-width: 100%;
         margin-top: 0.5rem;
-        border: 2px solid rgba(0, 0, 0, 0.5);
+        border: 1px solid #A8B2BF;
         padding-inline: 0.5rem;
         border-radius: 0.5rem;
     }
@@ -122,11 +125,11 @@
     }
 
     .details-container textarea{
-        width: 100%;
+        min-width: 100%;
         min-height: 30vh;
         padding-inline: 0.5rem;
         font-size: var(--p-font-size);
-        border: 2px solid rgba(0, 0, 0, 0.5);
+        border: 1px solid #A8B2BF;
         border-radius: 0.5rem;
     }
 
@@ -139,7 +142,6 @@
 
     .details-button button:first-child{
         background-color: transparent;
-        border: 1px solid rgba(0, 0, 0, 0.3);
         padding: 1rem;
         border-radius: 0.5rem;
     }
@@ -159,16 +161,37 @@
 
     .profile-display{
         gap: 1rem;
+        flex-direction: column;
+        align-items: center;
     }
 
     .profile-display-content div{
-        display: flex;
-        align-items: center;
-        gap: 0;
+        flex-direction: column-reverse;
     }
 
-    .profile-display-content div *{
-        border: var(--border);
+    .details{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        padding-inline: 1rem;
+    }
+
+    .details > div{
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-end;
+    }
+
+    .textarea{
+        margin-inline: 1rem;
+    }
+
+    .textarea label{
+        margin-bottom: 0.5rem;
+    }
+
+    .details-button{
+        justify-content: center;
     }
 }
 
