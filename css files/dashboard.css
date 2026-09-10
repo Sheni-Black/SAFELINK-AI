@@ -82,7 +82,7 @@ hr{
     border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.aside-logo .close{
+.close{
     margin-left: auto;
     display: none;
 }
@@ -317,6 +317,18 @@ nav > span:first-child{
 
     .total-lessons-header-content > .complete{
         font-size: 14px;
+    }
+
+    .aside-logo > .aside-logo-header{
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    .aside-logo > .aside-logo-icon{
+        font-size: 10px;
+        padding-right: 1rem;
+        padding-left: 0.3rem;
+        border-radius: 0.1rem;
     }
 }
 
