@@ -58,20 +58,20 @@ aside div:not(:first-child):hover{
  }
 
 
-.dashboard-logo{
+.aside-logo{
     gap: 0.5rem;
     padding-left: 0.5rem;
     margin-top: 1rem;
 }
 
-.dashboard-logo h4{
+.aside-logo > .aside-logo-header{
     font-weight: 400;
-    font-size: 0.5rem;
+    font-size: 20px;
 }
 
-.dashboard-logo i{
-    font-size: 0.5rem;
-    padding-right: 1rem;
+.aside-logo > .aside-logo-icon{
+    font-size: 17px;
+    padding-right: 1.5rem;
     padding-left: 0.1rem;
     border-radius: 0.1rem;
 }
@@ -82,7 +82,7 @@ hr{
     border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.dashboard-logo .close{
+.aside-logo .close{
     margin-left: auto;
     display: none;
 }
