@@ -93,7 +93,7 @@ header{
  }
  .main-nav{
     background-color: #ffffff;
-    width: 55%;
+    width: 60%;
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -433,6 +433,10 @@ header{
 @media (max-width: 767px){
     /* for the header  */
 
+    .header-content h4{
+        font-size: 12px;
+    }
+
     .header-content p{
         font-size: 0.7rem;
     }
@@ -446,17 +450,17 @@ header{
     }
 
     .total-reports-content h1{
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 700;
     }
 
     .total-reports-content p{
-        font-size:  9px;
+        font-size:  8px;
         color: var(--p-color);
     }
 
     .total-reports-content span{
-        font-size: 26px;
+        font-size: 14px;
         padding: 0.5rem;
         border-radius: 0.5rem;
     }
