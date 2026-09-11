@@ -46,7 +46,7 @@ const containers = [
     newPasswordSet
 ];
 
-SHOW / HIDE AUTHENTICATION CONTAINERS
+// SHOW / HIDE AUTHENTICATION CONTAINERS
 
 function hideAllContainers() {
     // loop through every element of the containers array and give it a display of none
@@ -70,7 +70,7 @@ function showContainer(container) {
     }
 }
 
-INITIAL PAGE
+// INITIAL PAGE
 
 showContainer(signupContainer);
 
