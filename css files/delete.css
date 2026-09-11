@@ -8,6 +8,7 @@ span{
     display: flex;
     /* flex-direction: column; */
     gap: 1.5rem;
+    padding: 0;
 }
 
 .delete-account-main > *{
@@ -211,10 +212,6 @@ span{
 /* mobile / tablet */
 
 @media (min-width: 0px) and (max-width: 1023px){
-    .delete-account-main{
-        padding: 1rem;
-    }
-
     .try-these-first-card,
     .delete-permanently-card{
         padding: 1.25rem;

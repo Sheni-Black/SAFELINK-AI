@@ -241,10 +241,6 @@
 /* mobile / tablet */
 
 @media (min-width: 0px) and (max-width: 1023px){
-    .notification-settings-main{
-        padding: 1rem;
-    }
-
     .notification-card{
         padding: 1.25rem;
     }
