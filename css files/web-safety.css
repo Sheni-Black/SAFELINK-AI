@@ -77,7 +77,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 29px;
+  width: auto; /* 29px */
   height: 46px;
 }
 strong {
@@ -98,6 +98,7 @@ strong {
 }
 .wsafety-text {
   /* width: 943px; */
+  width: auto;
   height: 200px;
   gap: 12px;
   padding-top: 50px;
@@ -155,36 +156,27 @@ strong {
   justify-content: space-between;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
-  height: 334px;
+  height: auto; /* 334px; */
   padding: 16px 16px 0;
 }
 .website-texts {
   display: flex;
   flex-direction: column;
   padding: 10px 20px;
-  width: 200px;
-  height: 220px;
-  gap: 8px;
+  width: auto; /* 200px; */
+  height: auto; /* 220px; */
+  gap: 28px;
 }
 .wt-child {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.wurl {
-  width: 174px;
-  height: 75px;
-  gap: 8px;
-}
-.wdomain {
-  width: 78px;
-  height: 75px;
-  gap: 8px;
-}
+.wurl,
+.wdomain,
 .w-ip-address {
-  width: 130px;
-  height: 75px;
-  gap: 8px;
+  width: auto; /* 174px; */
+  height: auto; /* 75px; */
 }
 .wt-child p {
   font-size: 12px;
