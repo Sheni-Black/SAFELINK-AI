@@ -46,31 +46,31 @@ const containers = [
     newPasswordSet
 ];
 
-// SHOW / HIDE AUTHENTICATION CONTAINERS
+SHOW / HIDE AUTHENTICATION CONTAINERS
 
-// function hideAllContainers() {
-//     // loop through every element of the containers array and give it a display of none
+function hideAllContainers() {
+    // loop through every element of the containers array and give it a display of none
     
-//     containers.forEach((container) => {
+    containers.forEach((container) => {
 
-//         if (container) {
-//             container.style.display = "none";
-//         }
+        if (container) {
+            container.style.display = "none";
+        }
 
-//     });
-// }
+    });
+}
 
 
-// function showContainer(container) {
+function showContainer(container) {
 
-//     hideAllContainers();
+    hideAllContainers();
 
-//     if (container) {
-//         container.style.display = "block";
-//     }
-// }
+    if (container) {
+        container.style.display = "block";
+    }
+}
 
-// INITIAL PAGE
+INITIAL PAGE
 
 showContainer(signupContainer);
 
