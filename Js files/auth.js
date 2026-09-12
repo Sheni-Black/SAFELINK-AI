@@ -62,7 +62,8 @@ function hideAllContainers() {
 
 
 function showContainer(container) {
-
+    // before you show anything, make sure that all containers are hidden
+    
     hideAllContainers();
 
     if (container) {
@@ -80,7 +81,7 @@ showContainer(signupContainer);
 const createText = document.querySelector(".create-text");
 const loginText = document.querySelector(".login-text");
 
-
+// Sign up
 if (createText) {
 
     createText.addEventListener("click", () => {
@@ -91,7 +92,7 @@ if (createText) {
 
 }
 
-
+// Sign in
 if (loginText) {
 
     loginText.addEventListener("click", () => {
@@ -191,7 +192,6 @@ function showInputError(input, message, errorElement = null) {
     // Add your existing class as well.
     input.classList.add("input-error");
 
-
     // Use supplied error element if one exists.
     // Otherwise create one.
     if (!errorElement) {
@@ -236,10 +236,7 @@ function showInputSuccess(input, errorElement = null) {
     }
 
 
-    if (
-        errorElement &&
-        errorElement.classList.contains("js-error")
-    ) {
+    if (errorElement && errorElement.classList.contains("js-error")) {
 
         errorElement.textContent = "";
 
@@ -266,10 +263,7 @@ function clearInputState(input) {
 
     const errorElement = input.nextElementSibling;
 
-    if (
-        errorElement &&
-        errorElement.classList.contains("js-error")
-    ) {
+    if (errorElement && errorElement.classList.contains("js-error")) {
 
         errorElement.textContent = "";
 
@@ -289,15 +283,14 @@ function clearInputState(input) {
 // - value invalid       -> red border + message, live
 // - value valid          -> green border, message cleared
 //
-// This is what makes error text appear WHILE typing and
+// This is what makes error text appear while typing and
 // disappear the instant the field satisfies validation,
 // instead of only being checked on submit.
 //
 
 function validateFieldLive(input, errorElement, validatorFn, message, rawValue = null) {
 
-    const value =
-        rawValue !== null ? rawValue : input.value.trim();
+    const value = rawValue !== null ? rawValue : input.value.trim();
 
 
     if (value === "") {
@@ -364,12 +357,7 @@ function isValidPassword(passwordValue) {
         /[0-9]/.test(passwordValue);
 
 
-    return (
-        hasMinimumLength &&
-        hasUppercase &&
-        hasLowercase &&
-        hasNumber
-    );
+    return (hasMinimumLength && hasUppercase && hasLowercase && hasNumber);
 
 }
 
