@@ -28,7 +28,7 @@
 
 /* Starting here is everything that has to do with the nav/header */
 
-.dashboard-link{
+.dashboard-link {
   border: none;
   width: 2rem;
   height: 2rem;
@@ -121,11 +121,11 @@ nav > .fa-bars {
   display: none;
 }
 
-nav > .fa-bars:hover{
+nav > .fa-bars:hover {
   cursor: pointer;
 }
 
-.hamburger-nav{
+.hamburger-nav {
   position: absolute;
   left: 0;
   top: 13%;
@@ -138,22 +138,22 @@ nav > .fa-bars:hover{
   display: none;
 }
 
-.hamburger-nav  a{
+.hamburger-nav a {
   padding: 1rem;
   display: block;
 }
 
-.hamburger-nav > a:hover{
-  background-color: #EBECEF;
+.hamburger-nav > a:hover {
+  background-color: #ebecef;
 }
 
-nav > .nav-close{
+nav > .nav-close {
   display: none;
   overflow: hidden;
   font-weight: 400;
 }
 
-nav > .nav-close:hover{
+nav > .nav-close:hover {
   cursor: pointer;
 }
 
@@ -219,7 +219,7 @@ footer h4 {
 /* For mobile */
 
 @media (max-width: 767px) {
-  nav{
+  nav {
     padding-inline: 1rem;
   }
 }
@@ -248,7 +248,7 @@ footer h4 {
     padding-inline: 1rem;
   }
 
-  .hamburger-nav{
+  .hamburger-nav {
     top: 9.5%;
   }
 }
