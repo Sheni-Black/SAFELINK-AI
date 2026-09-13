@@ -749,8 +749,7 @@ function updateForgotPasswordButton() {
 
     if (!forgotPasswordButton) return;
 
-    forgotPasswordButton.disabled =
-        !isValidEmail(forgotEmail.value.trim());
+    forgotPasswordButton.disabled = !isValidEmail(forgotEmail.value.trim());
 
 }
 
@@ -887,9 +886,7 @@ function updateNewPasswordButton() {
     if (!newPasswordButton) return;
 
     const passwordValid = isValidPassword(newPassword.value);
-    const confirmValid =
-        newConfirmPassword.value !== "" &&
-        newConfirmPassword.value === newPassword.value;
+    const confirmValid = newConfirmPassword.value !== "" && newConfirmPassword.value === newPassword.value;
 
     newPasswordButton.disabled = !(passwordValid && confirmValid);
 
@@ -993,9 +990,7 @@ const checkEmailButton = document.querySelector(".check-email-button");
 
 function getOtp(inputs) {
 
-    return [...inputs]
-        .map((input) => input.value.trim())
-        .join("");
+    return [...inputs].map((input) => input.value.trim()).join("");
 
 }
 
@@ -1063,11 +1058,7 @@ function setupOtpInputs(inputs, button) {
 
         input.addEventListener("keydown", (e) => {
 
-            if (
-                e.key === "Backspace" &&
-                input.value === "" &&
-                index > 0
-            ) {
+            if ( e.key === "Backspace" && input.value === "" && index > 0) {
 
                 inputs[index - 1].focus();
 
