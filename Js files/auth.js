@@ -326,7 +326,6 @@ function isValidEmail(emailAddress) {
 
     const emailPattern =
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
     return emailPattern.test(emailAddress);
 
 }
@@ -344,18 +343,13 @@ function isValidEmail(emailAddress) {
 
 function isValidPassword(passwordValue) {
 
-    const hasMinimumLength =
-        passwordValue.length >= 8;
+    const hasMinimumLength = passwordValue.length >= 8;
 
-    const hasUppercase =
-        /[A-Z]/.test(passwordValue);
+    const hasUppercase = /[A-Z]/.test(passwordValue);
 
-    const hasLowercase =
-        /[a-z]/.test(passwordValue);
+    const hasLowercase = /[a-z]/.test(passwordValue);
 
-    const hasNumber =
-        /[0-9]/.test(passwordValue);
-
+    const hasNumber = /[0-9]/.test(passwordValue);
 
     return (hasMinimumLength && hasUppercase && hasLowercase && hasNumber);
 
@@ -369,7 +363,6 @@ function isValidPassword(passwordValue) {
 function validateSignupForm() {
 
     let isValid = true;
-
 
     // FULL NAME
 
@@ -391,7 +384,6 @@ function validateSignupForm() {
 
     }
 
-
     // EMAIL
 
     const emailValue = email.value.trim();
@@ -412,7 +404,6 @@ function validateSignupForm() {
 
     }
 
-
     // PASSWORD
 
     if (password.value === "") {
@@ -422,11 +413,7 @@ function validateSignupForm() {
 
     } else if (!isValidPassword(password.value)) {
 
-        showInputError(
-            password,
-            "Password must be at least 8 characters and contain uppercase, lowercase and a number.",
-            passwordError
-        );
+        showInputError(password,"Password must be at least 8 characters and contain uppercase, lowercase and a number.",passwordError);
         isValid = false;
 
     } else {
@@ -434,7 +421,6 @@ function validateSignupForm() {
         showInputSuccess(password, passwordError);
 
     }
-
 
     // CONFIRM PASSWORD
 
@@ -456,7 +442,6 @@ function validateSignupForm() {
 
     }
 
-
     // TERMS AND CONDITIONS
 
     if (!terms.checked) {
@@ -469,7 +454,6 @@ function validateSignupForm() {
         terms.classList.remove("input-error");
 
     }
-
 
     return isValid;
 
@@ -488,19 +472,10 @@ function updateSignupButton() {
     const nameValid = fname.value.trim().length >= 5;
     const emailValid = isValidEmail(email.value.trim());
     const passwordValid = isValidPassword(password.value);
-    const confirmValid =
-        cpassword.value !== "" && cpassword.value === password.value;
+    const confirmValid = cpassword.value !== "" && cpassword.value === password.value;
     const termsValid = terms.checked;
 
-
-    signupButton.disabled = !(
-        nameValid &&
-        emailValid &&
-        passwordValid &&
-        confirmValid &&
-        termsValid
-    );
-
+    signupButton.disabled = !(nameValid && emailValid && passwordValid && confirmValid && termsValid);
 }
 
 
@@ -516,7 +491,6 @@ if (signupForm) {
 
             updateSignupButton();
             return;
-
         }
 
         console.log("Sign-up form is valid.");
