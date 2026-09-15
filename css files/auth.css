@@ -115,7 +115,7 @@ label {
 .fpassword-button,
 .check-email-button,
 .npassword-button {
-  padding: 7px;
+  padding: 12px;
   width: 100%;
   color: white;
   background: #a5b4fc;
@@ -130,7 +130,7 @@ label {
 .fpassword-button:hover,
 .check-email-button:hover,
 .npassword-button:hover {
-  background: #433aca;
+  background: #4f46e5;
 }
 .cpassword1 {
   color: #9ca3af;
@@ -171,7 +171,7 @@ input:focus-visible {
 .create-text,
 .resend-text,
 .resend-text1 {
-  color: #4f46e5;
+  color: #818cf8;
   cursor: pointer;
 }
 
@@ -220,9 +220,9 @@ input:focus-visible {
 }
 .otp-input,
 .otp-input1 {
-  width: 35px !important;
-  height: 35px;
-  border: 1px solid rgb(190, 188, 188);
+  width: 37px !important;
+  height: 37px;
+  border: 1px solid #d1d5db;
   border-radius: 10px;
   outline: none;
   text-align: center;
@@ -235,7 +235,7 @@ input:focus-visible {
 .time,
 .time1 {
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 900;
 }
 .otp-successful,
 .rpassword-container {
@@ -343,13 +343,13 @@ input:focus-visible {
   .npassword-text p {
     font-size: 12px;
   }
-  .logo-text,
+  /* .logo-text,
   .logo-text1,
   .logo-text2,
   .logo-text3,
   .logo-text4 {
     font-size: 14px;
-  }
+  } */
   .google-container h4,
   .google-container1 h4 {
     font-size: 12px;
@@ -386,13 +386,13 @@ input:focus-visible {
     padding: 10px;
   }
 
-  .create-container h1,
-  .welcome-container h1,
-  .verify-container h1,
-  .fpassword-text h1,
+  .create-container h2,
+  .welcome-container h2,
+  .verify-container h2,
+  .fpassword-text h2,
   .otp-successful-text h2,
-  .check-email-text h1,
-  .npassword-text h1,
+  .check-email-text h2,
+  .npassword-text h2,
   .rpassword-text h2 {
     font-size: 17px;
   }
@@ -405,13 +405,13 @@ input:focus-visible {
     font-size: 10px;
   }
 
-  .logo-text,
+  /* .logo-text,
   .logo-text1,
   .logo-text2,
   .logo-text3,
   .logo-text4 {
     font-size: 12px;
-  }
+  } */
   .divider,
   .divider1 {
     gap: 10px;
