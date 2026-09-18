@@ -1106,7 +1106,7 @@ if (verifyButton) {
 
         setTimeout(() => {
 
-            // Replace this later with your actual homepage URL.
+            // Replace this later with actual homepage URL.
             // window.location.href = "../index.html";
 
         }, 2000);
@@ -1120,34 +1120,34 @@ if (verifyButton) {
 // PASSWORD RESET OTP
 // ==========================================================
 
-if (checkEmailButton) {
+// if (checkEmailButton) {
 
-    checkEmailButton.addEventListener("click", (e) => {
+//     checkEmailButton.addEventListener("click", (e) => {
 
-        e.preventDefault();
+//         e.preventDefault();
 
-        if (!isValidOtp(otpInputs1)) {
+//         if (!isValidOtp(otpInputs1)) {
 
-            otpInputs1.forEach((input) => {
+//             otpInputs1.forEach((input) => {
 
-                input.style.borderColor = "red";
-                input.classList.add("input-error");
+//                 input.style.borderColor = "red";
+//                 input.classList.add("input-error");
 
-            });
+//             });
 
-            return;
+//             return;
 
-        }
+//         }
 
-        const otp = getOtp(otpInputs1);
+//         const otp = getOtp(otpInputs1);
 
-        console.log("Password-reset OTP:", otp);
+//         console.log("Password-reset OTP:", otp);
 
-        showContainer(newPasswordContainer);
+//         showContainer(newPasswordContainer);
 
-    });
+//     });
 
-}
+// }
 
 
 // ==========================================================
@@ -1187,20 +1187,14 @@ const visibilityContainers = document.querySelectorAll(".visibility");
 
 visibilityContainers.forEach((visibilityContainer) => {
 
-    const closeVisible =
-        visibilityContainer.querySelector(".close-visible");
+    const closeVisible = visibilityContainer.querySelector(".close-visible");
 
-    const nonVisible =
-        visibilityContainer.querySelector(".non-visible");
+    const nonVisible = visibilityContainer.querySelector(".non-visible");
 
-    const visible =
-        visibilityContainer.querySelector(".visible");
+    const visible = visibilityContainer.querySelector(".visible");
 
     // Find the input that belongs to this visibility container
-    const passwordInput =
-        visibilityContainer
-            .closest(".input-icon-wrapper")
-            .querySelector("input");
+    const passwordInput = visibilityContainer.closest(".input-icon-wrapper").querySelector("input");
 
 
     // ======================================================
